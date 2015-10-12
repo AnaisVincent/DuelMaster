@@ -1,247 +1,243 @@
-The system is: Linux - 3.10.0-229.14.1.el7.x86_64 - x86_64
+The system is: Windows - 6.1 - AMD64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-Compiler: /usr/bin/cc 
+Compiler:  
 Build flags: 
 Id flags: 
 
 The output was:
 0
+Microsoft (R) Build Engine, version 14.0.23107.0
+Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 11/10/2015 19:48:00.
+Projet "C:\Users\Vincent\Documents\GitHub\DuelMaster\build\CMakeFiles\3.1.0\CompilerIdC\CompilerIdC.vcxproj" sur le noud 1 (cibles par d‚faut).
+PrepareForBuild:
+  Cr‚ation du r‚pertoire "Debug\".
+  Cr‚ation du r‚pertoire "Debug\CompilerIdC.tlog\".
+InitializeBuildStatus:
+  Cr‚ation de "Debug\CompilerIdC.tlog\unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /nologo /W0 /WX- /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue CMakeCCompilerId.c
+  CMakeCCompilerId.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X86 /SAFESEH Debug\CMakeCCompilerId.obj
+  CompilerIdC.vcxproj -> C:\Users\Vincent\Documents\GitHub\DuelMaster\build\CMakeFiles\3.1.0\CompilerIdC\.\CompilerIdC.exe
+PostBuildEvent:
+  for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+  :VCEnd
+  CMAKE_C_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\cl.exe
+FinalizeBuildStatus:
+  Suppression du fichier "Debug\CompilerIdC.tlog\unsuccessfulbuild".
+  Mise … jour de l'horodatage "Debug\CompilerIdC.tlog\CompilerIdC.lastbuildstate".
+G‚n‚ration du projet "C:\Users\Vincent\Documents\GitHub\DuelMaster\build\CMakeFiles\3.1.0\CompilerIdC\CompilerIdC.vcxproj" termin‚e (cibles par d‚faut).
+
+La g‚n‚ration a r‚ussi.
+    0 Avertissement(s)
+    0 Erreur(s)
+
+Temps ‚coul‚ 00:00:01.04
 
 
-Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
 
-The C compiler identification is GNU, found in "/users/link/vinclamb/Projects/DuelMaster/build/CMakeFiles/2.8.11/CompilerIdC/a.out"
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+
+The C compiler identification is MSVC, found in "C:/Users/Vincent/Documents/GitHub/DuelMaster/build/CMakeFiles/3.1.0/CompilerIdC/CompilerIdC.exe"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-Compiler: /usr/bin/c++ 
+Compiler:  
 Build flags: 
 Id flags: 
 
 The output was:
 0
+Microsoft (R) Build Engine, version 14.0.23107.0
+Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 11/10/2015 19:48:02.
+Projet "C:\Users\Vincent\Documents\GitHub\DuelMaster\build\CMakeFiles\3.1.0\CompilerIdCXX\CompilerIdCXX.vcxproj" sur le noud 1 (cibles par d‚faut).
+PrepareForBuild:
+  Cr‚ation du r‚pertoire "Debug\".
+  Cr‚ation du r‚pertoire "Debug\CompilerIdCXX.tlog\".
+InitializeBuildStatus:
+  Cr‚ation de "Debug\CompilerIdCXX.tlog\unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /nologo /W0 /WX- /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:queue CMakeCXXCompilerId.cpp
+  CMakeCXXCompilerId.cpp
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdCXX.lib" /MACHINE:X86 /SAFESEH Debug\CMakeCXXCompilerId.obj
+  CompilerIdCXX.vcxproj -> C:\Users\Vincent\Documents\GitHub\DuelMaster\build\CMakeFiles\3.1.0\CompilerIdCXX\.\CompilerIdCXX.exe
+PostBuildEvent:
+  for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+  :VCEnd
+  CMAKE_CXX_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\cl.exe
+FinalizeBuildStatus:
+  Suppression du fichier "Debug\CompilerIdCXX.tlog\unsuccessfulbuild".
+  Mise … jour de l'horodatage "Debug\CompilerIdCXX.tlog\CompilerIdCXX.lastbuildstate".
+G‚n‚ration du projet "C:\Users\Vincent\Documents\GitHub\DuelMaster\build\CMakeFiles\3.1.0\CompilerIdCXX\CompilerIdCXX.vcxproj" termin‚e (cibles par d‚faut).
+
+La g‚n‚ration a r‚ussi.
+    0 Avertissement(s)
+    0 Erreur(s)
+
+Temps ‚coul‚ 00:00:00.84
 
 
-Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
 
-The CXX compiler identification is GNU, found in "/users/link/vinclamb/Projects/DuelMaster/build/CMakeFiles/2.8.11/CompilerIdCXX/a.out"
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+
+The CXX compiler identification is MSVC, found in "C:/Users/Vincent/Documents/GitHub/DuelMaster/build/CMakeFiles/3.1.0/CompilerIdCXX/CompilerIdCXX.exe"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /users/link/vinclamb/Projects/DuelMaster/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/Vincent/Documents/GitHub/DuelMaster/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/gmake "cmTryCompileExec598938497/fast"
-/usr/bin/gmake -f CMakeFiles/cmTryCompileExec598938497.dir/build.make CMakeFiles/cmTryCompileExec598938497.dir/build
-gmake[1] : on entre dans le rÃ©pertoire Â« /users/v/vinclamb/Projects/DuelMaster/build/CMakeFiles/CMakeTmp Â»
-/usr/bin/cmake -E cmake_progress_report /users/link/vinclamb/Projects/DuelMaster/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec598938497.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTryCompileExec598938497.dir/testCCompiler.c.o   -c /users/link/vinclamb/Projects/DuelMaster/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTryCompileExec598938497
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec598938497.dir/link.txt --verbose=1
-/usr/bin/cc         CMakeFiles/cmTryCompileExec598938497.dir/testCCompiler.c.o  -o cmTryCompileExec598938497 -rdynamic 
-gmake[1] : on quitte le rÃ©pertoire Â« /users/v/vinclamb/Projects/DuelMaster/build/CMakeFiles/CMakeTmp Â»
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTryCompileExec4105269914.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine, version 14.0.23107.0
+Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 11/10/2015 19:48:03.
+Projet "C:\Users\Vincent\Documents\GitHub\DuelMaster\build\CMakeFiles\CMakeTmp\cmTryCompileExec4105269914.vcxproj" sur le noud 1 (cibles par d‚faut).
+PrepareForBuild:
+  Cr‚ation du r‚pertoire "cmTryCompileExec4105269914.dir\Debug\".
+  Cr‚ation du r‚pertoire "C:\Users\Vincent\Documents\GitHub\DuelMaster\build\CMakeFiles\CMakeTmp\Debug\".
+  Cr‚ation du r‚pertoire "cmTryCompileExec4105269914.dir\Debug\cmTryCom.1BE14E1F.tlog\".
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec4105269914.dir\Debug\cmTryCom.1BE14E1F.tlog\unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTryCompileExec4105269914.dir\Debug\\" /Fd"cmTryCompileExec4105269914.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue C:\Users\Vincent\Documents\GitHub\DuelMaster\build\CMakeFiles\CMakeTmp\testCCompiler.c
+  Compilateur d'optimisation Microsoft (R) C/C++ versionÿ19.00.23026 pour x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTryCompileExec4105269914.dir\Debug\\" /Fd"cmTryCompileExec4105269914.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue C:\Users\Vincent\Documents\GitHub\DuelMaster\build\CMakeFiles\CMakeTmp\testCCompiler.c
+  
+  testCCompiler.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Vincent\Documents\GitHub\DuelMaster\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec4105269914.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:/Users/Vincent/Documents/GitHub/DuelMaster/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec4105269914.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Vincent/Documents/GitHub/DuelMaster/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec4105269914.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec4105269914.dir\Debug\testCCompiler.obj
+  cmTryCompileExec4105269914.vcxproj -> C:\Users\Vincent\Documents\GitHub\DuelMaster\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec4105269914.exe
+FinalizeBuildStatus:
+  Suppression du fichier "cmTryCompileExec4105269914.dir\Debug\cmTryCom.1BE14E1F.tlog\unsuccessfulbuild".
+  Mise … jour de l'horodatage "cmTryCompileExec4105269914.dir\Debug\cmTryCom.1BE14E1F.tlog\cmTryCompileExec4105269914.lastbuildstate".
+G‚n‚ration du projet "C:\Users\Vincent\Documents\GitHub\DuelMaster\build\CMakeFiles\CMakeTmp\cmTryCompileExec4105269914.vcxproj" termin‚e (cibles par d‚faut).
+
+La g‚n‚ration a r‚ussi.
+    0 Avertissement(s)
+    0 Erreur(s)
+
+Temps ‚coul‚ 00:00:00.91
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /users/link/vinclamb/Projects/DuelMaster/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/Vincent/Documents/GitHub/DuelMaster/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/gmake "cmTryCompileExec1263687024/fast"
-/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1263687024.dir/build.make CMakeFiles/cmTryCompileExec1263687024.dir/build
-gmake[1] : on entre dans le rÃ©pertoire Â« /users/v/vinclamb/Projects/DuelMaster/build/CMakeFiles/CMakeTmp Â»
-/usr/bin/cmake -E cmake_progress_report /users/link/vinclamb/Projects/DuelMaster/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec1263687024.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1263687024.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
-Linking C executable cmTryCompileExec1263687024
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1263687024.dir/link.txt --verbose=1
-/usr/bin/cc       -v CMakeFiles/cmTryCompileExec1263687024.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec1263687024 -rdynamic  
-Utilisation des specs internes.
-COLLECT_GCC=/usr/bin/cc
-COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/4.8.3/lto-wrapper
-Target: x86_64-redhat-linux
-ConfigurÃ© avec: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-languages=c,c++,objc,obj-c++,java,fortran,ada,go,lto --enable-plugin --enable-initfini-array --disable-libgcj --with-isl=/builddir/build/BUILD/gcc-4.8.3-20140911/obj-x86_64-redhat-linux/isl-install --with-cloog=/builddir/build/BUILD/gcc-4.8.3-20140911/obj-x86_64-redhat-linux/cloog-install --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux
-ModÃ¨le de thread: posix
-gcc version 4.8.3 20140911 (Red Hat 4.8.3-9) (GCC) 
-COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/4.8.3/:/usr/libexec/gcc/x86_64-redhat-linux/4.8.3/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/4.8.3/:/usr/lib/gcc/x86_64-redhat-linux/
-LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/4.8.3/:/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec1263687024' '-rdynamic' '-mtune=generic' '-march=x86-64'
- /usr/libexec/gcc/x86_64-redhat-linux/4.8.3/collect2 --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec1263687024 /usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.8.3/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.8.3 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../.. CMakeFiles/cmTryCompileExec1263687024.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/4.8.3/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../lib64/crtn.o
-gmake[1] : on quitte le rÃ©pertoire Â« /users/v/vinclamb/Projects/DuelMaster/build/CMakeFiles/CMakeTmp Â»
-
-
-Parsed C implicit link information from above output:
-  link line regex: [^( *|.*[/\])(ld|ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /users/link/vinclamb/Projects/DuelMaster/build/CMakeFiles/CMakeTmp]
-  ignore line: []
-  ignore line: [Run Build Command:/usr/bin/gmake "cmTryCompileExec1263687024/fast"]
-  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1263687024.dir/build.make CMakeFiles/cmTryCompileExec1263687024.dir/build]
-  ignore line: [gmake[1] : on entre dans le rÃ©pertoire Â« /users/v/vinclamb/Projects/DuelMaster/build/CMakeFiles/CMakeTmp Â»]
-  ignore line: [/usr/bin/cmake -E cmake_progress_report /users/link/vinclamb/Projects/DuelMaster/build/CMakeFiles/CMakeTmp/CMakeFiles 1]
-  ignore line: [Building C object CMakeFiles/cmTryCompileExec1263687024.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1263687024.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTryCompileExec1263687024]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1263687024.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc       -v CMakeFiles/cmTryCompileExec1263687024.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec1263687024 -rdynamic  ]
-  ignore line: [Utilisation des specs internes.]
-  ignore line: [COLLECT_GCC=/usr/bin/cc]
-  ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/4.8.3/lto-wrapper]
-  ignore line: [Target: x86_64-redhat-linux]
-  ignore line: [ConfigurÃ© avec: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-languages=c,c++,objc,obj-c++,java,fortran,ada,go,lto --enable-plugin --enable-initfini-array --disable-libgcj --with-isl=/builddir/build/BUILD/gcc-4.8.3-20140911/obj-x86_64-redhat-linux/isl-install --with-cloog=/builddir/build/BUILD/gcc-4.8.3-20140911/obj-x86_64-redhat-linux/cloog-install --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux]
-  ignore line: [ModÃ¨le de thread: posix]
-  ignore line: [gcc version 4.8.3 20140911 (Red Hat 4.8.3-9) (GCC) ]
-  ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/4.8.3/:/usr/libexec/gcc/x86_64-redhat-linux/4.8.3/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/4.8.3/:/usr/lib/gcc/x86_64-redhat-linux/]
-  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/4.8.3/:/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec1263687024' '-rdynamic' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/4.8.3/collect2 --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec1263687024 /usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.8.3/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.8.3 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../.. CMakeFiles/cmTryCompileExec1263687024.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/4.8.3/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../lib64/crtn.o]
-    arg [/usr/libexec/gcc/x86_64-redhat-linux/4.8.3/collect2] ==> ignore
-    arg [--build-id] ==> ignore
-    arg [--no-add-needed] ==> ignore
-    arg [--eh-frame-hdr] ==> ignore
-    arg [--hash-style=gnu] ==> ignore
-    arg [-m] ==> ignore
-    arg [elf_x86_64] ==> ignore
-    arg [-export-dynamic] ==> ignore
-    arg [-dynamic-linker] ==> ignore
-    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
-    arg [-o] ==> ignore
-    arg [cmTryCompileExec1263687024] ==> ignore
-    arg [/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../lib64/crt1.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../lib64/crti.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-redhat-linux/4.8.3/crtbegin.o] ==> ignore
-    arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.8.3] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.3]
-    arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../lib64] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../lib64]
-    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
-    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
-    arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../..]
-    arg [CMakeFiles/cmTryCompileExec1263687024.dir/CMakeCCompilerABI.c.o] ==> ignore
-    arg [-lgcc] ==> lib [gcc]
-    arg [--as-needed] ==> ignore
-    arg [-lgcc_s] ==> lib [gcc_s]
-    arg [--no-as-needed] ==> ignore
-    arg [-lc] ==> lib [c]
-    arg [-lgcc] ==> lib [gcc]
-    arg [--as-needed] ==> ignore
-    arg [-lgcc_s] ==> lib [gcc_s]
-    arg [--no-as-needed] ==> ignore
-    arg [/usr/lib/gcc/x86_64-redhat-linux/4.8.3/crtend.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../lib64/crtn.o] ==> ignore
-  remove lib [gcc]
-  remove lib [gcc_s]
-  remove lib [gcc]
-  remove lib [gcc_s]
-  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.3] ==> [/usr/lib/gcc/x86_64-redhat-linux/4.8.3]
-  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../lib64] ==> [/usr/lib64]
-  collapse library dir [/lib/../lib64] ==> [/lib64]
-  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
-  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../..] ==> [/usr/lib]
-  implicit libs: [c]
-  implicit dirs: [/usr/lib/gcc/x86_64-redhat-linux/4.8.3;/usr/lib64;/lib64;/usr/lib]
-  implicit fwks: []
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTryCompileExec1107402899.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine, version 14.0.23107.0
+Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 11/10/2015 19:48:05.
+Projet "C:\Users\Vincent\Documents\GitHub\DuelMaster\build\CMakeFiles\CMakeTmp\cmTryCompileExec1107402899.vcxproj" sur le noud 1 (cibles par d‚faut).
+PrepareForBuild:
+  Cr‚ation du r‚pertoire "cmTryCompileExec1107402899.dir\Debug\".
+  Cr‚ation du r‚pertoire "C:\Users\Vincent\Documents\GitHub\DuelMaster\build\CMakeFiles\CMakeTmp\Debug\".
+  Cr‚ation du r‚pertoire "cmTryCompileExec1107402899.dir\Debug\cmTryCom.9FA21B31.tlog\".
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec1107402899.dir\Debug\cmTryCom.9FA21B31.tlog\unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTryCompileExec1107402899.dir\Debug\\" /Fd"cmTryCompileExec1107402899.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files (x86)\CMake\share\cmake-3.1\Modules\CMakeCCompilerABI.c"
+  Compilateur d'optimisation Microsoft (R) C/C++ versionÿ19.00.23026 pour x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTryCompileExec1107402899.dir\Debug\\" /Fd"cmTryCompileExec1107402899.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files (x86)\CMake\share\cmake-3.1\Modules\CMakeCCompilerABI.c"
+  
+  CMakeCCompilerABI.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Vincent\Documents\GitHub\DuelMaster\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec1107402899.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:/Users/Vincent/Documents/GitHub/DuelMaster/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec1107402899.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Vincent/Documents/GitHub/DuelMaster/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec1107402899.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec1107402899.dir\Debug\CMakeCCompilerABI.obj
+  cmTryCompileExec1107402899.vcxproj -> C:\Users\Vincent\Documents\GitHub\DuelMaster\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec1107402899.exe
+FinalizeBuildStatus:
+  Suppression du fichier "cmTryCompileExec1107402899.dir\Debug\cmTryCom.9FA21B31.tlog\unsuccessfulbuild".
+  Mise … jour de l'horodatage "cmTryCompileExec1107402899.dir\Debug\cmTryCom.9FA21B31.tlog\cmTryCompileExec1107402899.lastbuildstate".
+G‚n‚ration du projet "C:\Users\Vincent\Documents\GitHub\DuelMaster\build\CMakeFiles\CMakeTmp\cmTryCompileExec1107402899.vcxproj" termin‚e (cibles par d‚faut).
+
+La g‚n‚ration a r‚ussi.
+    0 Avertissement(s)
+    0 Erreur(s)
+
+Temps ‚coul‚ 00:00:01.04
 
 
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /users/link/vinclamb/Projects/DuelMaster/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/Vincent/Documents/GitHub/DuelMaster/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/gmake "cmTryCompileExec1833730116/fast"
-/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1833730116.dir/build.make CMakeFiles/cmTryCompileExec1833730116.dir/build
-gmake[1] : on entre dans le rÃ©pertoire Â« /users/v/vinclamb/Projects/DuelMaster/build/CMakeFiles/CMakeTmp Â»
-/usr/bin/cmake -E cmake_progress_report /users/link/vinclamb/Projects/DuelMaster/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec1833730116.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTryCompileExec1833730116.dir/testCXXCompiler.cxx.o -c /users/link/vinclamb/Projects/DuelMaster/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTryCompileExec1833730116
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1833730116.dir/link.txt --verbose=1
-/usr/bin/c++          CMakeFiles/cmTryCompileExec1833730116.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec1833730116 -rdynamic 
-gmake[1] : on quitte le rÃ©pertoire Â« /users/v/vinclamb/Projects/DuelMaster/build/CMakeFiles/CMakeTmp Â»
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTryCompileExec3566386792.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine, version 14.0.23107.0
+Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 11/10/2015 19:48:07.
+Projet "C:\Users\Vincent\Documents\GitHub\DuelMaster\build\CMakeFiles\CMakeTmp\cmTryCompileExec3566386792.vcxproj" sur le noud 1 (cibles par d‚faut).
+PrepareForBuild:
+  Cr‚ation du r‚pertoire "cmTryCompileExec3566386792.dir\Debug\".
+  Cr‚ation du r‚pertoire "C:\Users\Vincent\Documents\GitHub\DuelMaster\build\CMakeFiles\CMakeTmp\Debug\".
+  Cr‚ation du r‚pertoire "cmTryCompileExec3566386792.dir\Debug\cmTryCom.C645ED16.tlog\".
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec3566386792.dir\Debug\cmTryCom.C645ED16.tlog\unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTryCompileExec3566386792.dir\Debug\\" /Fd"cmTryCompileExec3566386792.dir\Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:queue C:\Users\Vincent\Documents\GitHub\DuelMaster\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
+  Compilateur d'optimisation Microsoft (R) C/C++ versionÿ19.00.23026 pour x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTryCompileExec3566386792.dir\Debug\\" /Fd"cmTryCompileExec3566386792.dir\Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:queue C:\Users\Vincent\Documents\GitHub\DuelMaster\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
+  
+  testCXXCompiler.cxx
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Vincent\Documents\GitHub\DuelMaster\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec3566386792.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:/Users/Vincent/Documents/GitHub/DuelMaster/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3566386792.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Vincent/Documents/GitHub/DuelMaster/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3566386792.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec3566386792.dir\Debug\testCXXCompiler.obj
+  cmTryCompileExec3566386792.vcxproj -> C:\Users\Vincent\Documents\GitHub\DuelMaster\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec3566386792.exe
+FinalizeBuildStatus:
+  Suppression du fichier "cmTryCompileExec3566386792.dir\Debug\cmTryCom.C645ED16.tlog\unsuccessfulbuild".
+  Mise … jour de l'horodatage "cmTryCompileExec3566386792.dir\Debug\cmTryCom.C645ED16.tlog\cmTryCompileExec3566386792.lastbuildstate".
+G‚n‚ration du projet "C:\Users\Vincent\Documents\GitHub\DuelMaster\build\CMakeFiles\CMakeTmp\cmTryCompileExec3566386792.vcxproj" termin‚e (cibles par d‚faut).
+
+La g‚n‚ration a r‚ussi.
+    0 Avertissement(s)
+    0 Erreur(s)
+
+Temps ‚coul‚ 00:00:00.87
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /users/link/vinclamb/Projects/DuelMaster/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/Vincent/Documents/GitHub/DuelMaster/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/gmake "cmTryCompileExec94115769/fast"
-/usr/bin/gmake -f CMakeFiles/cmTryCompileExec94115769.dir/build.make CMakeFiles/cmTryCompileExec94115769.dir/build
-gmake[1] : on entre dans le rÃ©pertoire Â« /users/v/vinclamb/Projects/DuelMaster/build/CMakeFiles/CMakeTmp Â»
-/usr/bin/cmake -E cmake_progress_report /users/link/vinclamb/Projects/DuelMaster/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec94115769.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTryCompileExec94115769.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTryCompileExec94115769
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec94115769.dir/link.txt --verbose=1
-/usr/bin/c++        -v CMakeFiles/cmTryCompileExec94115769.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec94115769 -rdynamic  
-Utilisation des specs internes.
-COLLECT_GCC=/usr/bin/c++
-COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/4.8.3/lto-wrapper
-Target: x86_64-redhat-linux
-ConfigurÃ© avec: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-languages=c,c++,objc,obj-c++,java,fortran,ada,go,lto --enable-plugin --enable-initfini-array --disable-libgcj --with-isl=/builddir/build/BUILD/gcc-4.8.3-20140911/obj-x86_64-redhat-linux/isl-install --with-cloog=/builddir/build/BUILD/gcc-4.8.3-20140911/obj-x86_64-redhat-linux/cloog-install --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux
-ModÃ¨le de thread: posix
-gcc version 4.8.3 20140911 (Red Hat 4.8.3-9) (GCC) 
-COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/4.8.3/:/usr/libexec/gcc/x86_64-redhat-linux/4.8.3/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/4.8.3/:/usr/lib/gcc/x86_64-redhat-linux/
-LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/4.8.3/:/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec94115769' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/libexec/gcc/x86_64-redhat-linux/4.8.3/collect2 --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec94115769 /usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.8.3/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.8.3 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../.. CMakeFiles/cmTryCompileExec94115769.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/4.8.3/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../lib64/crtn.o
-gmake[1] : on quitte le rÃ©pertoire Â« /users/v/vinclamb/Projects/DuelMaster/build/CMakeFiles/CMakeTmp Â»
-
-
-Parsed CXX implicit link information from above output:
-  link line regex: [^( *|.*[/\])(ld|ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /users/link/vinclamb/Projects/DuelMaster/build/CMakeFiles/CMakeTmp]
-  ignore line: []
-  ignore line: [Run Build Command:/usr/bin/gmake "cmTryCompileExec94115769/fast"]
-  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTryCompileExec94115769.dir/build.make CMakeFiles/cmTryCompileExec94115769.dir/build]
-  ignore line: [gmake[1] : on entre dans le rÃ©pertoire Â« /users/v/vinclamb/Projects/DuelMaster/build/CMakeFiles/CMakeTmp Â»]
-  ignore line: [/usr/bin/cmake -E cmake_progress_report /users/link/vinclamb/Projects/DuelMaster/build/CMakeFiles/CMakeTmp/CMakeFiles 1]
-  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec94115769.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTryCompileExec94115769.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTryCompileExec94115769]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec94115769.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++        -v CMakeFiles/cmTryCompileExec94115769.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec94115769 -rdynamic  ]
-  ignore line: [Utilisation des specs internes.]
-  ignore line: [COLLECT_GCC=/usr/bin/c++]
-  ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/4.8.3/lto-wrapper]
-  ignore line: [Target: x86_64-redhat-linux]
-  ignore line: [ConfigurÃ© avec: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-languages=c,c++,objc,obj-c++,java,fortran,ada,go,lto --enable-plugin --enable-initfini-array --disable-libgcj --with-isl=/builddir/build/BUILD/gcc-4.8.3-20140911/obj-x86_64-redhat-linux/isl-install --with-cloog=/builddir/build/BUILD/gcc-4.8.3-20140911/obj-x86_64-redhat-linux/cloog-install --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux]
-  ignore line: [ModÃ¨le de thread: posix]
-  ignore line: [gcc version 4.8.3 20140911 (Red Hat 4.8.3-9) (GCC) ]
-  ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/4.8.3/:/usr/libexec/gcc/x86_64-redhat-linux/4.8.3/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/4.8.3/:/usr/lib/gcc/x86_64-redhat-linux/]
-  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/4.8.3/:/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec94115769' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/4.8.3/collect2 --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec94115769 /usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.8.3/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.8.3 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../.. CMakeFiles/cmTryCompileExec94115769.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/4.8.3/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../lib64/crtn.o]
-    arg [/usr/libexec/gcc/x86_64-redhat-linux/4.8.3/collect2] ==> ignore
-    arg [--build-id] ==> ignore
-    arg [--no-add-needed] ==> ignore
-    arg [--eh-frame-hdr] ==> ignore
-    arg [--hash-style=gnu] ==> ignore
-    arg [-m] ==> ignore
-    arg [elf_x86_64] ==> ignore
-    arg [-export-dynamic] ==> ignore
-    arg [-dynamic-linker] ==> ignore
-    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
-    arg [-o] ==> ignore
-    arg [cmTryCompileExec94115769] ==> ignore
-    arg [/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../lib64/crt1.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../lib64/crti.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-redhat-linux/4.8.3/crtbegin.o] ==> ignore
-    arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.8.3] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.3]
-    arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../lib64] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../lib64]
-    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
-    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
-    arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../..]
-    arg [CMakeFiles/cmTryCompileExec94115769.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
-    arg [-lstdc++] ==> lib [stdc++]
-    arg [-lm] ==> lib [m]
-    arg [-lgcc_s] ==> lib [gcc_s]
-    arg [-lgcc] ==> lib [gcc]
-    arg [-lc] ==> lib [c]
-    arg [-lgcc_s] ==> lib [gcc_s]
-    arg [-lgcc] ==> lib [gcc]
-    arg [/usr/lib/gcc/x86_64-redhat-linux/4.8.3/crtend.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../lib64/crtn.o] ==> ignore
-  remove lib [gcc_s]
-  remove lib [gcc]
-  remove lib [gcc_s]
-  remove lib [gcc]
-  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.3] ==> [/usr/lib/gcc/x86_64-redhat-linux/4.8.3]
-  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../../../lib64] ==> [/usr/lib64]
-  collapse library dir [/lib/../lib64] ==> [/lib64]
-  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
-  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.3/../../..] ==> [/usr/lib]
-  implicit libs: [stdc++;m;c]
-  implicit dirs: [/usr/lib/gcc/x86_64-redhat-linux/4.8.3;/usr/lib64;/lib64;/usr/lib]
-  implicit fwks: []
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTryCompileExec1181420341.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine, version 14.0.23107.0
+Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 11/10/2015 19:48:08.
+Projet "C:\Users\Vincent\Documents\GitHub\DuelMaster\build\CMakeFiles\CMakeTmp\cmTryCompileExec1181420341.vcxproj" sur le noud 1 (cibles par d‚faut).
+PrepareForBuild:
+  Cr‚ation du r‚pertoire "cmTryCompileExec1181420341.dir\Debug\".
+  Cr‚ation du r‚pertoire "C:\Users\Vincent\Documents\GitHub\DuelMaster\build\CMakeFiles\CMakeTmp\Debug\".
+  Cr‚ation du r‚pertoire "cmTryCompileExec1181420341.dir\Debug\cmTryCom.83DD71CA.tlog\".
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec1181420341.dir\Debug\cmTryCom.83DD71CA.tlog\unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTryCompileExec1181420341.dir\Debug\\" /Fd"cmTryCompileExec1181420341.dir\Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Program Files (x86)\CMake\share\cmake-3.1\Modules\CMakeCXXCompilerABI.cpp"
+  Compilateur d'optimisation Microsoft (R) C/C++ versionÿ19.00.23026 pour x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTryCompileExec1181420341.dir\Debug\\" /Fd"cmTryCompileExec1181420341.dir\Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Program Files (x86)\CMake\share\cmake-3.1\Modules\CMakeCXXCompilerABI.cpp"
+  
+  CMakeCXXCompilerABI.cpp
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Vincent\Documents\GitHub\DuelMaster\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec1181420341.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:/Users/Vincent/Documents/GitHub/DuelMaster/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec1181420341.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Vincent/Documents/GitHub/DuelMaster/build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec1181420341.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec1181420341.dir\Debug\CMakeCXXCompilerABI.obj
+  cmTryCompileExec1181420341.vcxproj -> C:\Users\Vincent\Documents\GitHub\DuelMaster\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec1181420341.exe
+FinalizeBuildStatus:
+  Suppression du fichier "cmTryCompileExec1181420341.dir\Debug\cmTryCom.83DD71CA.tlog\unsuccessfulbuild".
+  Mise … jour de l'horodatage "cmTryCompileExec1181420341.dir\Debug\cmTryCom.83DD71CA.tlog\cmTryCompileExec1181420341.lastbuildstate".
+G‚n‚ration du projet "C:\Users\Vincent\Documents\GitHub\DuelMaster\build\CMakeFiles\CMakeTmp\cmTryCompileExec1181420341.vcxproj" termin‚e (cibles par d‚faut).
+
+La g‚n‚ration a r‚ussi.
+    0 Avertissement(s)
+    0 Erreur(s)
+
+Temps ‚coul‚ 00:00:01.11
 
 

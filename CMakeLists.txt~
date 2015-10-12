@@ -1,3 +1,0 @@
-cmake_minimum_required (VERSION 2.6)
-project (DuelMaster)
-add_executable(../bin/helloWorld src/main.cpp)

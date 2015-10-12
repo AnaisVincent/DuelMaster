@@ -1,0 +1,10 @@
+﻿La génération a démarré 11/10/2015 19:50:13.
+     1>Projet "C:\Users\Vincent\Documents\GitHub\DuelMaster\build\ZERO_CHECK.vcxproj" sur le nœud 2 (Build cible(s)).
+     1>CustomBuild:
+         Checking Build System
+         CMake does not need to re-run because C:/Users/Vincent/Documents/GitHub/DuelMaster/build/CMakeFiles/generate.stamp is up-to-date.
+     1>Génération du projet "C:\Users\Vincent\Documents\GitHub\DuelMaster\build\ZERO_CHECK.vcxproj" terminée (Build cible(s)).
+
+La génération a réussi.
+
+Temps écoulé 00:00:00.32
