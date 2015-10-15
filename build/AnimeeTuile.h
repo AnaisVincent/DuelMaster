@@ -19,7 +19,6 @@ public:
 	int const getTuileCount();
 	const Tuile* const getTuile(int i);
 	void setRate(float rate);
-	void setY(int x);
 	void addTuile(Tuile* tuile);
 	void setTuile(int i, Tuile* tuile);
 };

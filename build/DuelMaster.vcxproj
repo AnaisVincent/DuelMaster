@@ -319,8 +319,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Animation.cpp" />
     <ClCompile Include="AnimeeTuile.cpp" />
     <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\main.cpp" />
+    <ClCompile Include="Element.cpp" />
+    <ClCompile Include="StaticElement.cpp" />
     <ClCompile Include="StatiqueTuile.cpp" />
     <ClCompile Include="Tuile.cpp" />
   </ItemGroup>
@@ -330,7 +333,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Animation.h" />
     <ClInclude Include="AnimeeTuile.h" />
+    <ClInclude Include="Element.h" />
+    <ClInclude Include="StaticElement.h" />
     <ClInclude Include="StatiqueTuile.h" />
     <ClInclude Include="Tuile.h" />
   </ItemGroup>
