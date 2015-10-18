@@ -9,7 +9,32 @@ endif()
 
 set(EXECUTABLE_OUTPUT_PATH ../bin/${CMAKE_BUILD_TYPE})
 set(EXECUTABLE_NAME "DuelMaster")
-add_executable(${EXECUTABLE_NAME} src/main.cpp)
+add_executable(${EXECUTABLE_NAME} 
+
+	src/Element.h
+	src/StaticElement.h
+	src/Tuile.h
+	src/StaticTuile.h
+	src/AnimatedTuile.h
+	src/Animation.h
+	src/TuileSet.h
+	src/Surface.h
+	src/Layer.h
+	src/StateObserver.h
+
+	src/main.cpp
+	src/Element.cpp
+	src/StaticElement.cpp
+	src/Tuile.cpp
+	src/StaticTuile.cpp
+	src/AnimatedTuile.cpp
+	src/Animation.cpp
+	src/TuileSet.cpp
+	src/Surface.cpp
+	src/Layer.cpp
+	src/StateObserver.cpp
+	
+)
 
 # Detect and add SFML
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake_modules" ${CMAKE_MODULE_PATH})
