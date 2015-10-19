@@ -1,54 +1,81 @@
-<?xml version="1.0" encoding="Windows-1252"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\main.cpp">
+    <ClCompile Include="C:\Users\Anaïs\Documents\GitHub\DuelMaster\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Tuile.cpp">
+    <ClCompile Include="C:\Users\Anaïs\Documents\GitHub\DuelMaster\src\AnimatedTuile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="StatiqueTuile.cpp">
+    <ClCompile Include="C:\Users\Anaïs\Documents\GitHub\DuelMaster\src\StaticTuile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AnimeeTuile.cpp">
+    <ClCompile Include="C:\Users\Anaïs\Documents\GitHub\DuelMaster\src\Element.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Animation.cpp">
+    <ClCompile Include="C:\Users\Anaïs\Documents\GitHub\DuelMaster\src\Animation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Element.cpp">
+    <ClCompile Include="C:\Users\Anaïs\Documents\GitHub\DuelMaster\src\StaticElement.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="StaticElement.cpp">
+    <ClCompile Include="C:\Users\Anaïs\Documents\GitHub\DuelMaster\src\Tuile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StatePlan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugPlan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ElementListPlan.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\CMakeLists.txt" />
+    <ClInclude Include="C:\Users\Anaïs\Documents\GitHub\DuelMaster\src\AnimatedTuile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Anaïs\Documents\GitHub\DuelMaster\src\StaticTuile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Anaïs\Documents\GitHub\DuelMaster\src\Element.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Anaïs\Documents\GitHub\DuelMaster\src\Animation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Anaïs\Documents\GitHub\DuelMaster\src\StaticElement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Anaïs\Documents\GitHub\DuelMaster\src\Tuile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ElementListPlan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StatePlan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugPlan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Anaïs\Documents\GitHub\DuelMaster\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{50946E4C-6E14-4516-AF28-A298F4E0E0E5}</UniqueIdentifier>
+      <UniqueIdentifier>{CC66E0CF-2301-4B0A-90AD-AEFE3CDC2773}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Tuile.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="StatiqueTuile.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AnimeeTuile.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Animation.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Element.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="StaticElement.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{36E5B208-9AA4-4F9C-ABA3-51A017ED8389}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
