@@ -1,0 +1,1 @@
+/usr/bin/c++   -g    CMakeFiles/DuelMaster.dir/src/main.cpp.o  -o ../bin/Debug/DuelMaster -rdynamic /usr/lsa/lib/libsfml-graphics.so /usr/lsa/lib/libsfml-window.so /usr/lsa/lib/libsfml-system.so -Wl,-rpath,/usr/lsa/lib 

@@ -1,0 +1,111 @@
+commit linux centOS
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Committer: vincent lambrechts <vinclamb@D067-PC1.smbedu.ensea.fr>
+#
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   CMakeLists.txt
+#	deleted:    README.md
+#	deleted:    bin/Debug/SFMLTest.exe
+#	deleted:    bin/Debug/SFMLTest.ilk
+#	deleted:    bin/Debug/SFMLTest.pdb
+#	deleted:    bin/Debug/openal32.dll
+#	deleted:    bin/Debug/sfml-audio-2.dll
+#	deleted:    bin/Debug/sfml-audio-d-2.dll
+#	deleted:    bin/Debug/sfml-graphics-2.dll
+#	deleted:    bin/Debug/sfml-graphics-d-2.dll
+#	deleted:    bin/Debug/sfml-network-2.dll
+#	deleted:    bin/Debug/sfml-network-d-2.dll
+#	deleted:    bin/Debug/sfml-system-2.dll
+#	deleted:    bin/Debug/sfml-system-d-2.dll
+#	deleted:    bin/Debug/sfml-window-2.dll
+#	deleted:    bin/Debug/sfml-window-d-2.dll
+#	deleted:    build/.vs/SFML/v14/.suo
+#	deleted:    build/ALL_BUILD.vcxproj
+#	deleted:    build/ALL_BUILD.vcxproj.filters
+#	modified:   build/CMakeCache.txt
+#	deleted:    build/CMakeFiles/3.1.0/CMakeCCompiler.cmake
+#	deleted:    build/CMakeFiles/3.1.0/CMakeCXXCompiler.cmake
+#	deleted:    build/CMakeFiles/3.1.0/CMakeDetermineCompilerABI_C.bin
+#	deleted:    build/CMakeFiles/3.1.0/CMakeDetermineCompilerABI_CXX.bin
+#	deleted:    build/CMakeFiles/3.1.0/CMakeRCCompiler.cmake
+#	deleted:    build/CMakeFiles/3.1.0/CMakeSystem.cmake
+#	deleted:    build/CMakeFiles/3.1.0/CompilerIdC/CMakeCCompilerId.c
+#	deleted:    build/CMakeFiles/3.1.0/CompilerIdC/CompilerIdC.exe
+#	deleted:    build/CMakeFiles/3.1.0/CompilerIdC/CompilerIdC.vcxproj
+#	deleted:    build/CMakeFiles/3.1.0/CompilerIdC/Debug/CMakeCCompilerId.obj
+#	deleted:    build/CMakeFiles/3.1.0/CompilerIdC/Debug/CompilerIdC.tlog/CL.command.1.tlog
+#	deleted:    build/CMakeFiles/3.1.0/CompilerIdC/Debug/CompilerIdC.tlog/CL.read.1.tlog
+#	deleted:    build/CMakeFiles/3.1.0/CompilerIdC/Debug/CompilerIdC.tlog/CL.write.1.tlog
+#	deleted:    build/CMakeFiles/3.1.0/CompilerIdC/Debug/CompilerIdC.tlog/CompilerIdC.lastbuildstate
+#	deleted:    build/CMakeFiles/3.1.0/CompilerIdC/Debug/CompilerIdC.tlog/link.command.1.tlog
+#	deleted:    build/CMakeFiles/3.1.0/CompilerIdC/Debug/CompilerIdC.tlog/link.read.1.tlog
+#	deleted:    build/CMakeFiles/3.1.0/CompilerIdC/Debug/CompilerIdC.tlog/link.write.1.tlog
+#	deleted:    build/CMakeFiles/3.1.0/CompilerIdCXX/CMakeCXXCompilerId.cpp
+#	deleted:    build/CMakeFiles/3.1.0/CompilerIdCXX/CompilerIdCXX.exe
+#	deleted:    build/CMakeFiles/3.1.0/CompilerIdCXX/CompilerIdCXX.vcxproj
+#	deleted:    build/CMakeFiles/3.1.0/CompilerIdCXX/Debug/CMakeCXXCompilerId.obj
+#	deleted:    build/CMakeFiles/3.1.0/CompilerIdCXX/Debug/CompilerIdCXX.tlog/CL.command.1.tlog
+#	deleted:    build/CMakeFiles/3.1.0/CompilerIdCXX/Debug/CompilerIdCXX.tlog/CL.read.1.tlog
+#	deleted:    build/CMakeFiles/3.1.0/CompilerIdCXX/Debug/CompilerIdCXX.tlog/CL.write.1.tlog
+#	deleted:    build/CMakeFiles/3.1.0/CompilerIdCXX/Debug/CompilerIdCXX.tlog/CompilerIdCXX.lastbuildstate
+#	deleted:    build/CMakeFiles/3.1.0/CompilerIdCXX/Debug/CompilerIdCXX.tlog/link.command.1.tlog
+#	deleted:    build/CMakeFiles/3.1.0/CompilerIdCXX/Debug/CompilerIdCXX.tlog/link.read.1.tlog
+#	deleted:    build/CMakeFiles/3.1.0/CompilerIdCXX/Debug/CompilerIdCXX.tlog/link.write.1.tlog
+#	modified:   build/CMakeFiles/CMakeOutput.log
+#	modified:   build/CMakeFiles/TargetDirectories.txt
+#	deleted:    build/CMakeFiles/f3d8c46a95f65470ada7ad9fb76cad32/generate.stamp.rule
+#	deleted:    build/CMakeFiles/generate.stamp
+#	deleted:    build/CMakeFiles/generate.stamp.depend
+#	deleted:    build/CMakeFiles/generate.stamp.list
+#	deleted:    build/SFML.sdf
+#	deleted:    build/SFML.sln
+#	deleted:    build/SFMLTest.dir/Debug/SFMLTest.log
+#	deleted:    build/SFMLTest.dir/Debug/SFMLTest.tlog/CL.command.1.tlog
+#	deleted:    build/SFMLTest.dir/Debug/SFMLTest.tlog/CL.read.1.tlog
+#	deleted:    build/SFMLTest.dir/Debug/SFMLTest.tlog/CL.write.1.tlog
+#	deleted:    build/SFMLTest.dir/Debug/SFMLTest.tlog/SFMLTest.lastbuildstate
+#	deleted:    build/SFMLTest.dir/Debug/SFMLTest.tlog/custombuild.command.1.tlog
+#	deleted:    build/SFMLTest.dir/Debug/SFMLTest.tlog/custombuild.read.1.tlog
+#	deleted:    build/SFMLTest.dir/Debug/SFMLTest.tlog/custombuild.write.1.tlog
+#	deleted:    build/SFMLTest.dir/Debug/SFMLTest.tlog/link.command.1.tlog
+#	deleted:    build/SFMLTest.dir/Debug/SFMLTest.tlog/link.read.1.tlog
+#	deleted:    build/SFMLTest.dir/Debug/SFMLTest.tlog/link.write.1.tlog
+#	deleted:    build/SFMLTest.dir/Debug/main.obj
+#	deleted:    build/SFMLTest.dir/Debug/vc140.pdb
+#	deleted:    build/SFMLTest.vcxproj
+#	deleted:    build/SFMLTest.vcxproj.filters
+#	deleted:    build/Win32/Debug/ZERO_CHECK/ZERO_CHECK.log
+#	deleted:    build/Win32/Debug/ZERO_CHECK/ZERO_CHECK.tlog/ZERO_CHECK.lastbuildstate
+#	deleted:    build/Win32/Debug/ZERO_CHECK/ZERO_CHECK.tlog/custombuild.command.1.tlog
+#	deleted:    build/Win32/Debug/ZERO_CHECK/ZERO_CHECK.tlog/custombuild.read.1.tlog
+#	deleted:    build/Win32/Debug/ZERO_CHECK/ZERO_CHECK.tlog/custombuild.write.1.tlog
+#	deleted:    build/ZERO_CHECK.vcxproj
+#	deleted:    build/ZERO_CHECK.vcxproj.filters
+#	modified:   build/cmake_install.cmake
+#	deleted:    cmake_modules/FindSFML.cmake
+#	deleted:    configure.sh
+#	deleted:    rapport/Rapport.odt
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	CMakeLists.txt~
+#	Makefile~
+#	bin/
+#	build/CMakeFiles/2.8.11/
+#	build/CMakeFiles/CMakeDirectoryInformation.cmake
+#	build/CMakeFiles/DuelMaster.dir/
+#	build/CMakeFiles/Makefile.cmake
+#	build/CMakeFiles/Makefile2
+#	build/CMakeFiles/progress.marks
+#	build/Makefile
+#	configure
+#	make
+#	make~
+#	run
+#	run~
