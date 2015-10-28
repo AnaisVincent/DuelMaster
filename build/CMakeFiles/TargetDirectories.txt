@@ -1,3 +1,1 @@
-C:/Users/Vincent/Documents/GitHub/DuelMaster/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/Vincent/Documents/GitHub/DuelMaster/build/CMakeFiles/ZERO_CHECK.dir
-C:/Users/Vincent/Documents/GitHub/DuelMaster/build/CMakeFiles/SFMLTest.dir
+/users/v/vinclamb/Projects/DuelMaster/build/CMakeFiles/DuelMaster.dir
