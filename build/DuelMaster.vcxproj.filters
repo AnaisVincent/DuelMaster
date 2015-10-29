@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="Windows-1252"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\main.cpp">
@@ -28,10 +28,28 @@
     <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Surface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Layer.cpp">
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\StateObserver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\StateObserver.cpp">
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\DebugPlan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\ElementListPlan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\StatePlan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Plan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\TuileSetWorld.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SurfaceWorld.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -60,10 +78,28 @@
     <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Surface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Layer.h">
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\StateObserver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\StateObserver.h">
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\DebugPlan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\ElementListPlan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\StatePlan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Plan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\TuileSetWorld.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SurfaceWorld.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

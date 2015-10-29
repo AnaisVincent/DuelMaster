@@ -1,8 +1,6 @@
 #include "TuileSet.h"
 
-TuileSet::~TuileSet()
-{
-}
+TuileSet::~TuileSet() {}
 
 int const TuileSet::getCellWidth()
 {

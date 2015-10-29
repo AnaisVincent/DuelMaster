@@ -18,9 +18,15 @@ add_executable(${EXECUTABLE_NAME}
 	src/AnimatedTuile.h
 	src/Animation.h
 	src/TuileSet.h
+	src/TuileSetWorld.h
 	src/Surface.h
-	src/Layer.h
+	src/SurfaceWorld.h
+	src/Plan.h
 	src/StateObserver.h
+	src/DebugPlan.h
+	src/ElementListPlan.h
+	src/Scene.h
+	src/StatePlan.h
 
 	src/main.cpp
 	src/Element.cpp
@@ -31,8 +37,15 @@ add_executable(${EXECUTABLE_NAME}
 	src/Animation.cpp
 	src/TuileSet.cpp
 	src/Surface.cpp
-	src/Layer.cpp
+	src/TuileSetWorld.cpp
+	src/SurfaceWorld.cpp
+	src/Plan.cpp
 	src/StateObserver.cpp
+	src/DebugPlan.cpp
+	src/ElementListPlan.cpp
+	src/Scene.cpp
+	src/StatePlan.cpp
+
 	
 )
 

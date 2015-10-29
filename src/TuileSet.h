@@ -8,7 +8,6 @@ class TuileSet {
 
 private:
 
-
 public:
 	virtual ~TuileSet();
 	virtual int const getCellWidth();
