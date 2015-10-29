@@ -53,7 +53,7 @@ add_executable(${EXECUTABLE_NAME}
 set(SFML_ROOT "/usr/lsa")
 set(CMAKE_MODULE_PATH "${SFML_ROOT}/share/SFML/cmake/Modules"
 ${CMAKE_MODULE_PATH})
-find_package(SFML 1 COMPONENTS graphics window system)
+find_package(SFML 2 COMPONENTS graphics window system)
 if(SFML_FOUND)
    include_directories(${SFML_INCLUDE_DIR})
    target_link_libraries(DuelMaster ${SFML_LIBRARIES})
