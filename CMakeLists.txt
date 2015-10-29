@@ -1,6 +1,6 @@
 cmake_minimum_required (VERSION 2.6)
 
-project (SFML)
+project (DuelMaster)
 
 # Enable debug symbols by default
 if(CMAKE_BUILD_TYPE STREQUAL "")
@@ -48,8 +48,6 @@ add_executable(${EXECUTABLE_NAME}
 
 	
 )
-
-
 
 # SFML
 set(SFML_ROOT "/usr/lsa")
