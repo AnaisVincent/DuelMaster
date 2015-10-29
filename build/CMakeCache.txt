@@ -94,7 +94,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=/INCREMENTAL:NO
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=/debug /INCREMENTAL
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=DuelMaster
+CMAKE_PROJECT_NAME:STATIC=SFML
 
 //RC compiler
 CMAKE_RC_COMPILER:FILEPATH=rc
@@ -166,6 +166,12 @@ SFML_AUDIO_LIBRARY_STATIC_DEBUG:FILEPATH=C:/SFML-2.3.2/lib/sfml-audio-s-d.lib
 //Path to a library.
 SFML_AUDIO_LIBRARY_STATIC_RELEASE:FILEPATH=C:/SFML-2.3.2/lib/sfml-audio-s.lib
 
+//Value Computed by CMake
+SFML_BINARY_DIR:STATIC=C:/Users/Vincent/Documents/GitHub/DuelMaster/build
+
+//The directory containing a CMake configuration file for SFML.
+SFML_DIR:PATH=SFML_DIR-NOTFOUND
+
 //Path to a library.
 SFML_GRAPHICS_LIBRARY_DYNAMIC_DEBUG:FILEPATH=C:/SFML-2.3.2/lib/sfml-graphics-d.lib
 
@@ -195,6 +201,9 @@ SFML_NETWORK_LIBRARY_STATIC_RELEASE:FILEPATH=C:/SFML-2.3.2/lib/sfml-network-s.li
 
 //No help, variable specified on the command line.
 SFML_ROOT:UNINITIALIZED=C:/SFML-2.3.2
+
+//Value Computed by CMake
+SFML_SOURCE_DIR:STATIC=C:/Users/Vincent/Documents/GitHub/DuelMaster
 
 //Path to a library.
 SFML_SYSTEM_LIBRARY_DYNAMIC_DEBUG:FILEPATH=C:/SFML-2.3.2/lib/sfml-system-d.lib

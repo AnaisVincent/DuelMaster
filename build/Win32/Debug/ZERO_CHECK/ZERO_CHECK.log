@@ -1,5 +1,33 @@
-﻿La génération a démarré 28/10/2015 16:44:00.
+﻿La génération a démarré 29/10/2015 18:49:21.
+     1>Projet "C:\Users\Vincent\Documents\GitHub\DuelMaster\build\ZERO_CHECK.vcxproj" sur le nœud 2 (Build cible(s)).
+     1>CustomBuild:
+         Checking Build System
+         CMake is re-running because C:/Users/Vincent/Documents/GitHub/DuelMaster/build/CMakeFiles/generate.stamp is out-of-date.
+           the file 'C:/Users/Vincent/Documents/GitHub/DuelMaster/cmake_modules/FindSFML.cmake'
+           is newer than 'C:/Users/Vincent/Documents/GitHub/DuelMaster/build/CMakeFiles/generate.stamp.depend'
+           result='-1'
+         CMake Warning at CMakeLists.txt:19 (find_package):
+           By not providing "FindSFML.cmake" in CMAKE_MODULE_PATH this project has
+           asked CMake to find a package configuration file provided by "SFML", but
+           CMake did not find one.
+         
+           Could not find a package configuration file provided by "SFML" (requested
+           version 1) with any of the following names:
+         
+             SFMLConfig.cmake
+             sfml-config.cmake
+         
+           Add the installation prefix of "SFML" to CMAKE_PREFIX_PATH or set
+           "SFML_DIR" to a directory containing one of the above files.  If "SFML"
+           provides a separate development package or SDK, be sure it has been
+           installed.
+         
+         
+         -- Configuring done
+         -- Generating done
+         -- Build files have been written to: C:/Users/Vincent/Documents/GitHub/DuelMaster/build
+     1>Génération du projet "C:\Users\Vincent\Documents\GitHub\DuelMaster\build\ZERO_CHECK.vcxproj" terminée (Build cible(s)).
 
 La génération a réussi.
 
-Temps écoulé 00:00:00.22
+Temps écoulé 00:00:02.45
