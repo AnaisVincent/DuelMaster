@@ -1,19 +1,10 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\main.cpp">
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Action.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Element.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\StaticElement.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Tuile.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\StaticTuile.cpp">
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\ActionListe.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\AnimatedTuile.cpp">
@@ -22,48 +13,154 @@
     <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Animation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\TuileSet.cpp">
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Carte.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Surface.cpp">
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Commande.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\TuileSetWorld.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\SurfaceWorld.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Plan.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\StateObserver.cpp">
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\CommandeSet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\DebugPlan.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Dialogue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\DirectionCommande.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Element.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\ElementDuel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\ElementListPlan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Espace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Instruction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\InstructionCombat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\InstructionMvt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\InstructionTexte.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Layer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\LoadCommande.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\MobileElement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\ModeCommande.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Moteur.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\MoveCharacter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Obstacle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Personnage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Plan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Pouvoir.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Record.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Ruler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Scene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Soldat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\StateObserver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\StatePlan.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\StaticElement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\StaticTuile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Surface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\SurfaceWorld.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Tuile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\TuileSet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\TuileSetWorld.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Villageois.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Arme.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Etat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\EtatDuel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ElementListe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ElementGrille.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\AElementAlloc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ElementAlloc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ElementFabrique.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\TuileSetChar.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Element.h">
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Action.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\StaticElement.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Tuile.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\StaticTuile.h">
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\ActionListe.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\AnimatedTuile.h">
@@ -72,10 +169,100 @@
     <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Animation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\TuileSet.h">
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Carte.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\TuileSetWorld.h">
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Commande.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\CommandeSet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\DebugPlan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Dialogue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\DirectionCommande.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Element.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\ElementDuel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\ElementListPlan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Espace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Instruction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\InstructionCombat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\InstructionMvt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\InstructionTexte.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Layer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\LoadCommande.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\MobileElement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\ModeCommande.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Moteur.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\MoveCharacter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Obstacle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Personnage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Plan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Pouvoir.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Record.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Ruler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Soldat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\StateObserver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\StatePlan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\StaticElement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\StaticTuile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Surface.h">
@@ -84,22 +271,43 @@
     <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\SurfaceWorld.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Plan.h">
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Tuile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\StateObserver.h">
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\TuileSet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\DebugPlan.h">
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\TuileSetWorld.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\ElementListPlan.h">
+    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Villageois.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\Scene.h">
+    <ClInclude Include="..\src\Arme.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Vincent\Documents\GitHub\DuelMaster\src\StatePlan.h">
+    <ClInclude Include="..\src\EtatDuel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ElementListe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Etat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ElementGrille.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ElementFabrique.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\AElementAlloc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ElementAlloc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\TuileSetChar.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

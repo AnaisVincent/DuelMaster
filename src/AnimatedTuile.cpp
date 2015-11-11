@@ -19,6 +19,10 @@ float const AnimatedTuile::getRate()
 
 int const AnimatedTuile::getTuileCount()
 {
+	int i = 0;
+	while (this->tuiles + i != nullptr) {
+		
+	}
 	return 0;
 }
 

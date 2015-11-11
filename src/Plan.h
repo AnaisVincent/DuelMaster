@@ -6,6 +6,7 @@
 #include "Animation.h"
 #include "TuileSet.h"
 #include "TuileSetWorld.h"
+#include "TuileSetChar.h"
 #include <SFML\Graphics.hpp>
 #include <map>
 

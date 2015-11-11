@@ -4,23 +4,21 @@ StaticElement::StaticElement(){}
 
 StaticElement::~StaticElement(){}
 
-int const StaticElement::getX()
+/*int const StaticElement::getTypeId()
 {
-	return x;
+	return 0;
+}*/
+
+bool const StaticElement::isStatic()
+{
+	return true;
 }
 
-int const StaticElement::getY()
+/*bool const StaticElement::isSpace()
 {
-	return y;
+	return 0;
 }
 
-
-void StaticElement::setX(int x)
+void StaticElement::clone()
 {
-	this->x = x;
-}
-
-void StaticElement::setY(int y)
-{
-	this->y = y;
-}
+}*/

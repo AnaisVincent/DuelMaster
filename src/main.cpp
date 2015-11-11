@@ -41,7 +41,7 @@ int main()
 	const int level[] =
 	{
 		25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 70, 20, 21, 21, 21, 21, 21, 21, 21, 21, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01,
-		25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 70, 20, 21, 21, 21, 40,  21, 21, 01, 01, 01, 01, 01, 01, 01, 21, 21, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01,
+		25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 70, 20, 21, 21, 21, 40, 21, 21, 01, 01, 01, 01, 01, 01, 01, 21, 21, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01,
 		25, 25, 26, 21, 21, 21, 28, 25, 25, 25, 25, 26, 21, 21, 21, 28, 25, 25, 70, 20, 21, 21, 40, 40, 21, 21, 21, 01, 01, 01, 01, 21, 21, 21, 21, 21, 21, 01, 01, 01, 40, 40, 40, 40, 01, 01, 01, 01,
 		25, 26, 21, 21, 21, 21, 21, 21, 28, 25, 26, 21, 21, 21, 21, 21, 21, 28, 25, 26, 21, 21, 21, 21, 21, 21, 21, 21, 01, 01, 21, 21, 21, 21, 21, 21, 21, 21, 21, 40, 40, 21, 40, 40, 40, 01, 01, 01,
 		25, 26, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 01, 21, 21, 21, 28, 70, 20, 21, 21, 21, 21, 21, 21, 21, 21, 01, 01, 21, 21, 01, 01, 01, 21, 21, 21, 21, 21, 21, 21, 21, 40, 40, 40, 01,
@@ -68,17 +68,48 @@ int main()
 	};
 
 	// on crée le plan avec le niveau précédemment défini en int
-	Plan plan;
+	Plan plan1;
 	StaticTuile tuile = StaticTuile();
 	TuileSetWorld tuileset;
 	SurfaceWorld surface;
-	plan.setSurface(&surface);
-	plan.setTuileSet(&tuileset);
+	plan1.setSurface(&surface);
+	plan1.setTuileSet(&tuileset);
 	surface.loadTexture(tuileset.getImageFile());
 	surface.setSpriteCount(w*h);
 	surface.setArrayWidth(w);
 	surface.setSprite(tuile,level);
 	
+	// on crée le plan avec les personnages
+	Plan plan2;
+	StaticTuile perso = StaticTuile();
+	TuileSetChar tuileset2;
+	SurfaceWorld surface2;
+	plan2.setSurface(&surface2);
+	plan2.setTuileSet(&tuileset2);
+	surface2.loadTexture(tuileset2.getImageFile());
+	surface2.setSpriteCount(1);
+	surface2.setArrayWidth(1);
+	int p[] = { 1 };
+	surface2.setSprite(perso, p);
+
+
+	//gestion du clavier
+	/*if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+	{
+		surface2.move(0,-1);
+	}
+	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+	{
+		surface2.move(0, 1);
+	}
+	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+	{
+		surface2.move(-1, 0);
+	}
+	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+	{
+		surface2.move(1, 0);
+	}*/
 
 	// on fait tourner la boucle principale
 	while (window.isOpen())
@@ -94,6 +125,7 @@ int main()
 		// on dessine le niveau
 		window.clear();
 		window.draw(surface);
+		window.draw(surface2);
 		window.display();
 	}
 

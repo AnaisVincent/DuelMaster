@@ -14,11 +14,10 @@ public:
 	StaticElement();
 	~StaticElement();
 
-	int const getX() override;
-	int const getY() override;
-	void setX(int x) override;
-	void setY(int x) override;
-
+	//int const getTypeId() override;
+	bool const isStatic() override;
+	virtual bool const isSpace() = 0;
+	//void clone() override;
 
 };
 
