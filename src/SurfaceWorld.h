@@ -26,7 +26,7 @@ public:
 	void setSpriteCount(int n);
 	void setSpriteLocation(int i, int x, int y);
 	void setSpriteTexture(int i, const StaticTuile tex);
-	void SurfaceWorld::draw(sf::RenderTarget& target, sf::RenderStates states) const;
+	void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 };
 
 #endif

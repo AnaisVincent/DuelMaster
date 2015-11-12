@@ -2,7 +2,3 @@
 
 
 Tuile::~Tuile(){}
-
-bool const Tuile::isAnimated(){
-	return nullptr;
-}

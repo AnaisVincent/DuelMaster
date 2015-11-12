@@ -14,14 +14,14 @@ protected:
 	int y;
 	const Tuile* tuile;
 	float speed;
-	__int64 start;
+	int start;
 
 public:
 	Animation(int x, int y, const Tuile* a);
 	
 	void setSpeed(float speed);
-	void sync(__int64 time);
-	void update(__int64 time, Surface* surface);
+	void sync(int time);
+	void update(int time, Surface* surface);
 
 
 };

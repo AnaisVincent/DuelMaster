@@ -33,10 +33,10 @@ void Moteur::takeCommands(CommandeSet * commands)
 {
 }
 
-std::mutex & const Moteur::getUpdateMutex()
+/*std::mutex & const Moteur::getUpdateMutex()
 {
 	return update_mutex;
-}
+}*/
 
 bool Moteur::update(int64_t time, int64_t * next_time)
 {

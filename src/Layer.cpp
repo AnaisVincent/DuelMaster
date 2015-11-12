@@ -29,10 +29,10 @@ void Layer::printText(int x, int y, const char * msg, int spriteIdx, int w, int 
 {
 }
 
-void Layer::sync(__int64 time)
+void Layer::sync(int64_t time)
 {
 }
 
-void Layer::update(__int64 time)
+void Layer::update(int64_t time)
 {
 }

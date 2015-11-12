@@ -1,5 +1,5 @@
 # Les ligne commençant par '#' sont des commentaires.
 # Ignorer tous les fichiers de build et bin
-/bin
-/build
+bin/
+build/
 

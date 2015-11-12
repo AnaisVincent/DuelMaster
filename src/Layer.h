@@ -26,8 +26,8 @@ public:
 	void setSurface(const Surface* surface);
 	void setAnimation(int i, Animation* a);
 	void printText(int x, int y, const char* msg,int spriteIdx, int w, int h);
-	void sync(__int64 time);
-	void update(__int64 time);
+	void sync(int64_t time);
+	void update(int64_t time);
 
 };
 

@@ -19,8 +19,8 @@ public:
 	//void registerObservers(const State::State* s);
 	//void unregisterObservers(const State::State* s);
 	//void etatChanged(const state StateEvent e);
-	void sync(__int64 time);
-	void update(__int64 time);
+	void sync(int time);
+	void update(int time);
 
 protected:
 	int width;

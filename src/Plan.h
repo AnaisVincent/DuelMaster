@@ -7,7 +7,7 @@
 #include "TuileSet.h"
 #include "TuileSetWorld.h"
 #include "TuileSetChar.h"
-#include <SFML\Graphics.hpp>
+#include <SFML/Graphics.hpp>
 #include <map>
 
 
@@ -30,8 +30,8 @@ public:
 	void setSurface(Surface* surface);
 	void setAnimation(int i, Animation* a);
 	void printText(int x, int y, const char* msg,int spriteIdx, int w, int h);
-	void sync(__int64 time);
-	void update(__int64 time);
+	void sync(int time);
+	void update(int time);
 
 };
 

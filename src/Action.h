@@ -9,7 +9,7 @@ class Action
 public:
 	~Action();
 
-	//void apply(etat::Etat& s,bool notify);
+	virtual void apply() = 0;
 	//void undo(etat::Etat& s, bool notify);
 
 };
