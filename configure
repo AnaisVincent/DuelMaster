@@ -1,5 +1,8 @@
 #!/bin/bash
+rm -r bin
+mkdir bin
+rm -r build
 mkdir build
 cd build
-cmake -DSFML_ROOT="/usr/lsa"
+cmake .. -DSFML_ROOT="/usr/lsa"
 

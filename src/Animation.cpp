@@ -12,10 +12,10 @@ void Animation::setSpeed(float speed)
 	this->speed = speed;
 }
 
-void Animation::sync(__int64 time)
+void Animation::sync(int time)
 {
 }
 
-void Animation::update(__int64 time, Surface * surface)
+void Animation::update(int time, Surface * surface)
 {
 }

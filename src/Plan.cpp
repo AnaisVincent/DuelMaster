@@ -28,11 +28,11 @@ void Plan::printText(int x, int y, const char * msg, int spriteIdx, int w, int h
 	
 }
 
-void Plan::sync(__int64 time)
+void Plan::sync(int time)
 {
 }
 
-void Plan::update(__int64 time)
+void Plan::update(int time)
 {
 }
 

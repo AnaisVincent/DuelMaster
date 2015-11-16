@@ -17,7 +17,7 @@ const char * const TuileSet::getImageFile()
 	return 0;
 }
 
-const Tuile * const TuileSet::getElementTuile(const Element * e)
+/*const Tuile * const TuileSet::getElementTuile(const Element * e)
 {
 	return nullptr;
 }
@@ -26,4 +26,4 @@ const Tuile * const TuileSet::getElementTuile(const Element * e)
 const Tuile * const TuileSet::getCharTuile()
 {
 	return nullptr;
-}
+}*/

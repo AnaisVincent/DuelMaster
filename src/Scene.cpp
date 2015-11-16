@@ -27,11 +27,11 @@ void Scene::setSurface(int idx, Surface * surface)
 {
 }
 
-void Scene::sync(__int64 time)
+void Scene::sync(int time)
 {
 }
 
-void Scene::update(__int64 time)
+void Scene::update(int time)
 {
 }
 

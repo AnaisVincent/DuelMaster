@@ -5,7 +5,7 @@
 class Arme : public ElementDuel
 {
 private:
-	int durabilitité;
+	int durabilitite;
 
 
 public:

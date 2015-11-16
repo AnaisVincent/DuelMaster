@@ -4,12 +4,30 @@
 #include <cstdlib>
 #include <fstream>
 #include "Plan.h"
+#include "Personnage.h"
+#include "ActionListe.h"
+#include "MoveCharacter.h"
+
+int w = 48;
+int h = 24;
+int dimTuile = 32;
+MoveCharacter action;
+ActionListe actions=ActionListe();
+//création personnage
+Personnage perso;
+sf::Texture personnage;
+sf::Sprite sprite_personnage;
+
+bool carre = false;
+
+
+
+void moteurJeu();
+
 
 int main()
 {
-	int w = 48;
-	int h = 24;
-	int dimTuile = 32;
+
 	// on crée la fenêtre
 	sf::RenderWindow window(sf::VideoMode(w * dimTuile, h * dimTuile), "Tilemap");
 
@@ -80,7 +98,7 @@ int main()
 	surface.setSprite(tuile,level);
 	
 	// on crée le plan avec les personnages
-	Plan plan2;
+	/*Plan plan2;
 	StaticTuile perso = StaticTuile();
 	TuileSetChar tuileset2;
 	SurfaceWorld surface2;
@@ -90,30 +108,24 @@ int main()
 	surface2.setSpriteCount(1);
 	surface2.setArrayWidth(1);
 	int p[] = { 1 };
-	surface2.setSprite(perso, p);
+	surface2.setSprite(perso, p);*/
 
 
-	//gestion du clavier
-	/*if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+
+	if(!personnage.loadFromFile("../../res/ExplorationPart/Sprites/PrPrincipal.png"))
 	{
-		surface2.move(0,-1);
+		perror("erreur lors du chargement de l'image");
 	}
-	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
-	{
-		surface2.move(0, 1);
-	}
-	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
-	{
-		surface2.move(-1, 0);
-	}
-	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
-	{
-		surface2.move(1, 0);
-	}*/
+	personnage.setSmooth(true);
+	sprite_personnage.setTexture(personnage);
+	sprite_personnage.setTextureRect(sf::IntRect(0, 32, 32, 32)); 
+	
 
 	// on fait tourner la boucle principale
 	while (window.isOpen())
 	{
+		int x = perso.getX();
+		int y = perso.getY();
 		// on gère les évènements
 		sf::Event event;
 		while (window.pollEvent(event))
@@ -121,13 +133,78 @@ int main()
 			if (event.type == sf::Event::Closed)
 				window.close();
 		}
-
+		sprite_personnage.setPosition(x,y);
 		// on dessine le niveau
 		window.clear();
 		window.draw(surface);
-		window.draw(surface2);
+		window.draw(sprite_personnage);
+		//window.draw(surface2);
 		window.display();
+		
+		moteurJeu();
 	}
 
 	return 0;
+}
+
+
+void moteurJeu(){
+
+	
+	bool ordre=true;
+	if(ordre){
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){
+			action=MoveCharacter(1,0,&perso);
+			
+			actions.add(&action);
+			// check if action is true
+			if(perso.getX()<(w-1)*dimTuile) // le personnage ne peut pas aller hors de l'ecran; par défaut, permission=false
+				actions.setPermission(actions.size(),true);
+			else
+				actions.setPermission(actions.size(),false);
+			
+
+		}else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
+			action=MoveCharacter(-1,0,&perso);
+	
+			actions.add(&action);
+			// check if action is true
+			if(perso.getX()>0)
+				actions.setPermission(actions.size(),true);
+			else
+				actions.setPermission(actions.size(),false);			
+
+
+		}else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)){
+			action=MoveCharacter(0,-1,&perso);
+	
+			actions.add(&action);
+			// check if action is true
+			if(perso.getY()>0)
+				actions.setPermission(actions.size(),true);
+			else
+				actions.setPermission(actions.size(),false);
+			
+
+		}else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){
+			action=MoveCharacter(0,1,&perso);	
+		
+			actions.add(&action);
+			// check if action is true
+			if(perso.getY()<(h-1)*dimTuile)
+				actions.setPermission(actions.size(),true);			
+			else
+				actions.setPermission(actions.size(),false);
+
+		}
+
+
+		
+		actions.apply();
+		
+		
+		
+
+	}
+	
 }

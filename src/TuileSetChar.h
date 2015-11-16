@@ -1,7 +1,7 @@
 #pragma once
 #ifndef __TuileSetChar_h__
 #define __TuileSetChar_h__
-#include <SFML\Graphics.hpp>
+#include <SFML/Graphics.hpp>
 #include <iostream>
 #include "TuileSet.h"
 #include "Tuile.h"
@@ -13,7 +13,7 @@ class TuileSetChar : public TuileSet {
 
 private:
 	Tuile* tuiles;
-	const char* const image_file = "../res/ExplorationPart/Sprites/PrPrincipal.png";
+	const char* const image_file = "../../res/ExplorationPart/Sprites/PrPrincipal.png";
 public:
 
 	TuileSetChar();

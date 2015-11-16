@@ -9,7 +9,7 @@ private:
 
 public:
 	virtual ~Tuile();
-	virtual bool const isAnimated();
+	virtual bool const isAnimated() = 0;
 
 };
 

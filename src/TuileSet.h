@@ -13,8 +13,8 @@ public:
 	virtual int const getCellWidth();
 	virtual int const getCellHeight();
 	virtual const char* const getImageFile();
-	virtual const Tuile* const getElementTuile(const Element* e);
-	virtual const Tuile* const getCharTuile();
+	//virtual const Tuile* const getElementTuile(const Element* e);
+	//virtual const Tuile* const getCharTuile();
 };
 
 #endif
