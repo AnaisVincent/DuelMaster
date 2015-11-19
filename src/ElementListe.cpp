@@ -1,6 +1,12 @@
 #include "ElementListe.h"
+#include "Etat.h"
 
-ElementListe::ElementListe(Etat & s)
+ElementListe::ElementListe()
+{
+	
+}
+
+ElementListe::ElementListe(Etat * s)
 {
 	this->s = s;
 }
@@ -9,41 +15,53 @@ ElementListe::~ElementListe()
 {
 }
 
-void ElementListe::copy(const ElementListe & liste)
+const ElementListe ElementListe::clone()
 {
+	return ElementListe();
 }
 
-bool const ElementListe::equals(const ElementListe & other)
+void ElementListe::copy(const ElementListe * liste)
 {
-	return nullptr;
+	this->elements = liste->elements;
+	this->fabrique = liste->fabrique;
+	this->s = liste->s;
+}
+
+bool const ElementListe::equals(const ElementListe * other)
+{
+	if (other->elements == elements && other->fabrique == fabrique && other->s == s)
+		return true;
+	return false;
 }
 
 const Etat * const ElementListe::getEtat()
 {
-	return nullptr;
+	return s;
 }
 
 int const ElementListe::size()
 {
-	return 0;
+	return elements.size();
 }
 
 Element * const ElementListe::get(int i)
 {
-	return nullptr;
+	return elements[i];
 }
 
 void ElementListe::clear()
 {
-	
+	elements.clear();
 }
 
 void ElementListe::setElementFabrique(ElementFabrique * fabrique)
 {
+	this->fabrique = fabrique;
 }
 
 void ElementListe::set(int i, Element * e)
 {
+	elements[i] = e;
 }
 
 void const ElementListe::notifyObservers(int i)

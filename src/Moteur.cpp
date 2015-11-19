@@ -6,6 +6,7 @@ void Moteur::swapCommands()
 
 void Moteur::setMode(MoteurMode mode)
 {
+	this->enginemode = mode;
 }
 
 void Moteur::loadLevel(const char * file_name)
@@ -27,10 +28,12 @@ Moteur::MoteurMode const Moteur::getMode()
 
 void Moteur::addCommands(Commande * cmd)
 {
+	waitingCommands->set(cmd);
 }
 
 void Moteur::takeCommands(CommandeSet * commands)
 {
+	waitingCommands = commands;
 }
 
 /*std::mutex & const Moteur::getUpdateMutex()
@@ -40,5 +43,6 @@ void Moteur::takeCommands(CommandeSet * commands)
 
 bool Moteur::update(int64_t time, int64_t * next_time)
 {
+	lastUpdateTime = time;
 	return false;
 }

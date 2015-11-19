@@ -56,8 +56,8 @@ void ActionListe::setPermission(int i, bool boolean)
 void ActionListe::remove(int i)
 {
 	if(nombre_actions>0){
-		int i=i;
-		for(i=i;i<nombre_actions-1;i++){
+		int j=i;
+		for(j=i;i<nombre_actions-1;j++){
 			this->actions[nombre_actions]=this->actions[nombre_actions+1];
 			this->permission[nombre_actions]=this->permission[nombre_actions+1];
 		}

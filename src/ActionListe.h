@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include "Action.h"
+#include "MoveCharacter.h"
 #include <iostream>
 
 #ifndef __ActionListe_h__

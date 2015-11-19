@@ -1,27 +1,27 @@
 #pragma once
 #ifndef __ElementListe_h__
 #define __ElementListe_h__
-#include "Etat.h"
 #include "Element.h"
 #include "ElementFabrique.h"
 #include <vector>
 
-
+class Etat;
 
 class ElementListe
 {
 protected:
-	Etat s;
+	Etat *s;
 	ElementFabrique* fabrique;
-	std::vector<Element> elements;
+	std::vector<Element*> elements;
 
 public:
-	ElementListe(Etat &s);
+	ElementListe();
+	ElementListe(Etat *s);
 	~ElementListe();
 
 	const ElementListe clone();
-	void copy(const ElementListe &liste);
-	bool const equals(const ElementListe &other);
+	void copy(const ElementListe *liste);
+	bool const equals(const ElementListe *other);
 	const Etat* const getEtat();
 	int const size();
 	Element* const get(int i);

@@ -1,5 +1,6 @@
 #pragma once
 #include "Commande.h"
+#include "Element.h"
 #ifndef __DirectionCommande_h__
 #define __DirectionCommande_h__
 
@@ -8,15 +9,15 @@ class DirectionCommande : public Commande
 
 protected:
 	int character;
-	//etat::Direction direction;
+	Element::Direction direction;
 
 public:
-	//DirectionCommande(int c, etat::Direction d);
+	DirectionCommande(int c, Element::Direction d);
 
 	virtual int const getCategory() override;
 	virtual CommandeTypeId const getTypeId() override;
 	int const getCharacter();
-	//etat::Direction const getDirection();
+	Element::Direction const getDirection();
 
 };
 

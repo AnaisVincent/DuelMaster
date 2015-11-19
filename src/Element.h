@@ -5,7 +5,7 @@
 class Element
 {
 
-public: enum Direction { NORD, SUD, EST, OUEST };
+public: enum Direction { NORD, SUD, EST, OUEST, NONE};
 
 protected:
 	enum enumObstacle { VILLAGEOIS, PERSONNAGE, OBSTACLE, ESPACE };

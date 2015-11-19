@@ -11,8 +11,8 @@ public:
 	enum CommandeCategorie { MAIN_CATEGORY, MOVE_CATEGORY, MODE_CATEGORY };
 	enum CommandeTypeId { LOAD, MOVE, DIRECTION };
 
-	virtual int const getCategory();
-	virtual CommandeTypeId const getTypeId();
+	virtual int const getCategory() = 0;
+	virtual CommandeTypeId const getTypeId() = 0;
 
 protected:
 	CommandeTypeId type_id;
