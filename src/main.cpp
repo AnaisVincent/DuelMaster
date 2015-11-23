@@ -8,6 +8,7 @@
 #include "Personnage.h"
 #include "ActionListe.h"
 #include "MoveCharacter.h"
+#include "Ruler.h"
 
 
 int w = 48;
@@ -15,19 +16,22 @@ int h = 24;
 int dimTuile = 32;
 MoveCharacter action;
 ActionListe actions=ActionListe();
+Ruler ruler(w,h);
 //création personnage
 Personnage perso;
 sf::Texture personnage;
 sf::Sprite sprite_personnage;
+
+Personnage rival;
+sf::Texture tex_rival;
+sf::Sprite sprite_rival;
 
 
 bool carre = false;
 
 
 
-void moteurJeu(sf::Event event);
-int numdir=5;
-bool collision(int x, int y, int numdir, const int* level);
+void moteurJeu(sf::Event event, int dx, int dy, const int* level);
 
 
 int main()
@@ -127,12 +131,24 @@ int main()
 	perso.setX(w / 2 * dimTuile);
 	perso.setY(h / 2 * dimTuile);
 
+	if (!tex_rival.loadFromFile("../res/ExplorationPart/Sprites/PrRival.png"))
+	{
+		perror("erreur lors du chargement de l'image");
+	}
+	tex_rival.setSmooth(true);
+	sprite_rival.setTexture(tex_rival);
+	sprite_rival.setTextureRect(sf::IntRect(0, 32, 32, 32));
+	rival.setX((w / 2 + 1 )* dimTuile);
+	rival.setY((h / 2 + 1) * dimTuile);
+
 
 	// on fait tourner la boucle principale
 	while (window.isOpen())
 	{
 		int x = perso.getX();
 		int y = perso.getY();
+		int rx = rival.getX();
+		int ry = rival.getY();
 		// on gère les évènements
 		sf::Event event;
 		while (window.pollEvent(event))
@@ -141,17 +157,17 @@ int main()
 			window.close();
 		}
 			
-			moteurJeu(event);
-			//std::cout << "numdir vaut" << numdir << std::endl;
-			collision(x/32, y/32, numdir, level);
+			moteurJeu(event, x/32, y/32, level);
 		}
 		sprite_personnage.setPosition(x, y);
+		sprite_rival.setPosition(rx,ry);
 		
 
 		// on dessine le niveau
 		window.clear();
 		window.draw(surface);
 		window.draw(sprite_personnage);
+		window.draw(sprite_rival);
 		//window.draw(surface2);
 		window.display();
 
@@ -160,96 +176,56 @@ int main()
 	return 0;
 }
 
-bool collision(int dx, int dy, int numdir, const int* level) {
-	
-	int x = dy*w + dx;
 
-	if (numdir == 2 && (x - w) >= 0) { //vers le haut
-		if (level[x - w] < 21 || (23 < level[x - w] && level[x - w]< 29) || level[x - w] > 51) {
-			std::cout << "Choc1!" << std::endl;
-			return true; //tu ne peux pas passer
-		}
-	}
 
-	else if (numdir == 3 && (x + w) <= w*h) { //vers le bas
-		if (level[x + w] < 21 || (23 < level[x + w] && level[x + w]< 29) || level[x + w] > 51) {
-			std::cout << "Choc2! " << std::endl;
-			return true; //tu ne peux pas passer
-		}
-	}
-
-	else if (numdir == 1 && (x - 1) >= 0) { //vers la gauche
-		if (level[x - 1] < 21 || (23 < level[x - 1] && level[x - 1]< 29) || level[x - 1] > 51) {
-			std::cout << "Choc3!" << std::endl;
-			return true; //tu ne peux pas passer
-		}
-	}
-
-	else if (numdir == 0 && (x + 1) <= w*h) { //vers la droite
-		if (level[x + 1] < 21 || (23 < level[x + 1] && level[x + 1]< 29) || level[x + 1] > 51) {
-			std::cout << "Choc4!" << std::endl;
-			return true; //tu ne peux pas passer
-		}
-	}
-
-	return false; //tu peux passer
-}
-
-void moteurJeu(sf::Event event){
+void moteurJeu(sf::Event event, int dx, int dy, const int* level){
 
 	bool ordre=true;
 	if(ordre){
 		if (event.type == sf::Event::KeyPressed && (event.key.code == sf::Keyboard::Right)){
-			numdir = 0;
 			action=MoveCharacter(dimTuile,0,&perso);
 			actions.add(&action);
 			// check if action is true
-			if(perso.getX()<(w-1)*dimTuile) // le personnage ne peut pas aller hors de l'ecran; par défaut, permission=false
+			if(perso.getX()<(w-1)*dimTuile && ruler.collisions(dx, dy, 0, level)) // le personnage ne peut pas aller hors de l'ecran; par défaut, permission=false
 				actions.setPermission(actions.size(),true);
 			else
 				actions.setPermission(actions.size(),false);
 			
 
 		}else if (event.type == sf::Event::KeyPressed && (event.key.code == sf::Keyboard::Left)){
-			numdir = 1;
 			action=MoveCharacter(-dimTuile,0,&perso);
 	
 			actions.add(&action);
 			// check if action is true
-			if(perso.getX()>0)
+			if(perso.getX()>0 && ruler.collisions(dx, dy, 1, level))
 				actions.setPermission(actions.size(),true);
 			else
 				actions.setPermission(actions.size(),false);			
 
 
 		}else if (event.type == sf::Event::KeyPressed && (event.key.code == sf::Keyboard::Up)){
-			numdir = 2;
 			action=MoveCharacter(0,-dimTuile,&perso);
 	
 			actions.add(&action);
 			// check if action is true
-			if(perso.getY()>0)
+			if(perso.getY()>0 && ruler.collisions(dx, dy, 2, level))
 				actions.setPermission(actions.size(),true);
 			else
 				actions.setPermission(actions.size(),false);
 			
 
 		}else if (event.type == sf::Event::KeyPressed && (event.key.code == sf::Keyboard::Down)){
-			numdir = 3;
 			action=MoveCharacter(0,dimTuile,&perso);	
 		
 			actions.add(&action);
 			// check if action is true
-			if(perso.getY()<(h-1)*dimTuile)
+			if(perso.getY()<(h-1)*dimTuile && ruler.collisions(dx, dy, 3, level))
 				actions.setPermission(actions.size(),true);			
 			else
 				actions.setPermission(actions.size(),false);
 
 		}	
 
-		else {
-			numdir = 5;
-		}
 		actions.apply();
 	}	
 }

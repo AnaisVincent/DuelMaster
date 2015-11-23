@@ -26,6 +26,11 @@ Moteur::MoteurMode const Moteur::getMode()
 	return enginemode;
 }
 
+const Etat * const Moteur::getState()
+{
+	return currentState;
+}
+
 void Moteur::addCommands(Commande * cmd)
 {
 	waitingCommands->set(cmd);
