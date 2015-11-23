@@ -178,55 +178,94 @@ int main()
 
 
 
-void moteurJeu(sf::Event event, int dx, int dy, const int* level){
+void moteurJeu(sf::Event event, int dx, int dy, const int* level) {
 
-	bool ordre=true;
-	if(ordre){
-		if (event.type == sf::Event::KeyPressed && (event.key.code == sf::Keyboard::Right)){
-			action=MoveCharacter(dimTuile,0,&perso);
+
+	int distx = 0;
+	int disty = 0;
+
+	int signe = 0;
+
+	if (event.type == sf::Event::KeyPressed && (event.key.code == sf::Keyboard::Right)) {
+		action = MoveCharacter(dimTuile, 0, &perso);
+		actions.add(&action);
+		// check if action is true
+		if (perso.getX() < (w - 1)*dimTuile && ruler.collisions(dx, dy, 0, level)) // le personnage ne peut pas aller hors de l'ecran; par défaut, permission=false
+			actions.setPermission(actions.size(), true);
+		else
+			actions.setPermission(actions.size(), false);
+
+
+	}
+	else if (event.type == sf::Event::KeyPressed && (event.key.code == sf::Keyboard::Left)) {
+		action = MoveCharacter(-dimTuile, 0, &perso);
+
+		actions.add(&action);
+		// check if action is true
+		if (perso.getX() > 0 && ruler.collisions(dx, dy, 1, level))
+			actions.setPermission(actions.size(), true);
+		else
+			actions.setPermission(actions.size(), false);
+
+
+	}
+	else if (event.type == sf::Event::KeyPressed && (event.key.code == sf::Keyboard::Up)) {
+		action = MoveCharacter(0, -dimTuile, &perso);
+
+		actions.add(&action);
+		// check if action is true
+		if (perso.getY() > 0 && ruler.collisions(dx, dy, 2, level))
+			actions.setPermission(actions.size(), true);
+		else
+			actions.setPermission(actions.size(), false);
+
+
+	}
+	else if (event.type == sf::Event::KeyPressed && (event.key.code == sf::Keyboard::Down)) {
+		action = MoveCharacter(0, dimTuile, &perso);
+
+		actions.add(&action);
+		// check if action is true
+		if (perso.getY() < (h - 1)*dimTuile && ruler.collisions(dx, dy, 3, level))
+			actions.setPermission(actions.size(), true);
+		else
+			actions.setPermission(actions.size(), false);
+
+	}
+	else {
+		int x = perso.getX();
+		int y = perso.getY();
+		int rx = rival.getX();
+		int ry = rival.getY();
+
+		if ((x - rx)*(x - rx) < (y - ry)*(y - ry)) {
+			disty = 8;
+			if (y < ry) {
+				signe = -1;
+			}
+			else {
+				signe = 1;
+			}
+
+			action = MoveCharacter(signe*distx, signe*disty, &rival);
 			actions.add(&action);
-			// check if action is true
-			if(perso.getX()<(w-1)*dimTuile && ruler.collisions(dx, dy, 0, level)) // le personnage ne peut pas aller hors de l'ecran; par défaut, permission=false
-				actions.setPermission(actions.size(),true);
-			else
-				actions.setPermission(actions.size(),false);
-			
+			actions.setPermission(actions.size(), true);
 
-		}else if (event.type == sf::Event::KeyPressed && (event.key.code == sf::Keyboard::Left)){
-			action=MoveCharacter(-dimTuile,0,&perso);
-	
+		}
+		else {
+			distx = 8;
+			if (x < rx) {
+				signe = -1;
+			}
+			else {
+				signe = 1;
+			}
+			action = MoveCharacter(signe*distx, signe*disty, &rival);
 			actions.add(&action);
-			// check if action is true
-			if(perso.getX()>0 && ruler.collisions(dx, dy, 1, level))
-				actions.setPermission(actions.size(),true);
-			else
-				actions.setPermission(actions.size(),false);			
+			actions.setPermission(actions.size(), true);
+		}
+	}
 
+			actions.apply();
 
-		}else if (event.type == sf::Event::KeyPressed && (event.key.code == sf::Keyboard::Up)){
-			action=MoveCharacter(0,-dimTuile,&perso);
-	
-			actions.add(&action);
-			// check if action is true
-			if(perso.getY()>0 && ruler.collisions(dx, dy, 2, level))
-				actions.setPermission(actions.size(),true);
-			else
-				actions.setPermission(actions.size(),false);
-			
-
-		}else if (event.type == sf::Event::KeyPressed && (event.key.code == sf::Keyboard::Down)){
-			action=MoveCharacter(0,dimTuile,&perso);	
-		
-			actions.add(&action);
-			// check if action is true
-			if(perso.getY()<(h-1)*dimTuile && ruler.collisions(dx, dy, 3, level))
-				actions.setPermission(actions.size(),true);			
-			else
-				actions.setPermission(actions.size(),false);
-
-		}	
-
-		actions.apply();
-	}	
 }
-
