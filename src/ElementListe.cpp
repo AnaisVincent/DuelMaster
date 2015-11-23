@@ -11,13 +11,30 @@ ElementListe::ElementListe(Etat * s)
 	this->s = s;
 }
 
+ElementListe::ElementListe(Etat * s, ElementFabrique * fabrique, std::vector<Element*> elements)
+{
+	this->s = s;
+	this->fabrique = fabrique;
+	this->elements = elements;
+}
+
 ElementListe::~ElementListe()
 {
 }
 
+void ElementListe::Change(int valeur)
+{
+}
+
+int ElementListe::Statut(void) const
+{
+	return 0;
+}
+
+
 const ElementListe ElementListe::clone()
 {
-	return ElementListe();
+	return ElementListe(s,fabrique,elements);
 }
 
 void ElementListe::copy(const ElementListe * liste)

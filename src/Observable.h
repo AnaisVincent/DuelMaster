@@ -2,19 +2,26 @@
 #ifndef __Observable_h__
 #define __Observable_h__
 #include <vector>
+#include "EtatObserver.h"
 
 class Observable
 {
+private:
+	std::list<EtatObserver*> m_list;
 
-protected:
-	//std::vector<EtatObserver* mutable>;
+	typedef std::list<EtatObserver*>::iterator iterator;
+	typedef std::list<EtatObserver*>::const_iterator const_iterator;
 
 public:
-	~Observable();
+	void AddObs(EtatObserver* obs);
+	void DelObs(EtatObserver* obs);
 
-	//void const registerObserver(EtatObserver* o);
-	//void const unregisterObserver(EtatObserver* o);
-	//void const notifyObservers(const EtatEvent& e);
+	virtual int Statut(void) const = 0;
+	virtual ~Observable();
+
+protected:
+	void Notify(void);
+
 };
 
 #endif
