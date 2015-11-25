@@ -3,12 +3,11 @@
 #define __ElementListe_h__
 #include "Element.h"
 #include "ElementFabrique.h"
-#include "Observable.h"
 #include <vector>
 
 class Etat;
 
-class ElementListe : public Observable
+class ElementListe
 {
 protected:
 	Etat *s;
@@ -18,11 +17,7 @@ protected:
 public:
 	ElementListe();
 	ElementListe(Etat *s);
-	ElementListe(Etat *s, ElementFabrique* fabrique, std::vector<Element*> elements);
 	~ElementListe();
-
-	void Change(int valeur);
-	int Statut(void) const;
 
 	const ElementListe clone();
 	void copy(const ElementListe *liste);

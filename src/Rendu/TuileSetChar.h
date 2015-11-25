@@ -1,6 +1,6 @@
 #pragma once
-#ifndef __TuileSetWorld_h__
-#define __TuileSetWorld_h__
+#ifndef __TuileSetChar_h__
+#define __TuileSetChar_h__
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include "TuileSet.h"
@@ -9,15 +9,15 @@
 #include "AnimatedTuile.h"
 #include "Element.h"
 
-class TuileSetWorld : public TuileSet {
+class TuileSetChar : public TuileSet {
 
 private:
 	Tuile* tuiles;
-	const char* const image_file = "../../res/ExplorationPart/Textures/tileset.png";
+	const char* const image_file = "../res/ExplorationPart/Sprites/PrPrincipal.png";
 public:
 
-	TuileSetWorld();
-	~TuileSetWorld();
+	TuileSetChar();
+	~TuileSetChar();
 	int const getCellWidth() override;
 	int const getCellHeight() override;
 	const char* const getImageFile();
