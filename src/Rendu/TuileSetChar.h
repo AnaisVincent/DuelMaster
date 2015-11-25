@@ -7,7 +7,7 @@
 #include "Tuile.h"
 #include "StaticTuile.h"
 #include "AnimatedTuile.h"
-#include "Element.h"
+#include "../Carte_Etat/Element.h"
 
 class TuileSetChar : public TuileSet {
 

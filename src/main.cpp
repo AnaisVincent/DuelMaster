@@ -4,11 +4,11 @@
 #include <cstdlib>
 #include <fstream>
 #include <cmath>
-#include "Plan.h"
-#include "Personnage.h"
-#include "ActionListe.h"
-#include "MoveCharacter.h"
-#include "Ruler.h"
+#include "Rendu/Plan.h"
+#include "Carte_Etat/Personnage.h"
+#include "Moteurdejeu/ActionListe.h"
+#include "Moteurdejeu/MoveCharacter.h"
+#include "Moteurdejeu/Ruler.h"
 
 
 int w = 48;

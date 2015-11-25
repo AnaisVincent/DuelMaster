@@ -1,6 +1,6 @@
 #pragma once
 #include "Action.h"
-#include "Personnage.h"
+#include "../Carte_Etat/Personnage.h"
 #include <SFML/Graphics.hpp>
 #ifndef __MoveCharacter_h__
 #define __MoveCharacter_h__

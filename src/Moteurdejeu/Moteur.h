@@ -1,8 +1,8 @@
 #pragma once
 #include "CommandeSet.h"
 #include "ActionListe.h"
-#include "Etat.h"
-#include "ElementFabrique.h"
+#include "../Carte_Etat/Etat.h"
+#include "../Carte_Etat/ElementFabrique.h"
 #include "Ruler.h"
 #ifndef __Moteur_h__
 #define __Moteur_h__

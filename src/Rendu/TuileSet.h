@@ -2,7 +2,7 @@
 #ifndef __TuileSet_h__
 #define __TuileSet_h__
 #include "Tuile.h"
-#include "Element.h"
+#include "../Carte_Etat/Element.h"
 
 class TuileSet {
 

@@ -1,6 +1,6 @@
 #pragma once
 #include "Commande.h"
-#include "Element.h"
+#include "../Carte_Etat/Element.h"
 #ifndef __DirectionCommande_h__
 #define __DirectionCommande_h__
 
