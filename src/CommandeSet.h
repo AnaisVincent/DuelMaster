@@ -1,5 +1,5 @@
 #pragma once
-#include <map>
+#include <vector>
 #include "Commande.h"
 #ifndef __CommandeSet_h__
 #define __CommandeSet_h__
@@ -8,7 +8,7 @@ class CommandeSet
 {
 
 protected:
-	std::map<int, Commande*> commands;
+	std::vector<Commande*> commands;
 
 public:
 	~CommandeSet();
