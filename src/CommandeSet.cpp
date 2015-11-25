@@ -31,7 +31,7 @@ void CommandeSet::set(Commande * cmd)
 	}
 }
 
-void CommandeSet::take(CommandeSet & commands, bool replace)
+std::vector<Commande*> CommandeSet::take()
 {
-	
+	return commands;
 }

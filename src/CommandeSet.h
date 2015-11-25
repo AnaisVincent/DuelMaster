@@ -16,7 +16,7 @@ public:
 	int const size();
 	Commande* const get(int category);
 	void set(Commande* cmd);
-	void take(CommandeSet& commands,bool replace);
+	std::vector<Commande*> take();
 
 };
 
