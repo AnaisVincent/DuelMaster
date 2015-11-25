@@ -5,7 +5,6 @@
 #include <iostream>
 #include "Plan.h"
 #include <vector>
-#include "EtatObserver.h"
 
 class Scene
 {
@@ -17,9 +16,9 @@ public:
 	int const getPlanCount();
 	void setPlan(int idx, Plan* Plan);
 	void setSurface(int idx, Surface* surface);
-	//void registerObservers(const Etat* s);
-	//void unregisterObservers(const Etat* s);
-	//void etatChanged(const EtatEvent e);
+	//void registerObservers(const State::State* s);
+	//void unregisterObservers(const State::State* s);
+	//void etatChanged(const state StateEvent e);
 	void sync(int time);
 	void update(int time);
 
