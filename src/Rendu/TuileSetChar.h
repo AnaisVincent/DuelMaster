@@ -13,7 +13,7 @@ class TuileSetChar : public TuileSet {
 
 private:
 	Tuile* tuiles;
-	const char* const image_file = "../res/ExplorationPart/Sprites/PrPrincipal.png";
+	const char* const image_file = "../../res/ExplorationPart/Sprites/PrPrincipal.png";
 public:
 
 	TuileSetChar();
