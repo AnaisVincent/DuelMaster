@@ -31,7 +31,7 @@ bool carre = false;
 
 
 
-void moteurJeu(sf::Event event, int dx, int dy, const int* level);
+void moteurJeu(sf::Event event, int dx, int dy, int rx, int ry, const int* level);
 
 
 int main()
@@ -121,7 +121,7 @@ int main()
 
 
 
-	if(!personnage.loadFromFile("../res/ExplorationPart/Sprites/PrPrincipal.png"))
+	if(!personnage.loadFromFile("../../res/ExplorationPart/Sprites/PrPrincipal.png"))
 	{
 		perror("erreur lors du chargement de l'image");
 	}
@@ -131,14 +131,14 @@ int main()
 	perso.setX(w / 2 * dimTuile);
 	perso.setY(h / 2 * dimTuile);
 
-	if (!tex_rival.loadFromFile("../res/ExplorationPart/Sprites/PrRival.png"))
+	if (!tex_rival.loadFromFile("../../res/ExplorationPart/Sprites/PrRival.png"))
 	{
 		perror("erreur lors du chargement de l'image");
 	}
 	tex_rival.setSmooth(true);
 	sprite_rival.setTexture(tex_rival);
 	sprite_rival.setTextureRect(sf::IntRect(0, 32, 32, 32));
-	rival.setX((w / 2 + 1 )* dimTuile);
+	rival.setX((w / 2 + 1)* dimTuile);
 	rival.setY((h / 2 + 1) * dimTuile);
 
 
@@ -157,7 +157,7 @@ int main()
 			window.close();
 		}
 			
-			moteurJeu(event, x/32, y/32, level);
+			moteurJeu(event, x/32, y/32, rx, ry, level);
 		}
 		sprite_personnage.setPosition(x, y);
 		sprite_rival.setPosition(rx,ry);
@@ -178,7 +178,7 @@ int main()
 
 
 
-void moteurJeu(sf::Event event, int dx, int dy, const int* level) {
+void moteurJeu(sf::Event event, int dx, int dy, int rx,int ry, const int* level) {
 
 
 	int distx = 0;
@@ -235,34 +235,33 @@ void moteurJeu(sf::Event event, int dx, int dy, const int* level) {
 	else {
 		int x = perso.getX();
 		int y = perso.getY();
-		int rx = rival.getX();
-		int ry = rival.getY();
 
 		if ((x - rx)*(x - rx) < (y - ry)*(y - ry)) {
-			disty = 8;
-			if (y < ry) {
-				signe = -1;
+			if (y < ry ) {
+				action = MoveCharacter(0, -dimTuile, &rival);
+				actions.add(&action);
+				actions.setPermission(actions.size(), true);
 			}
-			else {
-				signe = 1;
+			if (ry < y){
+				action = MoveCharacter(0, dimTuile, &rival);
+				actions.add(&action);
+				actions.setPermission(actions.size(), true);
 			}
-
-			action = MoveCharacter(signe*distx, signe*disty, &rival);
-			actions.add(&action);
-			actions.setPermission(actions.size(), true);
+					
 
 		}
-		else {
-			distx = 8;
+		if ((x - rx)*(x - rx) > (y - ry)*(y - ry)) {
 			if (x < rx) {
-				signe = -1;
+				action = MoveCharacter(-dimTuile, 0, &rival);
+				actions.add(&action);
+				actions.setPermission(actions.size(), true);
 			}
-			else {
-				signe = 1;
+			if (rx < x) {
+				action = MoveCharacter(dimTuile, 0, &rival);
+				actions.add(&action);
+				actions.setPermission(actions.size(), true);
 			}
-			action = MoveCharacter(signe*distx, signe*disty, &rival);
-			actions.add(&action);
-			actions.setPermission(actions.size(), true);
+			
 		}
 	}
 

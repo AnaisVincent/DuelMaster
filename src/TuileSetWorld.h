@@ -13,7 +13,7 @@ class TuileSetWorld : public TuileSet {
 
 private:
 	Tuile* tuiles;
-	const char* const image_file = "../res/ExplorationPart/Textures/tileset.png";
+	const char* const image_file = "../../res/ExplorationPart/Textures/tileset.png";
 public:
 
 	TuileSetWorld();
