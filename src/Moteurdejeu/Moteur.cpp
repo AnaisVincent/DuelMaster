@@ -38,9 +38,11 @@ void Moteur::addCommands(Commande * cmd)
 
 void Moteur::takeCommands(CommandeSet * commands)
 {
-	for (int i = 0; i < commands->take().size(); i++)
-		if(commands->take()[i])
+	for (int i = 0; i < commands->take().size(); i++) {
+		if (commands->take()[i])
 			;
+	}
+
 }
 
 /*std::mutex & const Moteur::getUpdateMutex()
