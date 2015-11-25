@@ -3,6 +3,7 @@
 #include "ActionListe.h"
 #include "Etat.h"
 #include "ElementFabrique.h"
+#include "Ruler.h"
 #ifndef __Moteur_h__
 #define __Moteur_h__
 //#include <mutex>;
@@ -27,8 +28,9 @@ protected:
 	ElementFabrique* factory;
 	Etat* currentState;
 	//mutable std::mutex commands_mutex;
-	CommandeSet* currentCommands;
-	CommandeSet* waitingCommands;
+	//CommandeSet* currentCommands;
+	//CommandeSet* waitingCommands;
+	CommandeSet* commands;
 	//mutable std::mutex update_mutex;
 	int64_t lastUpdateTime;
 

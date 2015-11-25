@@ -33,12 +33,14 @@ const Etat * const Moteur::getState()
 
 void Moteur::addCommands(Commande * cmd)
 {
-	waitingCommands->set(cmd);
+	commands->set(cmd);
 }
 
 void Moteur::takeCommands(CommandeSet * commands)
 {
-	waitingCommands = commands;
+	for (int i = 0; i < commands->take().size(); i++)
+		if(commands->take()[i])
+			;
 }
 
 /*std::mutex & const Moteur::getUpdateMutex()
