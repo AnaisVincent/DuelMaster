@@ -9,7 +9,7 @@ public:
 	~Commande();
 
 	enum CommandeCategorie { MAIN_CATEGORY, MOVE_CATEGORY, MODE_CATEGORY };
-	enum CommandeTypeId { LOAD, MOVE, DIRECTION };
+	enum CommandeTypeId { LOAD, MODE, DIRECTION };
 
 	virtual int const getCategory() = 0;
 	virtual CommandeTypeId const getTypeId() = 0;
