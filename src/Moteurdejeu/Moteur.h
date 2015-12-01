@@ -4,9 +4,12 @@
 #include "../Carte_Etat/Etat.h"
 #include "../Carte_Etat/ElementFabrique.h"
 #include "Ruler.h"
+#include <SFML/Graphics.hpp>
 #ifndef __Moteur_h__
 #define __Moteur_h__
 //#include <mutex>;
+
+#define dimTuile 32
 
 class Moteur
 {
@@ -20,7 +23,7 @@ public:
 	MoteurMode const getMode();
 	const Etat* const getState();
 	void addCommands(Commande* cmd);
-	void takeCommands(CommandeSet* commands);
+	std::vector<Commande*> takeCommands(CommandeSet* commands);
 	//std::mutex& const getUpdateMutex();
 	bool update(int64_t time, int64_t* next_time = NULL);
 
@@ -31,6 +34,9 @@ protected:
 	//CommandeSet* currentCommands;
 	//CommandeSet* waitingCommands;
 	CommandeSet* commands;
+	ActionListe actions;
+	Ruler* ruler;
+	Personnage* persos;
 	//mutable std::mutex update_mutex;
 	int64_t lastUpdateTime;
 
@@ -38,6 +44,7 @@ protected:
 	void setMode(MoteurMode mode);
 	void loadLevel(const char* file_name);
 	MoteurMode enginemode;
+	void run();
 
 };
 

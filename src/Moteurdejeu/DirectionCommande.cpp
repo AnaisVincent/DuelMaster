@@ -4,6 +4,8 @@ DirectionCommande::DirectionCommande(int c, Element::Direction d)
 {
 	this->character = c;
 	this->direction = d;
+	type_id = DIRECTION;
+	categorie = MOVE_CATEGORY;
 }
 
 int const DirectionCommande::getCategory()
