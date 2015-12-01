@@ -2,6 +2,7 @@
 
 ActionListe::ActionListe()
 {
+	nombre_actions = 0;
 }
 
 ActionListe::~ActionListe()
@@ -29,7 +30,6 @@ void ActionListe::apply()
 	for(int i=0;i<nombre_actions;i++){
 		
 		if(permission[i]){
-
 			actions[i]->apply();
 		}
 	}

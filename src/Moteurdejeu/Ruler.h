@@ -9,8 +9,8 @@ class Ruler
 {
 
 protected:
-	const Etat* currentState;
-	const CommandeSet* commands;
+	Etat* currentState;
+	CommandeSet* commands;
 	ActionListe* actions;
 	int w;
 	int h;
@@ -19,11 +19,12 @@ protected:
 	void resChar(int idx);
 
 public:
+	Ruler();
 	Ruler(int width, int height);
-	Ruler(ActionListe* actions, const Etat* s, const CommandeSet* commands);
+	Ruler(ActionListe* actions, Etat* s, CommandeSet* commands);
 	~Ruler();
 	
-	bool collisions(int dx, int dy, int numdir, std::vector<int> level);
+	bool collisions(int x, int y);
 	void apply();
 
 };

@@ -3,29 +3,31 @@
 
 PlayerControler::PlayerControler()
 {
+	perso = Personnage();
 }
 
 PlayerControler::~PlayerControler()
 {
 }
 
-DirectionCommande PlayerControler::moveCommande(sf::Event event)
+DirectionCommande* PlayerControler::moveCommande(sf::Event event)
 {
-
-	if (perso.isPersonnage() == true) {
+	std::cout << "envoi d'une commande de direction" << std::endl;
+	//if (perso.isPersonnage()) {
 
 		if (event.type == sf::Event::KeyPressed && (event.key.code == sf::Keyboard::Right)) {
-			return DirectionCommande(0, Element::OUEST);
+			return new DirectionCommande(0, Element::EST);
 		}
 		if (event.type == sf::Event::KeyPressed && (event.key.code == sf::Keyboard::Left)) {
-			return DirectionCommande(0, Element::EST);
+			return new DirectionCommande(0, Element::OUEST);
 		}
 		if (event.type == sf::Event::KeyPressed && (event.key.code == sf::Keyboard::Up)) {
-			return DirectionCommande(0, Element::NORD);
+			return new DirectionCommande(0, Element::NORD);
 		}
 		if (event.type == sf::Event::KeyPressed && (event.key.code == sf::Keyboard::Down)) {
-			return DirectionCommande(0, Element::SUD);
+			return new DirectionCommande(0, Element::SUD);
 		}
 
-	}
+	//}
+	//throw std::logic_error("Perdu");
 }

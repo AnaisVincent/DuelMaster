@@ -10,6 +10,8 @@ Map::~Map()
 
 void Map::levelMap()
 {
+	w = 48;
+	h = 24;
 	level = {
 		25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 70, 20, 21, 21, 21, 21, 21, 21, 21, 21, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01,
 		25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 70, 20, 21, 21, 21, 40, 21, 21, 01, 01, 01, 01, 01, 01, 01, 21, 21, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01, 01,
@@ -46,4 +48,19 @@ void Map::levelDuel()
 std::vector<int> Map::getlevel()
 {
 	return level;
+}
+
+const int const Map::getnumber(int x, int y)
+{
+	return level[x + (y * w)];
+}
+
+const int const Map::getheight()
+{
+	return h;
+}
+
+const int const Map::getwidth()
+{
+	return w;
 }

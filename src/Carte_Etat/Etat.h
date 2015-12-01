@@ -1,5 +1,6 @@
 #pragma once
 #include "ElementFabrique.h"
+#include "../Rendu/Map.h"
 #ifndef __Etat_h__
 #define __Etat_h__
 
@@ -10,8 +11,9 @@ class Etat
 {
 
 protected:
-	ElementListe* chars;
-	ElementGrille* grid;
+	const ElementListe* chars;
+	const ElementGrille* grid;
+	Map* map;
 	int epoch;
 	float epochRate;
 
@@ -26,6 +28,7 @@ public:
 	float const getEpochRate();
 	const ElementGrille* const getGrid();
 	const ElementListe* const getChars();
+	Map* getMap();
 	//const MobileElement* const getChar(int idx);
 	void setElementFactory(ElementFabrique* f);
 	void setEpoch(int time);

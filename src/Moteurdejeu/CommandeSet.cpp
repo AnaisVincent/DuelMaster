@@ -13,7 +13,7 @@ Commande * const CommandeSet::get(int category)
 {
 	Commande* search;
 	int i = 0;
-	for (i = 0; i < commands.size() / sizeof(Commande*); i++) {
+	for (i = 0; i < commands.size(); i++) {
 		if (commands.at(i)->getCategory() == category) {
 			search = commands[i];
 		}
@@ -23,15 +23,16 @@ Commande * const CommandeSet::get(int category)
 
 void CommandeSet::set(Commande * cmd)
 {
-	int i = 0;
-	for (i = 0; i < commands.size() / sizeof(Commande*); i++) {
-		if (commands.at(i)->getCategory() == cmd->getCategory()) {
-			commands[i] = cmd;
-		}
-	}
+	commands.push_back(cmd);
+}
+
+void CommandeSet::pop()
+{
+	commands.pop_back();
 }
 
 std::vector<Commande*> CommandeSet::take()
 {
+	//std::cout << "fonction basique" << std::endl;
 	return commands;
 }

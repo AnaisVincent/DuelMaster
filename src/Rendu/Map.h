@@ -8,6 +8,7 @@ class Map
 {
 
 protected:
+	int w, h;
 	std::vector<int> level;
 
 public:
@@ -17,6 +18,9 @@ public:
 	void levelMap();
 	void levelDuel();
 	std::vector<int> getlevel();
+	const int const getnumber(int x, int y);
+	const int const getheight();
+	const int const getwidth();
 };
 
 #endif

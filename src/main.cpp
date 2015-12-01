@@ -6,10 +6,12 @@
 #include <cmath>
 #include "Rendu/Plan.h"
 #include "Carte_Etat/Personnage.h"
+#include "Moteurdejeu/Moteur.h"
 #include "Moteurdejeu/ActionListe.h"
 #include "Moteurdejeu/MoveCharacter.h"
 #include "Moteurdejeu/Ruler.h"
 #include "Rendu/Map.h"
+#include "IHM/PlayerControler.h"
 
 
 int w = 48;
@@ -27,26 +29,28 @@ Personnage rival;
 sf::Texture tex_rival;
 sf::Sprite sprite_rival;
 
-
 bool carre = false;
 
-
-
-void moteurJeu(sf::Event event, int dx, int dy, int rx, int ry, std::vector<int> level);
+//void moteurJeu(sf::Event event, int dx, int dy, int rx, int ry, std::vector<int> level);
 
 
 int main()
 {
+	std::cout << "bonjour" << std::endl;
+	perso = Personnage();
+	rival = Personnage();
+	std::vector<Personnage> persos;
+	persos.push_back(perso);
+	persos.push_back(rival);
 
 	// on crée la fenêtre
 	sf::RenderWindow window(sf::VideoMode(w * dimTuile, h * dimTuile), "Tilemap");
 
 	// on définit le niveau
-	std::cout << "map generation" << std::endl;
+	std::cout << "chargement de la map 1" << std::endl;
 	Map map = Map();
 	map.levelMap();
-	std::vector<int> level = map.getlevel();
-	std::cout << "end map generation" << std::endl;
+	std::cout << "fin chargement" << std::endl;
 
 	// on crée le plan avec le niveau précédemment défini en int
 	Plan plan1;
@@ -58,7 +62,7 @@ int main()
 	surface.loadTexture(tuileset.getImageFile());
 	surface.setSpriteCount(w*h);
 	surface.setArrayWidth(w);
-	surface.setSprite(tuile,level);
+	surface.setSprite(tuile, map.getlevel());
 	
 	// on crée le plan avec les personnages
 	/*Plan plan2;
@@ -95,12 +99,16 @@ int main()
 	rival.setX((w / 2 + 1)* dimTuile);
 	rival.setY((h / 2 + 1) * dimTuile);
 
+	//Déclaration du moteur de jeu et du controlleur
+	Moteur moteur = Moteur(&perso);
+	moteur.setMode(Moteur::PLAY);
+	PlayerControler p_control = PlayerControler();
 
 	// on fait tourner la boucle principale
 	while (window.isOpen())
 	{
-		int x = perso.getX();
-		int y = perso.getY();
+		int x = moteur.getPerso()->getX();
+		int y = moteur.getPerso()->getY();
 		int rx = rival.getX();
 		int ry = rival.getY();
 		// on gère les évènements
@@ -108,10 +116,14 @@ int main()
 		while (window.pollEvent(event))
 		{
 			if (event.type == sf::Event::Closed) {
-			window.close();
-		}
+				window.close();
+			}
+			if (event.type == sf::Event::KeyPressed && (event.key.code == sf::Keyboard::Right || event.key.code == sf::Keyboard::Left || event.key.code == sf::Keyboard::Up || event.key.code == sf::Keyboard::Down)){
+				moteur.addCommands(p_control.moveCommande(event));
+				moteur.exec();
+			}
 			
-			moteurJeu(event, x/32, y/32, rx, ry, level);
+			//moteurJeu(event, x/32, y/32, rx, ry, level);
 		}
 		sprite_personnage.setPosition(x, y);
 		sprite_rival.setPosition(rx,ry);
@@ -132,7 +144,7 @@ int main()
 
 
 
-void moteurJeu(sf::Event event, int dx, int dy, int rx,int ry, std::vector<int> level) {
+/*void moteurJeu(sf::Event event, int dx, int dy, int rx,int ry, std::vector<int> level) {
 
 
 	int distx = 0;
@@ -221,4 +233,4 @@ void moteurJeu(sf::Event event, int dx, int dy, int rx,int ry, std::vector<int> 
 
 			actions.apply();
 
-}
+}*/

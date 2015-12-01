@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+#include <iostream>
 #include "Commande.h"
 #include "DirectionCommande.h"
 #ifndef __CommandeSet_h__
@@ -17,6 +18,7 @@ public:
 	int const size();
 	Commande* const get(int category);
 	void set(Commande* cmd);
+	void pop();
 	std::vector<Commande*> take();
 
 };
