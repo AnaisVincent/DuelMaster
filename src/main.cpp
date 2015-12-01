@@ -121,7 +121,7 @@ int main()
 
 
 
-	if(!personnage.loadFromFile("../../res/ExplorationPart/Sprites/PrPrincipal.png"))
+	if(!personnage.loadFromFile("../res/ExplorationPart/Sprites/PrPrincipal.png"))
 	{
 		perror("erreur lors du chargement de l'image");
 	}
@@ -131,7 +131,7 @@ int main()
 	perso.setX(w / 2 * dimTuile);
 	perso.setY(h / 2 * dimTuile);
 
-	if (!tex_rival.loadFromFile("../../res/ExplorationPart/Sprites/PrRival.png"))
+	if (!tex_rival.loadFromFile("../res/ExplorationPart/Sprites/PrRival.png"))
 	{
 		perror("erreur lors du chargement de l'image");
 	}

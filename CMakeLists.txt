@@ -3,9 +3,9 @@ cmake_minimum_required (VERSION 2.6)
 project (DuelMaster)
 
 # Enable debug symbols by default
-if(CMAKE_BUILD_TYPE STREQUAL "")
-  set(CMAKE_BUILD_TYPE Debug)
-endif()
+# if(CMAKE_BUILD_TYPE STREQUAL "")
+#   set(CMAKE_BUILD_TYPE Debug)
+# endif()
 
 
 file(GLOB_RECURSE SOURCE_FILES src/*)
