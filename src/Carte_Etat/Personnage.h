@@ -9,7 +9,7 @@ class Personnage : public MobileElement
 public: enum enumPersonnage { JOUEUR, RIVAL };
 
 private:
-	enumPersonnage typePersonnage; // 1 = joueur, 2 = rival
+	enumPersonnage typePersonnage; // 0 = joueur, 1 = rival
 
 
 public:

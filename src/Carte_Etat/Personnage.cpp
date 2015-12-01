@@ -25,6 +25,7 @@ Personnage::enumPersonnage const Personnage::getTypePersonnage()
 
 bool const Personnage::isPersonnage()
 {
+	if (getTypePersonnage == 0)
 	return true;
 }
 
