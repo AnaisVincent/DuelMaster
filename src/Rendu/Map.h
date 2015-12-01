@@ -1,4 +1,5 @@
 #pragma once
+#include <vector>
 #ifndef __Map_h__
 #define __Map_h__
 
@@ -7,7 +8,7 @@ class Map
 {
 
 protected:
-	int* level;
+	std::vector<int> level;
 
 public:
 	Map();
@@ -15,6 +16,7 @@ public:
 
 	void levelMap();
 	void levelDuel();
+	std::vector<int> getlevel();
 };
 
 #endif

@@ -30,11 +30,11 @@ void SurfaceWorld::setArrayWidth(int w)
 	arrayWidth = w;
 }
 
-void SurfaceWorld::setSprite(StaticTuile tex, const int* tuiles)
+void SurfaceWorld::setSprite(StaticTuile tex, std::vector<int> tuiles)
 {
 	// on redimensionne le tableau de vertex pour qu'il puisse contenir tout le niveau
 	vertices.resize(spriteCount * 4);
-
+	std::cout << "level case 0 : " << tuiles[0] << std::endl;
 	// on remplit le tableau de vertex, avec un quad par tuile
 	for (unsigned int i = 0; i < spriteCount; ++i)
 		{

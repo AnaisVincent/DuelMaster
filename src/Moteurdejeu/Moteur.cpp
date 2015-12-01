@@ -56,7 +56,6 @@ void Moteur::run()
 							actions.setPermission(actions.size(), true);
 						else
 							actions.setPermission(actions.size(), false);*/
-
 					}
 		}
 	}

@@ -23,7 +23,7 @@ public:
 	Ruler(ActionListe* actions, const Etat* s, const CommandeSet* commands);
 	~Ruler();
 	
-	bool collisions(int dx, int dy, int numdir, const int* level);
+	bool collisions(int dx, int dy, int numdir, std::vector<int> level);
 	void apply();
 
 };

@@ -25,7 +25,7 @@ Ruler::~Ruler()
 {
 }
 
-bool Ruler::collisions(int dx, int dy, int numdir, const int* level)
+bool Ruler::collisions(int dx, int dy, int numdir, std::vector<int> level)
 {
 	int x = dy*w + dx;
 

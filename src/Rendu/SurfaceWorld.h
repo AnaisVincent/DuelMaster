@@ -22,7 +22,7 @@ public:
 	void clear();
 	void loadTexture(const char* image_file);
 	void setArrayWidth(int w);
-	void setSprite(StaticTuile tex, const int* tuiles);
+	void setSprite(StaticTuile tex, std::vector<int> tuiles);
 	void setSpriteCount(int n);
 	void setSpriteLocation(int i, int x, int y);
 	void setSpriteTexture(int i, const StaticTuile tex);
