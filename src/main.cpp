@@ -41,30 +41,6 @@ int main()
 	// on crée la fenêtre
 	sf::RenderWindow window(sf::VideoMode(w * dimTuile, h * dimTuile), "Tilemap");
 
-	/*std::ifstream fin("../res/ExplorationPart/map.txt");
-	std::cout << "hello" << std::endl;
-	if(!fin.good()) {
-		throw std::runtime_error("Cannot open file");
-	}
-	char* level;
-	while (true) {
-		char tmp[0x1000];
-		int i = 0;
-		fin.getline(tmp, 0x1000);
-		if (fin.eof()) {
-			break;
-		}
-		if (!fin.good()) {
-			throw std::runtime_error("Cannot read file");
-		}
-		std::cout << tmp;
-		if (i = 0) {level = tmp; }
-		else { strcat(level, tmp); }
-		i++;
-	}
-	std::cout << level;
-	*/
-
 	// on définit le niveau
 	std::cout << "map generation" << std::endl;
 	Map map = Map();
