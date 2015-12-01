@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include "Commande.h"
+#include "DirectionCommande.h"
 #ifndef __CommandeSet_h__
 #define __CommandeSet_h__
 
