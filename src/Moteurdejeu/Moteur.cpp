@@ -56,7 +56,7 @@ void Moteur::exec()
 						action = MoveCharacter(0, dimTuile, perso);
 						actions.add(&action);
 						// check if action is true
-						if (perso->getY() < (currentState.getMap()->getheight() - 1)*dimTuile && ruler.collisions(perso->getX() / dimTuile, perso->getY() / dimTuile) + 1)
+						if (perso->getY() < (currentState.getMap()->getheight() - 1)*dimTuile && ruler.collisions(perso->getX() / dimTuile, perso->getY() / dimTuile + 1))
 						actions.setPermission(actions.size(), true);
 						else
 						actions.setPermission(actions.size(), false);
