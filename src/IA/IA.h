@@ -6,6 +6,7 @@
 class IA
 {
 protected:
+
 	
 public:
 	IA();

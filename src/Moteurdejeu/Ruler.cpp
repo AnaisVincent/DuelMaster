@@ -33,8 +33,8 @@ bool Ruler::collisions(int x, int y)
 {
 	int z = currentState->getMap()->getnumber(x, y);
 	if (z < 21 || (23 < z && z < 29) || z > 51) {
-		std::cout << "Choc!" << std::endl;
-		std::cout << "case concernée :" << z << std::endl;
+		std::cout << "Choc!";
+		std::cout << " || numero de case concernee :" << z << std::endl;
 		return false; //tu ne peux pas passer
 	}
 	else return true;
