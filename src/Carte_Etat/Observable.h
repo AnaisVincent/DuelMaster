@@ -7,7 +7,7 @@ class Observable
 {
 
 protected:
-	//std::vector<EtatObserver* mutable>;
+	//std::vector<EtatObserver*> mutable;
 
 public:
 	~Observable();
