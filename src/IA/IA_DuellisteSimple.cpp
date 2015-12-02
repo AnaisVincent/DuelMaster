@@ -1,9 +1,9 @@
-#include "IA_DuelisteSimple.h"
+#include "IA_DuellisteSimple.h"
 
-IA_DuelisteSimple::IA_DuelisteSimple()
+IA_DuellisteSimple::IA_DuellisteSimple()
 {
 }
 
-IA_DuelisteSimple::~IA_DuelisteSimple()
+IA_DuellisteSimple::~IA_DuellisteSimple()
 {
 }

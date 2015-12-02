@@ -11,7 +11,7 @@
 #include "Moteurdejeu/MoveCharacter.h"
 #include "Moteurdejeu/Ruler.h"
 #include "Rendu/Map.h"
-#include "IHM/PlayerControler.h"
+#include "IHM/PlayerController.h"
 
 
 int w = 48;
@@ -102,7 +102,7 @@ int main()
 	//Déclaration du moteur de jeu et du controlleur
 	Moteur moteur = Moteur(&perso);
 	moteur.setMode(Moteur::PLAY);
-	PlayerControler p_control = PlayerControler();
+	PlayerController p_control = PlayerController();
 
 	// on fait tourner la boucle principale
 	while (window.isOpen())

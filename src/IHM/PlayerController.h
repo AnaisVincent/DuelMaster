@@ -3,12 +3,12 @@
 #include "../Moteurdejeu/DirectionCommande.h"
 #include "../Carte_Etat/Element.h"
 #include <iostream>
-#ifndef __PlayerControler_h__
-#define __PlayerControler_h__
+#ifndef __PlayerController_h__
+#define __PlayerController_h__
 #include <SFML/Graphics.hpp>
 
 
-class PlayerControler
+class PlayerController
 {
 
 protected:
@@ -16,8 +16,8 @@ protected:
 	sf::Event event;
 
 public:
-	PlayerControler();
-	~PlayerControler();
+	PlayerController();
+	~PlayerController();
 
 	DirectionCommande* moveCommande(sf::Event event);
 };

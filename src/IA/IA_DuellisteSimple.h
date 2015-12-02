@@ -1,15 +1,15 @@
 #pragma once
-#ifndef __IA_DuelisteSimple_h__
-#define __IA_DuelisteSimple_h__
+#ifndef __IA_DuellisteSimple_h__
+#define __IA_DuellisteSimple_h__
 
 
-class IA_DuelisteSimple
+class IA_DuellisteSimple
 {
 protected:
 
 public:
-	IA_DuelisteSimple();
-	~IA_DuelisteSimple();
+	IA_DuellisteSimple();
+	~IA_DuellisteSimple();
 
 };
 

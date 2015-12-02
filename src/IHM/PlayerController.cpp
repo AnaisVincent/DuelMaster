@@ -1,16 +1,16 @@
-#include "PlayerControler.h"
+#include "PlayerController.h"
 #include "../Carte_Etat/Personnage.h"
 
-PlayerControler::PlayerControler()
+PlayerController::PlayerController()
 {
 	perso = Personnage();
 }
 
-PlayerControler::~PlayerControler()
+PlayerController::~PlayerController()
 {
 }
 
-DirectionCommande* PlayerControler::moveCommande(sf::Event event)
+DirectionCommande* PlayerController::moveCommande(sf::Event event)
 {
 	std::cout << "envoi d'une commande de direction" << std::endl;
 	//if (perso.isPersonnage()) {
