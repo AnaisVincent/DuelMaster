@@ -11,6 +11,9 @@ protected:
 public:
 	Comportement();
 	~Comportement();
+	virtual void random() = 0;
+	virtual void smarter() = 0;
+
 
 };
 
