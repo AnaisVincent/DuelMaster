@@ -18,9 +18,9 @@ public:
 	void levelMap();
 	void levelDuel();
 	std::vector<int> getlevel();
-	const int const getnumber(int x, int y);
-	const int const getheight();
-	const int const getwidth();
+	const int getnumber(int x, int y);
+	const int getheight();
+	const int getwidth();
 };
 
 #endif

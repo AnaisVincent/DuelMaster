@@ -50,17 +50,17 @@ std::vector<int> Map::getlevel()
 	return level;
 }
 
-const int const Map::getnumber(int x, int y)
+const int Map::getnumber(int x, int y)
 {
 	return level[x + (y * w)];
 }
 
-const int const Map::getheight()
+const int Map::getheight()
 {
 	return h;
 }
 
-const int const Map::getwidth()
+const int Map::getwidth()
 {
 	return w;
 }
