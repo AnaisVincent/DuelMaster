@@ -8,12 +8,25 @@ ComportementDeplacement::~ComportementDeplacement()
 {
 }
 
-void ComportementDeplacement::random()
+int ComportementDeplacement::random()
 {
+	int o;
+	o = rand() % 5 + 1;
+	return o;
 }
 
 
-void ComportementDeplacement::smarter()
+int ComportementDeplacement::smarter()
+{
+	return 0;
+}
+
+int ComportementDeplacement::promenade()
+{
+	return 0;
+}
+
+int ComportementDeplacement::stalker()
 {
 	int x = 0;//perso.getX();
 	int y = 0;//perso.getY();
@@ -37,12 +50,5 @@ void ComportementDeplacement::smarter()
 			//aller en haut
 		}
 	}
-}
-
-void ComportementDeplacement::promenade()
-{
-}
-
-void ComportementDeplacement::stalker()
-{
+	return 0;
 }

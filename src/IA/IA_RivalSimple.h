@@ -11,7 +11,7 @@ protected:
 public:
 	IA_RivalSimple();
 	~IA_RivalSimple();
-	void addComportement(Comportement* behavior) override;
+	//void addComportement(Comportement* behavior) override;
 	DirectionCommande* createDirectionCommande() override;
 
 };

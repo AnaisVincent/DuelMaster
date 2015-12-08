@@ -12,10 +12,10 @@ protected:
 public:
 	ComportementDeplacement();
 	~ComportementDeplacement();
-	void random() override;
-	void smarter() override;
-	void promenade();
-	void stalker();
+	int random() override;
+	int smarter() override;
+	int promenade();
+	int stalker();
 
 };
 

@@ -26,7 +26,10 @@ void Moteur::exec()
 					std::cout << " || commande de type direction recue" << std::endl;
 					MoveCharacter action = MoveCharacter();
 					if (dynamic_cast<DirectionCommande*>(temp[i])->getDirection() == Element::EST) {
-						action = MoveCharacter(dimTuile, 0, perso);
+						if(dynamic_cast<DirectionCommande*>(temp[i])->getCharacter() == 0)
+							action = MoveCharacter(dimTuile, 0, perso);
+						if (dynamic_cast<DirectionCommande*>(temp[i])->getCharacter() == 1)
+							action = MoveCharacter(dimTuile, 0, rival);
 						actions.add(&action);
 						// check if action is true
 						if (perso->getX() < (currentState.getMap()->getwidth() - 1)*dimTuile && ruler.collisions(perso->getX()/dimTuile + 1, perso->getY()/dimTuile)) // le personnage ne peut pas aller hors de l'ecran; par défaut, permission=false
@@ -35,7 +38,10 @@ void Moteur::exec()
 						actions.setPermission(actions.size(), false);
 					}
 					else if (dynamic_cast<DirectionCommande*>(temp[i])->getDirection() == Element::OUEST) {
-						action = MoveCharacter(-dimTuile, 0, perso);
+						if (dynamic_cast<DirectionCommande*>(temp[i])->getCharacter() == 0)
+							action = MoveCharacter(-dimTuile, 0, perso);
+						if (dynamic_cast<DirectionCommande*>(temp[i])->getCharacter() == 1)
+							action = MoveCharacter(-dimTuile, 0, rival);
 						actions.add(&action);
 						// check if action is true
 						if (perso->getX() > 0 && ruler.collisions(perso->getX() / dimTuile - 1, perso->getY() / dimTuile))
@@ -44,7 +50,10 @@ void Moteur::exec()
 						actions.setPermission(actions.size(), false);
 					}
 					else if (dynamic_cast<DirectionCommande*>(temp[i])->getDirection() == Element::NORD) {
-						action = MoveCharacter(0, -dimTuile, perso);
+						if (dynamic_cast<DirectionCommande*>(temp[i])->getCharacter() == 0)
+							action = MoveCharacter(0, -dimTuile, perso);
+						if (dynamic_cast<DirectionCommande*>(temp[i])->getCharacter() == 1)
+							action = MoveCharacter(0, -dimTuile, rival);
 						actions.add(&action);
 						// check if action is true
 						if (perso->getY() > 0 && ruler.collisions(perso->getX() / dimTuile, perso->getY() / dimTuile - 1))
@@ -53,7 +62,10 @@ void Moteur::exec()
 						actions.setPermission(actions.size(), false);
 					}
 					else if (dynamic_cast<DirectionCommande*>(temp[i])->getDirection() == Element::SUD) {
-						action = MoveCharacter(0, dimTuile, perso);
+						if (dynamic_cast<DirectionCommande*>(temp[i])->getCharacter() == 0)
+							action = MoveCharacter(0, dimTuile, perso);
+						if (dynamic_cast<DirectionCommande*>(temp[i])->getCharacter() == 1)
+							action = MoveCharacter(0, dimTuile, rival);
 						actions.add(&action);
 						// check if action is true
 						if (perso->getY() < (currentState.getMap()->getheight() - 1)*dimTuile && ruler.collisions(perso->getX() / dimTuile, perso->getY() / dimTuile + 1))
