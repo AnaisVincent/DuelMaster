@@ -12,9 +12,6 @@ void ComportementDeplacement::random()
 {
 }
 
-void ComportementDeplacement::smarter()
-{
-}
 
 void ComportementDeplacement::smarter()
 {
@@ -39,6 +36,7 @@ void ComportementDeplacement::smarter()
 		if (rx < x) {
 			//aller en haut
 		}
+	}
 }
 
 void ComportementDeplacement::promenade()
