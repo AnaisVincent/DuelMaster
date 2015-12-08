@@ -1,8 +1,8 @@
 #ifndef __Arme_h__
 #define __Arme_h__
-#include "ElementDuel.h"
+#include "Carte.h"
 
-class Arme : public ElementDuel
+class Arme : public Carte
 {
 private:
 	int durabilitite;
