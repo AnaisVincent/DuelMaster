@@ -100,7 +100,7 @@ int main()
 	rival.setY((h / 2 + 1) * dimTuile);
 
 	//Déclaration du moteur de jeu et du controlleur
-	Moteur moteur = Moteur(&perso);
+	Moteur moteur = Moteur(&perso, &rival);
 	moteur.setMode(Moteur::PLAY);
 	PlayerController p_control = PlayerController();
 
@@ -109,8 +109,8 @@ int main()
 	{
 		int x = moteur.getPerso()->getX();
 		int y = moteur.getPerso()->getY();
-		int rx = rival.getX();
-		int ry = rival.getY();
+		int rx = moteur.getRival()->getX();
+		int ry = moteur.getRival()->getY();
 		// on gère les évènements
 		sf::Event event;
 		while (window.pollEvent(event))

@@ -15,7 +15,7 @@ class Moteur
 
 public:
 	Moteur();
-	Moteur(Personnage* perso);
+	Moteur(Personnage* perso, Personnage* rival);
 	~Moteur();
 	
 	
@@ -31,6 +31,7 @@ public:
 	void loadLevel(const char* file_name);
 	void exec();
 	Personnage* getPerso();
+	Personnage* getRival();
 
 protected:
 	ElementFabrique* factory;
@@ -42,6 +43,7 @@ protected:
 	ActionListe actions;
 	Ruler ruler;
 	Personnage* perso;
+	Personnage* rival;
 	//mutable std::mutex update_mutex;
 	int64_t lastUpdateTime;
 

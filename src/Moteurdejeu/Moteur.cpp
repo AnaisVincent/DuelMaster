@@ -75,6 +75,11 @@ Personnage* Moteur::getPerso()
 	return perso;
 }
 
+Personnage* Moteur::getRival()
+{
+	return rival;
+}
+
 Moteur::Moteur()
 {
 	commands = new CommandeSet();
@@ -83,11 +88,12 @@ Moteur::Moteur()
 	ruler = Ruler(&actions, &currentState, commands);
 }
 
-Moteur::Moteur(Personnage* perso)
+Moteur::Moteur(Personnage* perso, Personnage* rival)
 {
 	commands = new CommandeSet();
 	actions = ActionListe();
 	this->perso = perso;
+	this->rival = rival;
 	currentState = Etat();
 	ruler = Ruler(&actions, &currentState, commands);
 }
