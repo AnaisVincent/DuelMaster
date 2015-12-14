@@ -12,6 +12,8 @@
 #include "Moteurdejeu_headers/Ruler.h"
 #include "Rendu_headers/Map.h"
 #include "IHM_headers/PlayerController.h"
+#include <thread>
+#include <mutex>
 
 
 int w = 48;
@@ -32,6 +34,11 @@ sf::Sprite sprite_rival;
 bool carre = false;
 
 //void moteurJeu(sf::Event event, int dx, int dy, int rx, int ry, std::vector<int> level);
+
+
+//Mutex
+std::mutex mu;
+void shared_print(char msg, int id);
 
 
 int main()
@@ -104,6 +111,11 @@ int main()
 	moteur.setMode(Moteur::PLAY);
 	PlayerController p_control = PlayerController();
 
+	//Threads
+	std::thread tMoteur(&ActionListe::apply, &actions);
+	//std::thread tPlayerController(&PlayerController::moveCommande);
+
+
 	// on fait tourner la boucle principale
 	while (window.isOpen())
 	{
@@ -118,16 +130,16 @@ int main()
 			if (event.type == sf::Event::Closed) {
 				window.close();
 			}
-			if (event.type == sf::Event::KeyPressed && (event.key.code == sf::Keyboard::Right || event.key.code == sf::Keyboard::Left || event.key.code == sf::Keyboard::Up || event.key.code == sf::Keyboard::Down)){
+			if (event.type == sf::Event::KeyPressed && (event.key.code == sf::Keyboard::Right || event.key.code == sf::Keyboard::Left || event.key.code == sf::Keyboard::Up || event.key.code == sf::Keyboard::Down)) {
 				moteur.addCommands(p_control.moveCommande(event));
 				moteur.exec();
 			}
-			
+
 			//moteurJeu(event, x/32, y/32, rx, ry, level);
 		}
 		sprite_personnage.setPosition(x, y);
-		sprite_rival.setPosition(rx,ry);
-		
+		sprite_rival.setPosition(rx, ry);
+
 
 		// on dessine le niveau
 		window.clear();
@@ -137,9 +149,24 @@ int main()
 		//window.draw(surface2);
 		window.display();
 
-
 	}
+
+	if (tMoteur.joinable()) { //on ajoute cette ligne sinon peut crasher
+		tMoteur.join(); //attend que tMoteur finisse
+	}
+	/*if (tPlayerController.joinable()) {
+		tPlayerController.join();
+	}*/
+
 	return 0;
+}
+
+//à utiliser pour 
+void shared_print(char msg, int id) {
+	std::lock_guard<std::mutex> guard(mu); //Evite d'être verrouiller à jamais si la ligne entre lock() et unlock() lève une exception
+	//mu.lock();
+	std::cout << msg << id << std::endl;
+	//mu.unlock();
 }
 
 
