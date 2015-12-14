@@ -1,4 +1,4 @@
-#include "Record.h"
+#include "../Moteurdejeu_headers/Record.h"
 
 /*Record::Record(etat::Etat& s)
 {

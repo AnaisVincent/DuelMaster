@@ -1,18 +1,24 @@
-#ifndef ETATEVENT__H
-#define ETATEVENT__H
+#pragma once
+#include "Etat.h"
+#ifndef __EtatEvent_h__
+#define __EtatEvent_h__
 
-#include "EtatEventId.h"
-#include "EtatObserver.h"
+class EtatEvent
+{
 
-/// class EtatEvent - 
-class EtatEvent : public EtatObserver {
-  // Attributes
+protected :
+	enum EtatEventId {ALL_CHANGED, LEVEL_CHANGED, EPOCH_CHANGED, LIST_CHANGED};
+
 public:
-  Etat  state;
-  // Operations
-public:
-  EtatEvent (Etat&amp; s, EtatEventId id);
-  ~EtatEvent ();
+
+	const Etat state;
+
+	EtatEvent(const Etat& s, EtatEventId id);
+	~EtatEvent();
+
+	bool const operator==(EtatEventId id);
+	bool const operator!=(EtatEventId id);
+	
 };
 
 #endif

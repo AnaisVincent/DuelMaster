@@ -1,4 +1,4 @@
-#include "CommandeSet.h"
+#include "../Moteurdejeu_headers/CommandeSet.h"
 
 CommandeSet::~CommandeSet()
 {

@@ -1,4 +1,4 @@
-#include "DirectionCommande.h"
+#include "../Moteurdejeu_headers/DirectionCommande.h"
 
 DirectionCommande::DirectionCommande(int c, Element::Direction d)
 {

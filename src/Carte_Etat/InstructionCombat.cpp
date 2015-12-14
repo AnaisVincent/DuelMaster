@@ -1,4 +1,4 @@
-#include "InstructionCombat.h"
+#include "../Carte_Etat_headers/InstructionCombat.h"
 
 InstructionCombat::InstructionCombat()
 {

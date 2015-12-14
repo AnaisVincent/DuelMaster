@@ -1,16 +1,28 @@
-#ifndef STATICELEMENT__H
-#define STATICELEMENT__H
-
+#pragma once
 #include "Element.h"
+#ifndef __StaticElement_h__
+#define __StaticElement_h__
 
-/// class StaticElement - 
-class StaticElement : public Element {
-  // Operations
+
+class StaticElement : public Element
+{
+
+private:
+
+
 public:
-  StaticElement ();
-  ~StaticElement ();
-  bool const  isStatic ();
-  virtual bool isSpace () = 0;
+	StaticElement();
+	~StaticElement();
+
+	//int const getTypeId() override;
+	bool const isStatic() override;
+	virtual bool const isSpace() = 0;
+	//void clone() override;
+
 };
+
+
+
+
 
 #endif

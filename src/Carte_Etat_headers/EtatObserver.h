@@ -1,8 +1,13 @@
-#ifndef ETATOBSERVER__H
-#define ETATOBSERVER__H
+#pragma once
+#ifndef __EtatObserver_h__
+#define __EtatObserver_h__
 
-/// class EtatObserver - 
-class EtatObserver {
+class EtatObserver
+{
+
+public:
+
+	//void stateChanged(const EtatEvent& e);
 };
 
 #endif

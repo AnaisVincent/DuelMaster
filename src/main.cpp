@@ -4,14 +4,14 @@
 #include <cstdlib>
 #include <fstream>
 #include <cmath>
-#include "Rendu/Plan.h"
-#include "Carte_Etat/Personnage.h"
-#include "Moteurdejeu/Moteur.h"
-#include "Moteurdejeu/ActionListe.h"
-#include "Moteurdejeu/MoveCharacter.h"
-#include "Moteurdejeu/Ruler.h"
-#include "Rendu/Map.h"
-#include "IHM/PlayerController.h"
+#include "Rendu_headers/Plan.h"
+#include "Carte_Etat_headers/Personnage.h"
+#include "Moteurdejeu_headers/Moteur.h"
+#include "Moteurdejeu_headers/ActionListe.h"
+#include "Moteurdejeu_headers/MoveCharacter.h"
+#include "Moteurdejeu_headers/Ruler.h"
+#include "Rendu_headers/Map.h"
+#include "IHM_headers/PlayerController.h"
 
 
 int w = 48;

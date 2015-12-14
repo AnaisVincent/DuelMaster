@@ -1,4 +1,4 @@
-#include "ComportementDeplacement.h"
+#include "../IA_headers/ComportementDeplacement.h"
 
 ComportementDeplacement::ComportementDeplacement()
 {

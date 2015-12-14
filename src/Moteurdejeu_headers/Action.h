@@ -1,12 +1,18 @@
-#ifndef ACTION__H
-#define ACTION__H
+#pragma once
+#ifndef __Action_h__
+#define __Action_h__
 
-/// class Action - 
-class Action {
-  // Operations
+class Action
+{
+
+
 public:
-  ~Action ();
-  virtual virtual void  apply () = 0;
+	~Action();
+
+	virtual void apply() = 0;
+	//void undo(etat::Etat& s, bool notify);
+
 };
+
 
 #endif

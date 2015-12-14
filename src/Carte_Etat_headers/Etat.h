@@ -1,34 +1,44 @@
-#ifndef ETAT__H
-#define ETAT__H
+#pragma once
+#include "ElementFabrique.h"
+#include "../Rendu_headers/Map.h"
+#ifndef __Etat_h__
+#define __Etat_h__
 
-#include "ElementGrille.h"
-#include "ElementListe.h"
+class ElementListe;
+class ElementGrille;
 
-/// class Etat - 
-class Etat {
-  // Associations
-  // Attributes
+class Etat
+{
+
 protected:
-  ElementListe* chars;
-  ElementGrille* grid;
-  Map* map;
-  int  epoch;
-  float  epochRate;
-  // Operations
+	const ElementListe* chars;
+	const ElementGrille* grid;
+	Map* map;
+	int epoch;
+	float epochRate;
+
 public:
-  Etat ();
-  ~Etat ();
-  void  copy (Etat* other);
-  bool const  equals (Etat* other);
-  int const  getEpoch ();
-  float const  getEpochRate ();
-  Map* getMap ();
-  void  setElementFactory (ElementFabrique* f);
-  void  setEpoch (int time);
-  void  setEpochRate (float rate);
-  void  setGrid (ElementGrille* grid);
-  void  setChars (ElementListe* list);
-  void  loadLevel (char* file_name);
+	Etat();
+	~Etat();
+
+	//Etat const clone();
+	void copy(const Etat* other);
+	bool const equals(const Etat* other);
+	int const getEpoch();
+	float const getEpochRate();
+	const ElementGrille* const getGrid();
+	const ElementListe* const getChars();
+	Map* getMap();
+	//const MobileElement* const getChar(int idx);
+	void setElementFactory(ElementFabrique* f);
+	void setEpoch(int time);
+	void setEpochRate(float rate);
+	void setGrid(const ElementGrille* grid);
+	void setChars(const ElementListe* list);
+	void loadLevel(const char* file_name);
+	//void const notifyObservers(EtatEventId id);
+	//void const notifyObservers(const EtatEvent* e);
+
 };
 
 #endif

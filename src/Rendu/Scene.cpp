@@ -1,4 +1,4 @@
-#include "Scene.h"
+#include "../Rendu_headers/Scene.h"
 
 Scene::Scene() {}
 

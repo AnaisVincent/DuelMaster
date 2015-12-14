@@ -1,15 +1,22 @@
-#ifndef SOLDAT__H
-#define SOLDAT__H
-
+#pragma once
+#ifndef __Soldat_h__
+#define __Soldat_h__
 #include "Carte.h"
 
-/// class Soldat - 
-class Soldat : public Carte {
-  // Operations
+class Soldat : public Carte
+{
+protected:
+	//VueListeSoldat position;
+
 public:
-  Soldat ();
-  ~Soldat ();
-  void  utiliser ();
+	Soldat();
+	~Soldat();
+
+	void utiliser() override;
+
 };
+
+
+
 
 #endif

@@ -1,4 +1,4 @@
-#include "Personnage.h"
+#include "../Carte_Etat_headers/Personnage.h"
 
 Personnage::Personnage()
 {

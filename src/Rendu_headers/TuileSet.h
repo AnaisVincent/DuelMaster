@@ -1,16 +1,20 @@
-#ifndef TUILESET__H
-#define TUILESET__H
-
+#pragma once
+#ifndef __TuileSet_h__
+#define __TuileSet_h__
 #include "Tuile.h"
+#include "../Carte_Etat_headers/Element.h"
 
-/// class TuileSet - 
 class TuileSet {
-  // Associations
-  // Operations
+
+private:
+
 public:
-  ~TuileSet ();
-  virtual int const getCellWidth () = 0;
-  virtual int const getCellHeight () = 0;
+	virtual ~TuileSet();
+	virtual int const getCellWidth();
+	virtual int const getCellHeight();
+	virtual const char* const getImageFile();
+	//virtual const Tuile* const getElementTuile(const Element* e);
+	//virtual const Tuile* const getCharTuile();
 };
 
 #endif

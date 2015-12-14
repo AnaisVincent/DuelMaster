@@ -1,17 +1,21 @@
-#ifndef ELEMENTALLOC__H
-#define ELEMENTALLOC__H
+#pragma once
+#ifndef __ElementAlloc_h__
+#define __ElementAlloc_h__
+#include "Element.h"
 
-#include "AElementAlloc.h"
 
-/// class ElementAlloc - 
-class ElementAlloc : public AElementAlloc {
-  // Attributes
+class ElementAlloc
+{
 protected:
-  char  id;
-  // Operations
+	char id;
+
 public:
-  ElementAlloc (char id);
-  Element* newInstance (char id);
+	ElementAlloc(char id);
+
+	Element* newInstance(char id);
 };
+
+
+
 
 #endif

@@ -1,4 +1,4 @@
-#include "Dialogue.h"
+#include "../Carte_Etat_headers/Dialogue.h"
 
 Dialogue::Dialogue()
 {

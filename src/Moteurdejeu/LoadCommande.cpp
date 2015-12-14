@@ -1,4 +1,4 @@
-#include "LoadCommande.h"
+#include "../Moteurdejeu_headers/LoadCommande.h"
 
 LoadCommande::LoadCommande(const char * f)
 {

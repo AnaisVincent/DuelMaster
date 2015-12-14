@@ -1,4 +1,4 @@
-#include "Soldat.h"
+#include "../Combat_Etat_headers/Soldat.h"
 
 Soldat::Soldat()
 {

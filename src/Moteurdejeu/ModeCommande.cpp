@@ -1,4 +1,4 @@
-#include "ModeCommande.h"
+#include "../Moteurdejeu_headers/ModeCommande.h"
 
 ModeCommande::ModeCommande(Moteur::MoteurMode mode)
 {

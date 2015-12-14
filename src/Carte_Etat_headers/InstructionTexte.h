@@ -1,18 +1,21 @@
-#ifndef INSTRUCTIONTEXTE__H
-#define INSTRUCTIONTEXTE__H
+#pragma once
+#ifndef __InstructionTexte_h__
+#define __InstructionTexte_h__
+#include "Instruction.h" 
+#include <string>
 
-#include "Instruction.h"
-
-/// class InstructionTexte - 
-class InstructionTexte : public Instruction {
-  // Attributes
+class InstructionTexte : public Instruction
+{
 private:
-  std::string  texte;
-  // Operations
+	std::string texte;
+
 public:
-  InstructionTexte ();
-  ~InstructionTexte ();
-  void  execute ();
+	InstructionTexte();
+	~InstructionTexte();
+
+	void execute() override;
+
 };
+
 
 #endif

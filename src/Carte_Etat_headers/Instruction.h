@@ -1,13 +1,16 @@
-#ifndef INSTRUCTION__H
-#define INSTRUCTION__H
+#pragma once
+#ifndef __Instruction_h__
+#define __Instruction_h__
 
-/// class Instruction - 
-class Instruction {
-  // Operations
+class Instruction
+{
 public:
-  Instruction ();
-  ~Instruction ();
-  virtual void  execute ();
+	Instruction();
+	~Instruction();
+
+	virtual void execute() = 0;
+
 };
+
 
 #endif

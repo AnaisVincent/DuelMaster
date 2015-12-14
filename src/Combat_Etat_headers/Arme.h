@@ -1,19 +1,23 @@
-#ifndef ARME__H
-#define ARME__H
-
+#ifndef __Arme_h__
+#define __Arme_h__
 #include "Carte.h"
 
-/// class Arme - 
-class Arme : public Carte {
-  // Attributes
+class Arme : public Carte
+{
 private:
-  int  durabilitite;
-  // Operations
+	int durabilitite;
+
+
 public:
-  Arme ();
-  ~Arme ();
-  void  clone ();
-  void  utiliser ();
+	Arme();
+	~Arme();
+
+	void clone() override;
+	void utiliser();
+
 };
+
+
+
 
 #endif

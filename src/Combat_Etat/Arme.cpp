@@ -1,4 +1,4 @@
-#include "Arme.h"
+#include "../Combat_Etat_headers/Arme.h"
 
 Arme::Arme()
 {

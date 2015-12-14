@@ -1,22 +1,23 @@
-#ifndef INSTRUCTIONMVT__H
-#define INSTRUCTIONMVT__H
+#pragma once
+#ifndef __InstructionMvt_h__
+#define __InstructionMvt_h__
+#include "Instruction.h" 
+#include "Element.h"
 
-#include "Instruction.h"
-#include "Direction.h"
-
-/// class InstructionMvt - 
-class InstructionMvt : public Instruction {
-  // Associations
-  // Attributes
+class InstructionMvt : public Instruction
+{
 private:
-  int  id;
-  int  distance;
-  Element::Direction  direction;
-  // Operations
+	int id;
+	int distance;
+	Element::Direction direction;
+
 public:
-  InstructionMvt ();
-  ~InstructionMvt ();
-  void  execute ();
+	InstructionMvt();
+	~InstructionMvt();
+
+	void execute() override;
+
 };
+
 
 #endif

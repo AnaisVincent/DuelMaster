@@ -1,22 +1,31 @@
-#ifndef OBSTACLE__H
-#define OBSTACLE__H
-
+#pragma once
 #include "StaticElement.h"
+#ifndef __Obstacle_h__
+#define __Obstacle_h__
 
-/// class Obstacle - 
-class Obstacle : public StaticElement {
-  // Attributes
+
+class Obstacle : public StaticElement
+{
+public: enum enumObstacle { EAU, MAISON, BUISSON };
+
 private:
-  enumObstacle  typeObstacle;
-  // Operations
+	enumObstacle typeObstacle; // 1 = eau ; 2 = maison ; 3 = buisson
+
+
 public:
-  Obstacle ();
-  Obstacle (enumObstacl e);
-  ~Obstacle ();
-  int const  getTypeId ();
-  enumObstacle const  getTypeObstacle ();
-  bool const  isSpace ();
-  void  clone ();
+	Obstacle();
+	Obstacle(enumObstacle);
+	~Obstacle();
+
+	int const getTypeId() override;
+	enumObstacle const getTypeObstacle();
+	bool const isSpace() override;
+	void clone() override;
+
 };
+
+
+
+
 
 #endif

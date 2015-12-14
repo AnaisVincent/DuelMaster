@@ -1,12 +1,16 @@
-#ifndef TUILE__H
-#define TUILE__H
+#pragma once
+#ifndef __Tuile_h__
+#define __Tuile_h__
 
-/// class Tuile - 
 class Tuile {
-  // Operations
+
+private:
+	
+
 public:
-  ~Tuile ();
-  virtual bool const isAnimated () = 0;
+	virtual ~Tuile();
+	virtual bool const isAnimated() = 0;
+
 };
 
 #endif

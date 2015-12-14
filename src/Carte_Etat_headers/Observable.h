@@ -1,14 +1,21 @@
-#ifndef OBSERVABLE__H
-#define OBSERVABLE__H
+#pragma once
+#ifndef __Observable_h__
+#define __Observable_h__
+#include <vector>
 
-#include "EtatObserver.h"
+class Observable
+{
 
-/// class Observable - 
-class Observable {
-  // Associations
-  // Operations
+protected:
+	//mutable std::vector<EtatObserver*> observers;
+
 public:
-  ~Observable ();
+	~Observable();
+
+	//void const registerObserver(EtatObserver* o);
+	//void const unregisterObserver(EtatObserver* o);
+	//void const notifyObservers(const EtatEvent& e);
 };
 
 #endif
+

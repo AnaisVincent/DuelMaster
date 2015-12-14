@@ -1,4 +1,4 @@
-#include "Commande.h"
+#include "../Moteurdejeu_headers/Commande.h"
 
 Commande::~Commande()
 {

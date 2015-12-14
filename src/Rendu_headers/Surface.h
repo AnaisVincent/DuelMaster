@@ -1,22 +1,23 @@
-#ifndef SURFACE__H
-#define SURFACE__H
-
+#pragma once
+#ifndef __Surface_h__
+#define __Surface_h__
 #include "StaticTuile.h"
+#include <SFML/Graphics.hpp>
+#include <iostream>
 
-/// class Surface - 
 class Surface {
-  // Attributes
+
 private:
-  sf::Texture  tuileset;
-  // Operations
+    sf::Texture tuileset;
+
 public:
-  ~Surface ();
-  virtual virtual void  clear () = 0;
-  virtual virtual sf::Texture  getTexture () = 0;
-  virtual virtual void  loadTexture (char* image_file) = 0;
-  virtual virtual void  setSpriteCount (int n) = 0;
-  virtual virtual void  setSpriteLocation (int i, int x, int y) = 0;
-  virtual virtual void  setSpriteTexture (int i, StaticTuile tex) = 0;
+	virtual ~Surface();
+	virtual void clear();
+	virtual sf::Texture getTexture();
+	virtual void loadTexture(const char* image_file);
+	virtual void setSpriteCount(int n);
+	virtual void setSpriteLocation(int i, int x, int y);
+	virtual void setSpriteTexture(int i, const StaticTuile tex);
 };
 
 #endif

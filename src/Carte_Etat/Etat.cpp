@@ -1,6 +1,6 @@
-#include "Etat.h"
-#include "ElementGrille.h"
-#include "ElementListe.h"
+#include "../Carte_Etat_headers/Etat.h"
+#include "../Carte_Etat_headers/ElementGrille.h"
+#include "../Carte_Etat_headers/ElementListe.h"
 
 Etat::Etat()
 {

@@ -1,22 +1,30 @@
-#ifndef IA__H
-#define IA__H
+#pragma once
+#include <vector>
+#include "../IA_headers/ComportementDeplacement.h"
+#include "../Moteurdejeu_headers/DirectionCommande.h"
+#include "../Carte_Etat_headers/Etat.h"
+#include "../Moteurdejeu_headers/Moteur.h"
+#ifndef __IA_h__
+#define __IA_h__
 
-#include "ComportementDeplacement.h"
 
-/// class IA - 
-class IA {
-  // Associations
-  // Attributes
+class IA
+{
 protected:
-  Etat* s;
-  Moteur  moteur;
-  // Operations
+	enum OrderType {IDLE, MOVE_UP, MOVE_DOWN, MOVE_LEFT, MOVE_RIGHT, ATTACK};
+	ComportementDeplacement move_behavior;
+	const Etat* s;
+	Moteur moteur;
+	OrderType order;
+
+	
 public:
-  IA ();
-  IA (Moteur moteur);
-  ~IA ();
-  virtual virtual void  addComportement (Comportement* behavior) = 0;
-  virtual virtual DirectionCommande* createDirectionCommande () = 0;
+	IA();
+	IA(Moteur moteur);
+	~IA();
+	//virtual void addComportement(Comportement* behavior) = 0;
+	virtual DirectionCommande* createDirectionCommande() = 0;
+
 };
 
 #endif

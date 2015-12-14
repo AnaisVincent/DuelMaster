@@ -1,14 +1,16 @@
-#ifndef IA_DUELLISTESIMPLE__H
-#define IA_DUELLISTESIMPLE__H
+#pragma once
+#ifndef __IA_DuellisteSimple_h__
+#define __IA_DuellisteSimple_h__
 
-#include "IA.h"
 
-/// class IA_DuellisteSimple - 
-class IA_DuellisteSimple : public IA {
-  // Operations
+class IA_DuellisteSimple
+{
+protected:
+
 public:
-  IA_DuellisteSimple ();
-  ~IA_DuellisteSimple ();
+	IA_DuellisteSimple();
+	~IA_DuellisteSimple();
+
 };
 
 #endif

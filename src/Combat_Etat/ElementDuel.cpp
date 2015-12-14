@@ -1,4 +1,4 @@
-#include "ElementDuel.h"
+#include "../Combat_Etat_headers/ElementDuel.h"
 
 ElementDuel::ElementDuel()
 {

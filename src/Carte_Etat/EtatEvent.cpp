@@ -1,4 +1,4 @@
-#include "EtatEvent.h"
+#include "../Carte_Etat_headers/EtatEvent.h"
 
 EtatEvent::EtatEvent(const Etat& s, EtatEventId id)
 {

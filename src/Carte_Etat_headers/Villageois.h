@@ -1,25 +1,33 @@
-#ifndef VILLAGEOIS__H
-#define VILLAGEOIS__H
-
+#pragma once
 #include "MobileElement.h"
-#include "StatusVillageois.h"
-#include "Dialogue.h"
+#ifndef __Villageois_h__
+#define __Villageois_h__
 
-/// class Villageois - 
-class Villageois : public MobileElement {
-  // Associations
-  // Attributes
+
+class Villageois : public MobileElement
+{
+public:	enum enumVillageois { NORMAL, COMBAT };
+
 private:
-  enumVillageois  typeVillageois;
-  // Operations
+	enumVillageois typeVillageois; // 1 = normal, 2 = combat
+
+
 public:
-  Villageois ();
-  Villageois (enumVillageoi s);
-  ~Villageois ();
-  int const  getTypeId ();
-  enumVillageois const  getTypeVillageois ();
-  bool const  isPersonnage ();
-  void  clone ();
+	Villageois();
+	Villageois(enumVillageois);
+	~Villageois();
+
+	int const getTypeId() override;
+	enumVillageois const getTypeVillageois();
+	bool const isPersonnage() override;
+	void clone() override;
+
+
+
 };
+
+
+
+
 
 #endif

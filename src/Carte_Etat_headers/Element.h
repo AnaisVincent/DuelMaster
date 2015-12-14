@@ -1,30 +1,36 @@
-#ifndef ELEMENT__H
-#define ELEMENT__H
+#pragma once
+#ifndef __Element_h__
+#define __Element_h__
 
-#include "Direction.h"
-#include "TypeId.h"
+class Element
+{
 
-/// class Element - 
-class Element {
-  // Associations
-  // Attributes
+public: enum Direction { NORD, SUD, EST, OUEST, NONE};
+
 protected:
-  int  x;
-  int  y;
-  Direction  orientation;
-  // Operations
+	enum enumObstacle { VILLAGEOIS, PERSONNAGE, OBSTACLE, ESPACE };
+	int x;
+	int y;
+	Direction orientation;
+
+
 public:
-  Element ();
-  ~Element ();
-  virtual void  clone ();
-  int const  getX ();
-  int const  getY ();
-  Direction const  getOrientation ();
-  void  setX (int x);
-  void  setY (int x);
-  void  setOrientation (Direction dir);
-  virtual int getTypeId () = 0;
-  virtual bool isStatic () = 0;
+	Element();
+	~Element();
+
+	virtual int const getTypeId() = 0;
+	virtual bool const isStatic() = 0;
+	virtual void clone() = 0;
+	int const getX();
+	int const getY();
+	Direction const getOrientation();
+	void setX(int x);
+	void setY(int x);
+	void setOrientation(Direction dir);
+
 };
+
+
+
 
 #endif

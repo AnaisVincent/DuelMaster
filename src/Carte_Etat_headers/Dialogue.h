@@ -1,16 +1,16 @@
-#ifndef DIALOGUE__H
-#define DIALOGUE__H
+#pragma once
+#ifndef __Dialogue_h__
+#define __Dialogue_h__
 
-#include "Instruction.h"
-
-/// class Dialogue - 
-class Dialogue {
-  // Associations
-  // Operations
+class Dialogue
+{
 public:
-  Dialogue ();
-  ~Dialogue ();
-  void  execute ();
+	Dialogue();
+	~Dialogue();
+
+	void execute();
+
 };
+
 
 #endif

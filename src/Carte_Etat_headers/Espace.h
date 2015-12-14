@@ -1,24 +1,31 @@
-#ifndef ESPACE__H
-#define ESPACE__H
-
+#pragma once
 #include "StaticElement.h"
-#include "TypeEspace.h"
+#ifndef __Espace_h__
+#define __Espace_h__
 
-/// class Espace - 
-class Espace : public StaticElement {
-  // Associations
-  // Attributes
+
+class Espace : public StaticElement
+{
+public:	enum enumEspace { VIDE, CADEAU };
+
 private:
-  enumEspace  typeespace;
-  // Operations
+	enumEspace typeespace; // 1 = vide ; 2 = cadeau
+
+
 public:
-  Espace ();
-  Espace (enumEspac e);
-  ~Espace ();
-  int const  getTypeId ();
-  enumEspace const  getTypeEspace ();
-  bool const  isSpace ();
-  void  clone ();
+	Espace();
+	Espace(enumEspace);
+	~Espace();
+
+	int const getTypeId() override;
+	enumEspace const getTypeEspace();
+	bool const isSpace() override;
+	void clone() override;
+
 };
+
+
+
+
 
 #endif

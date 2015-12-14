@@ -1,4 +1,4 @@
-#include "Ruler.h"
+#include "../Moteurdejeu_headers/Ruler.h"
 
 void Ruler::moveChar(int idx)
 {

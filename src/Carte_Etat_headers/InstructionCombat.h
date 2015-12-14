@@ -1,15 +1,17 @@
-#ifndef INSTRUCTIONCOMBAT__H
-#define INSTRUCTIONCOMBAT__H
+#pragma once
+#ifndef __InstructionCombat_h__
+#define __InstructionCombat_h__
+#include "Instruction.h" 
 
-#include "Instruction.h"
-
-/// class InstructionCombat - 
-class InstructionCombat : public Instruction {
-  // Operations
+class InstructionCombat : public Instruction
+{
 public:
-  InstructionCombat ();
-  ~InstructionCombat ();
-  void  execute ();
+	InstructionCombat();
+	~InstructionCombat();
+
+	void execute() override;
+
 };
+
 
 #endif

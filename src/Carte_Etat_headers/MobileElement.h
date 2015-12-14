@@ -1,28 +1,37 @@
-#ifndef MOBILEELEMENT__H
-#define MOBILEELEMENT__H
-
-#include "Direction.h"
+#pragma once
 #include "Element.h"
+#ifndef __MobileElement_h__
+#define __MobileElement_h__
 
-/// class MobileElement - 
-class MobileElement : public Element {
-  // Attributes
+
+class MobileElement : public Element
+{
+
 protected:
-  int  speed;
-  int  position;
-  Direction  direction;
-  // Operations
+	int speed;
+	int position;
+	Direction direction; //1:Nord, 2:Sud, 3:Est, 4:Ouest
+	//Carte[NB_CARTES] deck;
+
 public:
-  MobileElement ();
-  ~MobileElement ();
-  bool const  isStatic ();
-  int const  getSpeed ();
-  int const  getPosition ();
-  Direction const  getDirection ();
-  void  setSpeed (int s);
-  void  setPosition (int p);
-  void  setDirection (Direction dir);
-  virtual bool isPersonnage () = 0;
+	MobileElement();
+	~MobileElement();
+
+	bool const isStatic() override;
+	virtual bool const isPersonnage() = 0;
+	int const getSpeed();
+	int const getPosition();
+	Direction const getDirection();
+	//int getCarte(int i);
+	void setSpeed(int s);
+	void setPosition(int p);
+	void setDirection(Direction dir);
+
+
 };
+
+
+
+
 
 #endif

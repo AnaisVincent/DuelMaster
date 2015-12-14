@@ -1,4 +1,4 @@
-#include "Pouvoir.h"
+#include "../Combat_Etat_headers/Pouvoir.h"
 
 Pouvoir::Pouvoir()
 {

@@ -1,26 +1,30 @@
-#ifndef ANIMATION__H
-#define ANIMATION__H
-
+#pragma once
+#ifndef __Animation_h__
+#define __Animation_h__
 #include "Tuile.h"
+#include "Surface.h"
 
-/// class Animation - 
 class Animation {
-  // Associations
-  // Attributes
+
 private:
-  int  i;
+	int i;
+
 protected:
-  int  x;
-  int  y;
-  Tuile* tuile;
-  float  speed;
-  int  start;
-  // Operations
+	int x;
+	int y;
+	const Tuile* tuile;
+	float speed;
+	int start;
+
 public:
-  Animation (int x, int y, Tuile* a);
-  void  setSpeed (float speed);
-  void  sync (int time);
-  void  update (int time, Surface* surface);
+	Animation(int x, int y, const Tuile* a);
+	
+	void setSpeed(float speed);
+	void sync(int time);
+	void update(int time, Surface* surface);
+
+
 };
+
 
 #endif

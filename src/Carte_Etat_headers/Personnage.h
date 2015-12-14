@@ -1,24 +1,33 @@
-#ifndef PERSONNAGE__H
-#define PERSONNAGE__H
-
+#pragma once
 #include "MobileElement.h"
-#include "TypePersonnage.h"
+#ifndef __Personnage_h__
+#define __Personnage_h__
 
-/// class Personnage - 
-class Personnage : public MobileElement {
-  // Associations
-  // Attributes
+
+class Personnage : public MobileElement
+{
+public: enum enumPersonnage { JOUEUR, RIVAL };
+
 private:
-  enumPersonnage  typePersonnage;
-  // Operations
+	enumPersonnage typePersonnage; // 0 = joueur, 1 = rival
+
+
 public:
-  Personnage ();
-  Personnage (enumPersonnag e);
-  ~Personnage ();
-  int const  getTypeId ();
-  enumPersonnage const  getTypePersonnage ();
-  bool const  isPersonnage ();
-  void  clone ();
+	Personnage();
+	Personnage(enumPersonnage);
+	~Personnage();
+
+	int const getTypeId() override;
+	enumPersonnage const getTypePersonnage();
+	bool const isPersonnage() override;
+	void clone() override;
+
+
+
 };
+
+
+
+
 
 #endif

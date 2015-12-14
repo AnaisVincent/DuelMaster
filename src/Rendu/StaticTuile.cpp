@@ -1,4 +1,4 @@
-#include "StaticTuile.h"
+#include "../Rendu_headers/StaticTuile.h"
 
 StaticTuile::StaticTuile(int x, int y, int width, int height)
 {

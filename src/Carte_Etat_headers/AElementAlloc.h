@@ -1,12 +1,19 @@
-#ifndef AELEMENTALLOC__H
-#define AELEMENTALLOC__H
+#pragma once
+#ifndef __AElementAlloc_h__
+#define __AElementAlloc_h__
+#include "Element.h"
 
-/// class AElementAlloc - 
-class AElementAlloc {
-  // Operations
+
+class AElementAlloc
+{
+
 public:
-  virtual ~AElementAlloc ();
-  virtual virtual Element* newInstance (char id) = 0;
+	~AElementAlloc();
+
+	virtual Element* newInstance(char id) = 0;
 };
+
+
+
 
 #endif

@@ -1,5 +1,5 @@
-#include "ElementListe.h"
-#include "Etat.h"
+#include "../Carte_Etat_headers/ElementListe.h"
+#include "../Carte_Etat_headers/Etat.h"
 
 ElementListe::ElementListe()
 {

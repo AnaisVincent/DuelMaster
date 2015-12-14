@@ -1,24 +1,29 @@
-#ifndef ETATDUEL__H
-#define ETATDUEL__H
+#pragma once
+#ifndef __EtatDuel_h__
+#define __EtatDuel_h__
+#include "Carte.h"
+#define NBCARTES 20
 
-#include "VueListeCartes.h"
-#include "ElementDuel.h"
 
-/// class EtatDuel - 
-class EtatDuel {
-  // Associations
-  // Attributes
+class EtatDuel
+{
 private:
-  int  points_combat;
-  int  points_vie;
-  Carte* liste_cartes;
-  int  tour;
-  int  compteur_pioche;
-  // Operations
+	enum VueListeCartes {PIOCHE, MAIN, TERRAIN, CIMETIERRE};
+	int points_combat;
+	int points_vie;
+	Carte* liste_cartes;
+	int tour;
+	int compteur_pioche;	
+
 public:
-  EtatDuel ();
-  ~EtatDuel ();
-  void  utiliser ();
+	EtatDuel();
+	~EtatDuel();
+
+	void utiliser();
+
 };
+
+
+
 
 #endif

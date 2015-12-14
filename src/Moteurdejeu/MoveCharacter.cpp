@@ -1,4 +1,4 @@
-#include "MoveCharacter.h"
+#include "../Moteurdejeu_headers/MoveCharacter.h"
 
 MoveCharacter::MoveCharacter()
 {

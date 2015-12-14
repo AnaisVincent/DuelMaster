@@ -1,17 +1,23 @@
-#ifndef LOADCOMMANDE__H
-#define LOADCOMMANDE__H
-
+#pragma once
 #include "Commande.h"
+#include <string>
+#ifndef __LoadCommande_h__
+#define __LoadCommande_h__
 
-/// class LoadCommande - 
-class LoadCommande : public Commande {
-  // Attributes
+class LoadCommande : public Commande
+{
+
 protected:
-  std::string  file_name;
-  // Operations
+	std::string file_name;
+
 public:
-  LoadCommande (char* f);
-  std::string  getFileName ();
+	LoadCommande(const char* f);
+
+	virtual int const getCategory() override;
+	virtual CommandeTypeId const getTypeId() override;
+	std::string getFileName();
+
 };
+
 
 #endif

@@ -1,4 +1,4 @@
-#include "Instruction.h"
+#include "../Carte_Etat_headers/Instruction.h"
 
 Instruction::Instruction()
 {

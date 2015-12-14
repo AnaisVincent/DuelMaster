@@ -1,5 +1,5 @@
-#include "PlayerController.h"
-#include "../Carte_Etat/Personnage.h"
+#include "../IHM_headers/PlayerController.h"
+#include "../Carte_Etat_headers/Personnage.h"
 
 PlayerController::PlayerController()
 {

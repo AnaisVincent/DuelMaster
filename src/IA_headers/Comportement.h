@@ -1,14 +1,21 @@
-#ifndef COMPORTEMENT__H
-#define COMPORTEMENT__H
+#pragma once
+#ifndef __Comportement_h__
+#define __Comportement_h__
+#include <cstdlib>
 
-/// class Comportement - 
-class Comportement {
-  // Operations
+
+class Comportement
+{
+protected:
+
+	
 public:
-  Comportement ();
-  ~Comportement ();
-  virtual virtual void  random () = 0;
-  virtual virtual void  smarter () = 0;
+	Comportement();
+	~Comportement();
+	virtual int random() = 0;
+	virtual int smarter() = 0;
+
+
 };
 
 #endif

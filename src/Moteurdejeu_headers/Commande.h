@@ -1,21 +1,24 @@
-#ifndef COMMANDE__H
-#define COMMANDE__H
+#pragma once
+#ifndef __Commande_h__
+#define __Commande_h__
 
-#include "CommandeCategorie.h"
-#include "CommandeTypeId.h"
+class Commande
+{
 
-/// class Commande - 
-class Commande {
-  // Associations
-  // Attributes
-protected:
-  CommandeTypeId  type_id;
-  CommandeCategorie  categorie;
-  // Operations
 public:
-  ~Commande ();
-  virtual int const getCategorie () = 0;
-  virtual CommandeTypeId const getTypeId () = 0;
+	~Commande();
+
+	enum CommandeCategorie { MAIN_CATEGORY, MOVE_CATEGORY, MODE_CATEGORY };
+	enum CommandeTypeId { LOAD, MODE, DIRECTION };
+
+	virtual int const getCategory() = 0;
+	virtual CommandeTypeId const getTypeId() = 0;
+
+protected:
+	CommandeTypeId type_id;
+	CommandeCategorie categorie;
+
 };
+
 
 #endif

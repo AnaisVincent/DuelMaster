@@ -1,4 +1,4 @@
-#include "IA_RivalSimple.h"
+#include "../IA_headers/IA_RivalSimple.h"
 
 IA_RivalSimple::IA_RivalSimple()
 {

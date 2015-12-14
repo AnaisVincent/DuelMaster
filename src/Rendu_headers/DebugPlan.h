@@ -1,15 +1,17 @@
-#ifndef DEBUGPLAN__H
-#define DEBUGPLAN__H
-
+#pragma once
+#ifndef __DebugPlan_h__
+#define __DebugPlan_h__
 #include "Plan.h"
 
-/// class DebugPlan - 
-class DebugPlan : public Plan {
-  // Operations
+
+class DebugPlan
+{
 public:
-  DebugPlan ();
-  ~DebugPlan ();
-  void  printGridValues (int* values, int n);
+	DebugPlan();
+	~DebugPlan();
+	//void etatChanged(const state StateEvent e);
+	void printGridValues(int* values, int n);
+
 };
 
 #endif

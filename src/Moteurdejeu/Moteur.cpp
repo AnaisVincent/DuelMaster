@@ -1,4 +1,4 @@
-#include "Moteur.h"
+#include "../Moteurdejeu_headers/Moteur.h"
 
 void Moteur::swapCommands()
 {

@@ -1,5 +1,5 @@
-#include "ElementGrille.h"
-#include "Etat.h"
+#include "../Carte_Etat_headers/ElementGrille.h"
+#include "../Carte_Etat_headers/Etat.h"
 
 ElementGrille::ElementGrille() : ElementListe()
 {

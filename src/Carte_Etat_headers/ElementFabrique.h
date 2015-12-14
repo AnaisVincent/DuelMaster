@@ -1,15 +1,24 @@
-#ifndef ELEMENTFABRIQUE__H
-#define ELEMENTFABRIQUE__H
-
+#pragma once
+#ifndef __ElementFabrique_h__
+#define __ElementFabrique_h__
+#include "Element.h"
 #include "AElementAlloc.h"
+#include <map>
 
-/// class ElementFabrique - 
-class ElementFabrique {
-  // Associations
-  // Operations
+
+class ElementFabrique
+{
+protected:
+	std::map<char,AElementAlloc*> list;
+
 public:
-  ~ElementFabrique ();
-  void  registerType (char id, AElementAllo c);
+	~ElementFabrique();
+
+	Element* const newInstance(char id);
+	void registerType(char id, AElementAlloc*);
 };
+
+
+
 
 #endif

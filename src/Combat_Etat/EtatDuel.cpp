@@ -1,4 +1,4 @@
-#include "EtatDuel.h"
+#include "../Combat_Etat_headers/EtatDuel.h"
 
 EtatDuel::EtatDuel()
 {

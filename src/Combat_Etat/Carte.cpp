@@ -1,4 +1,4 @@
-#include "Carte.h"
+#include "../Combat_Etat_headers/Carte.h"
 
 Carte::Carte()
 {
