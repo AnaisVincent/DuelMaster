@@ -13,7 +13,7 @@ namespace IHM {
   public:
     PlayerController ();
     ~PlayerController ();
-    DirectionCommande* moveCommande (sf::Event event);
+    Moteur_de_Jeu::DirectionCommande* moveCommande (sf::Event event);
   };
 
 };

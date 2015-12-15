@@ -64,7 +64,7 @@ namespace Exploration {
     void  setSpeed (int s);
     void  setPosition (int p);
     void  setDirection (Direction dir);
-    virtual bool isPersonnage () = 0;
+    virtual bool const isPersonnage () = 0;
   };
 
   enum Direction {
@@ -88,7 +88,7 @@ namespace Exploration {
     // Operations
   public:
     ~ElementFabrique ();
-    void  registerType (char id, AElementAlloc a);
+    void  registerType (char id, AElementAlloc& a);
   };
 
   /// class ElementListe - 
@@ -234,7 +234,7 @@ namespace Exploration {
   protected:
     ElementListe* chars;
     ElementGrille* grid;
-    Map* map;
+    Rendu::Map* map;
     int  epoch;
     float  epochRate;
     // Operations
@@ -245,7 +245,7 @@ namespace Exploration {
     bool const  equals (Etat* other);
     int const  getEpoch ();
     float const  getEpochRate ();
-    Map* getMap ();
+    Rendu::Map* getMap ();
     void  setElementFactory (ElementFabrique* f);
     void  setEpoch (int time);
     void  setEpochRate (float rate);
@@ -268,7 +268,7 @@ namespace Exploration {
     // Operations
   public:
     Personnage ();
-    Personnage (enumPersonnag e);
+    Personnage (TypePersonnage p);
     ~Personnage ();
     int const  getTypeId ();
     TypePersonnage const  getTypePersonnage ();
@@ -290,10 +290,10 @@ namespace Exploration {
     // Operations
   public:
     Villageois ();
-    Villageois (enumVillageoi s);
+    Villageois (StatusVillageois v);
     ~Villageois ();
     int const  getTypeId ();
-    TypeVillageois const  getTypeVillageois ();
+    StatusVillageois const  getTypeVillageois ();
     bool const  isPersonnage ();
     void  clone ();
   };
@@ -323,16 +323,11 @@ namespace Exploration {
 
   /// class Obstacle - 
   class Obstacle : public Exploration::StaticElement {
-    // Attributes
-  private:
-    enumObstacle  typeObstacle;
     // Operations
   public:
     Obstacle ();
-    Obstacle (enumObstacl e);
     ~Obstacle ();
     int const  getTypeId ();
-    enumObstacle const  getTypeObstacle ();
     bool const  isSpace ();
     void  clone ();
   };
