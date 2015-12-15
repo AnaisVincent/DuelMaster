@@ -32,6 +32,7 @@ public:
 	void exec();
 	Personnage* getPerso();
 	Personnage* getRival();
+	ActionListe* getActions();
 
 protected:
 	ElementFabrique* factory;
@@ -40,7 +41,7 @@ protected:
 	//CommandeSet* currentCommands;
 	//CommandeSet* waitingCommands;
 	CommandeSet* commands;
-	ActionListe actions;
+	ActionListe* actions;
 	Ruler ruler;
 	Personnage* perso;
 	Personnage* rival;

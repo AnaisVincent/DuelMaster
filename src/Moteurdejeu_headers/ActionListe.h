@@ -8,6 +8,7 @@
 #define __ActionListe_h__
 
 #define LISTEMAX 1024
+#include <mutex>
 
 class ActionListe
 {
@@ -16,7 +17,8 @@ protected:
 	//etat::Etat& s;
 	bool permission[LISTEMAX];
 	int nombre_actions;
-	Action* actions[LISTEMAX];
+	std::vector<Action*> actions;
+	std::mutex muti;
 	
 public:
 	ActionListe();
