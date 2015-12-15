@@ -4616,13 +4616,13 @@
         <dia:point val="-30.7333,-15.1667"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-30.7833,-15.2167;-5.9283,-1.3167"/>
+        <dia:rectangle val="-30.7833,-15.2167;-6.3133,-1.3167"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="-30.7333,-15.1667"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="24.755000000000003"/>
+        <dia:real val="24.369999999999997"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="13.799999999999999"/>
@@ -5312,7 +5312,7 @@
                 <dia:string>#target#</dia:string>
               </dia:attribute>
               <dia:attribute name="type">
-                <dia:string>#sf::RenderTarget&amp;;#</dia:string>
+                <dia:string>#sf::RenderTarget&amp;#</dia:string>
               </dia:attribute>
               <dia:attribute name="value">
                 <dia:string>##</dia:string>

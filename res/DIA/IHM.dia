@@ -106,13 +106,13 @@
         <dia:point val="22.4579,-4.73259"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="22.4079,-4.78259;42.2579,1.11741"/>
+        <dia:rectangle val="22.4079,-4.78259;48.0329,1.11741"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="22.4579,-4.73259"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="19.75"/>
+        <dia:real val="25.524999999999999"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="5.8000000000000007"/>
@@ -321,7 +321,7 @@
             <dia:string>##</dia:string>
           </dia:attribute>
           <dia:attribute name="type">
-            <dia:string>#DirectionCommande*#</dia:string>
+            <dia:string>#Moteur_de_Jeu::DirectionCommande*#</dia:string>
           </dia:attribute>
           <dia:attribute name="visibility">
             <dia:enum val="0"/>
