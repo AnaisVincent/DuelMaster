@@ -1,5 +1,6 @@
 #ifndef IA__H
 #define IA__H
+#include "../Moteurdejeu_headers/Moteur_de_Jeu.h"
 
 
 namespace IA {
