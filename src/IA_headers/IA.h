@@ -1,6 +1,5 @@
 #ifndef IA__H
 #define IA__H
-#include "../Moteurdejeu_headers/Moteur_de_Jeu.h"
 
 
 namespace IA {
@@ -36,9 +35,9 @@ namespace IA {
     Moteur_de_Jeu::Moteur  moteur;
     // Operations
   public:
-    IA ();
-    IA (Moteur_de_Jeu::Moteur moteur);
-    ~IA ();
+    IA_classe ();
+    IA_classe (Moteur_de_Jeu::Moteur moteur);
+    ~IA_classe ();
     virtual void  addComportement (Comportement* behavior) = 0;
     virtual Moteur_de_Jeu::DirectionCommande* createDirectionCommande () = 0;
   };
