@@ -10,8 +10,8 @@ namespace IA {
   public:
     Comportement ();
     ~Comportement ();
-    virtual virtual void  random () = 0;
-    virtual virtual void  smarter () = 0;
+    virtual void  random () = 0;
+    virtual void  smarter () = 0;
   };
 
   /// class ComportementDeplacement - 
@@ -26,24 +26,24 @@ namespace IA {
     void  stalker ();
   };
 
-  /// class IA - 
-  class IA {
+  /// class IA_classe - 
+  class IA_classe {
     // Associations
     // Attributes
   protected:
-    Etat* s;
-    Moteur  moteur;
+    Exploration::Etat* s;
+    Moteur_de_Jeu::Moteur  moteur;
     // Operations
   public:
     IA ();
-    IA (Moteur moteur);
+    IA (Moteur_de_Jeu::Moteur moteur);
     ~IA ();
-    virtual virtual void  addComportement (Comportement* behavior) = 0;
-    virtual virtual DirectionCommande* createDirectionCommande () = 0;
+    virtual void  addComportement (Comportement* behavior) = 0;
+    virtual Moteur_de_Jeu::DirectionCommande* createDirectionCommande () = 0;
   };
 
   /// class IA_DuellisteSimple - 
-  class IA_DuellisteSimple : public IA::IA {
+  class IA_DuellisteSimple : public IA::IA_classe {
     // Operations
   public:
     IA_DuellisteSimple ();
@@ -51,13 +51,13 @@ namespace IA {
   };
 
   /// class IA_RivalSimple - 
-  class IA_RivalSimple : public IA::IA {
+  class IA_RivalSimple : public IA::IA_classe {
     // Operations
   public:
     IA_RivalSimple ();
     ~IA_RivalSimple ();
     void  addComportement (Comportement* behavior);
-    DirectionCommande* createDirectionCommande ();
+    Moteur_de_Jeu::DirectionCommande* createDirectionCommande ();
   };
 
 };

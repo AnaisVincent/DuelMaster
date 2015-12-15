@@ -69,14 +69,23 @@ namespace Moteur_de_Jeu {
     std::string  getFileName ();
   };
 
+  enum MoteurMode {
+    PLAY     = 1,
+    RECORD     = 2,
+    REPLAY     = 3,
+    ROOLBACK     = 4,
+    PAUSE     = 5,
+    CLOSE     = 6
+  };
+
   /// class ModeCommande - 
   class ModeCommande : public Moteur_de_Jeu::Commande {
     // Attributes
   protected:
-    Moteur::MoteurMode  mode;
+    MoteurMode  mode;
     // Operations
   public:
-    ModeCommande (Moteur::MoteurMode mode);
+    ModeCommande (MoteurMode mode);
   };
 
   /// class MoveCharacter - 
@@ -86,12 +95,12 @@ namespace Moteur_de_Jeu {
     int  idx;
     int  dx;
     int  dy;
-    Personnage* perso;
+    Exploration::Personnage* perso;
     // Operations
   public:
     MoveCharacter ();
     MoveCharacter (int idx);
-    MoveCharacter (int dx, int dy, Personnage* perso);
+    MoveCharacter (int dx, int dy, Exploration::Personnage* perso);
     ~MoveCharacter ();
     int  getX ();
     int  getY ();
@@ -105,10 +114,10 @@ namespace Moteur_de_Jeu {
     // Attributes
   protected:
     int  character;
-    Element::Direction  direction;
+    Exploration::Direction  direction;
     // Operations
   public:
-    DirectionCommande (int c, Element::Direction d);
+    DirectionCommande (int c, Exploration::Direction d);
     int const  getCharacter ();
   };
 
@@ -163,15 +172,6 @@ namespace Moteur_de_Jeu {
     void  resChar (int idx);
   };
 
-  enum MoteurMode {
-    PLAY     = 1,
-    RECORD     = 2,
-    REPLAY     = 3,
-    ROOLBACK     = 4,
-    PAUSE     = 5,
-    CLOSE     = 6
-  };
-
   /// class Moteur - 
   class Moteur : public Moteur_de_Jeu::Ruler {
     // Associations
@@ -182,13 +182,13 @@ namespace Moteur_de_Jeu {
     CommandeSet* commands;
     ActionListe  actions;
     Ruler  ruler;
-    Personnage* perso;
+    Exploration::Personnage* perso;
     int64_t  lastUpdateTime;
     MoteurMode  enginemode;
     // Operations
   public:
     Moteur ();
-    Moteur (Personnage* perso);
+    Moteur (Exploration::Personnage* perso);
     ~Moteur ();
     MoteurMode const  getMode ();
     void  addCommands (Commande* cmd);
@@ -197,7 +197,7 @@ namespace Moteur_de_Jeu {
     void  setMode (MoteurMode mode);
     void  loadLevel (char* file_name);
     void  exec ();
-    Personnage* getPerso ();
+    Exploration::Personnage* getPerso ();
   };
 
 };

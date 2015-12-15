@@ -125,12 +125,12 @@ namespace Moteur_de_Rendu {
     // Operations
   public:
     ~Surface ();
-    virtual virtual void  clear () = 0;
-    virtual virtual sf::Texture  getTexture () = 0;
-    virtual virtual void  loadTexture (char* image_file) = 0;
-    virtual virtual void  setSpriteCount (int n) = 0;
-    virtual virtual void  setSpriteLocation (int i, int x, int y) = 0;
-    virtual virtual void  setSpriteTexture (int i, StaticTuile tex) = 0;
+    virtual void  clear () = 0;
+    virtual sf::Texture  getTexture () = 0;
+    virtual void  loadTexture (char* image_file) = 0;
+    virtual void  setSpriteCount (int n) = 0;
+    virtual void  setSpriteLocation (int i, int x, int y) = 0;
+    virtual void  setSpriteTexture (int i, StaticTuile tex) = 0;
   };
 
   /// class Plan - 
@@ -206,11 +206,11 @@ namespace Moteur_de_Rendu {
     void  clear ();
     void  loadTexture (char* image_file);
     void  setArrayWidth (int w);
-    void  setSprite (StaticTuile tex, std::vector&lt;int&gt; tuiles);
+    void  setSprite (StaticTuile tex, std::vector<int> tuiles);
     void  setSpriteCount (int n);
     void  setSpriteLocation (int i, int x, int y);
     void  setSpriteTexture (int i, StaticTuile tex);
-    void  draw (sf::RenderTarget&amp; target, sf::RenderStates states);
+    void  draw (sf::RenderTarget&; target, sf::RenderStates states);
   };
 
   /// class Scene - 

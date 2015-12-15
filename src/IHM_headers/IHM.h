@@ -7,7 +7,7 @@ namespace IHM {
   class PlayerController {
     // Attributes
   protected:
-    Personnage  perso;
+    Exploration::Personnage  perso;
     sf::Event  event;
     // Operations
   public:

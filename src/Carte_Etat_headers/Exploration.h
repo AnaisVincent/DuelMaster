@@ -16,21 +16,34 @@ namespace Exploration {
     ~Observable ();
   };
 
-  /// class AElementAlloc - 
-  class AElementAlloc {
-    // Operations
-  public:
-    virtual ~AElementAlloc ();
-    virtual virtual Element* newInstance (char id) = 0;
+  enum TypeId {
+    VILLAGEOIS     = 1,
+    PERSONNAGE     = 2,
+    ESPACE     = 3,
+    OBSTACLE     = 4
   };
 
-  /// class ElementFabrique - 
-  class ElementFabrique {
+  /// class Element - 
+  class Element {
     // Associations
+    // Attributes
+  protected:
+    int  x;
+    int  y;
+    Direction  orientation;
     // Operations
   public:
-    ~ElementFabrique ();
-    void  registerType (char id, AElementAllo c);
+    Element ();
+    ~Element ();
+    virtual void  clone ();
+    int const  getX ();
+    int const  getY ();
+    Direction const  getOrientation ();
+    void  setX (int x);
+    void  setY (int x);
+    void  setOrientation (Direction dir);
+    virtual int const getTypeId () = 0;
+    virtual bool const isStatic () = 0;
   };
 
   /// class MobileElement - 
@@ -55,40 +68,27 @@ namespace Exploration {
   };
 
   enum Direction {
-    Nord     = 1,
-    Sud     = 2,
-    Est     = 3,
-    Ouest     = 4
+    NORD     = 1,
+    SUD     = 2,
+    EST     = 3,
+    OUEST     = 4
   };
 
-  enum TypeId {
-    Villageois     = 1,
-    Personnage     = 2,
-    Espace     = 3,
-    Obstacle     = 4
-  };
-
-  /// class Element - 
-  class Element {
-    // Associations
-    // Attributes
-  protected:
-    int  x;
-    int  y;
-    Direction  orientation;
+  /// class AElementAlloc - 
+  class AElementAlloc {
     // Operations
   public:
-    Element ();
-    ~Element ();
-    virtual void  clone ();
-    int const  getX ();
-    int const  getY ();
-    Direction const  getOrientation ();
-    void  setX (int x);
-    void  setY (int x);
-    void  setOrientation (Direction dir);
-    virtual int getTypeId () = 0;
-    virtual bool isStatic () = 0;
+    virtual ~AElementAlloc ();
+    virtual Element* newInstance (char id) = 0;
+  };
+
+  /// class ElementFabrique - 
+  class ElementFabrique {
+    // Associations
+    // Operations
+  public:
+    ~ElementFabrique ();
+    void  registerType (char id, AElementAlloc a);
   };
 
   /// class ElementListe - 
@@ -129,7 +129,7 @@ namespace Exploration {
     bool const  hasCell (int i, int j);
     int const  getWidth ();
     int const  getHeight ();
-    void  isSpace (int i, int j, Element::Direction d);
+    void  isSpace (int i, int j, Direction d);
     void  setCell (int i, int j, Element* e);
     void  load (char* file_name);
     void const  notifyObservers (int i, int j);
@@ -148,7 +148,7 @@ namespace Exploration {
     Etat  state;
     // Operations
   public:
-    EtatEvent (Etat&amp; s, EtatEventId id);
+    EtatEvent (Etat& s, EtatEventId id);
     ~EtatEvent ();
   };
 
@@ -168,12 +168,17 @@ namespace Exploration {
   private:
     int  id;
     int  distance;
-    Element::Direction  direction;
+    Direction  direction;
     // Operations
   public:
     InstructionMvt ();
     ~InstructionMvt ();
     void  execute ();
+  };
+
+  enum TypeEspace {
+    VIDE     = 1,
+    CADEAU     = 2
   };
 
   /// class StaticElement - 
@@ -183,12 +188,7 @@ namespace Exploration {
     StaticElement ();
     ~StaticElement ();
     bool const  isStatic ();
-    virtual bool isSpace () = 0;
-  };
-
-  enum TypeEspace {
-    Vide     = 1,
-    Cadeau     = 2
+    virtual bool const isSpace () = 0;
   };
 
   /// class Espace - 
@@ -196,14 +196,14 @@ namespace Exploration {
     // Associations
     // Attributes
   private:
-    enumEspace  typeespace;
+    TypeEspace typeespace;
     // Operations
   public:
     Espace ();
-    Espace (enumEspac e);
+    Espace (TypeEspace e);
     ~Espace ();
     int const  getTypeId ();
-    enumEspace const  getTypeEspace ();
+    TypeEspace const  getTypeEspace ();
     bool const  isSpace ();
     void  clone ();
   };
@@ -255,8 +255,8 @@ namespace Exploration {
   };
 
   enum TypePersonnage {
-    Joueur     = 1,
-    Rival     = 2
+    JOUEUR     = 1,
+    RIVAL     = 2
   };
 
   /// class Personnage - 
@@ -264,21 +264,21 @@ namespace Exploration {
     // Associations
     // Attributes
   private:
-    enumPersonnage  typePersonnage;
+    TypePersonnage  typePersonnage;
     // Operations
   public:
     Personnage ();
     Personnage (enumPersonnag e);
     ~Personnage ();
     int const  getTypeId ();
-    enumPersonnage const  getTypePersonnage ();
+    TypePersonnage const  getTypePersonnage ();
     bool const  isPersonnage ();
     void  clone ();
   };
 
   enum StatusVillageois {
-    Normal     = 1,
-    Combat     = 2
+    NORMAL     = 1,
+    COMBAT     = 2
   };
 
   /// class Villageois - 
@@ -286,14 +286,14 @@ namespace Exploration {
     // Associations
     // Attributes
   private:
-    enumVillageois  typeVillageois;
+    StatusVillageois  typeVillageois;
     // Operations
   public:
     Villageois ();
     Villageois (enumVillageoi s);
     ~Villageois ();
     int const  getTypeId ();
-    enumVillageois const  getTypeVillageois ();
+    TypeVillageois const  getTypeVillageois ();
     bool const  isPersonnage ();
     void  clone ();
   };
