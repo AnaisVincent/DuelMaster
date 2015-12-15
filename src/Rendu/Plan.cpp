@@ -1,4 +1,6 @@
-#include "../Rendu_headers//Plan.h"
+#include "../Rendu_headers/Moteur_de_Rendu.hpp"
+
+using namespace Moteur_de_Rendu;
 
 Plan::Plan() {}
 

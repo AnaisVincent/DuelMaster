@@ -1,4 +1,6 @@
-#include "../Moteurdejeu_headers/Record.h"
+#include "../Moteurdejeu_headers/Moteur_de_Jeu.hpp"
+
+using namespace Moteur_de_Jeu;
 
 /*Record::Record(etat::Etat& s)
 {

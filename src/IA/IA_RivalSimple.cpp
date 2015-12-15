@@ -1,4 +1,6 @@
-#include "../IA_headers/IA_RivalSimple.h"
+#include "../IA_headers/IA.hpp"
+
+using namespace IA;
 
 IA_RivalSimple::IA_RivalSimple()
 {

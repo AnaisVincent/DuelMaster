@@ -1,5 +1,7 @@
-#include "../Carte_Etat_headers/ElementGrille.h"
-#include "../Carte_Etat_headers/Etat.h"
+#include "../Carte_Etat_headers/Exploration.hpp"
+//#include "../Carte_Etat_headers/Etat.h"
+
+using namespace Exploration;
 
 ElementGrille::ElementGrille() : ElementListe()
 {

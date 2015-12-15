@@ -1,4 +1,6 @@
-#include "../Carte_Etat_headers/EtatEvent.h"
+#include "../Carte_Etat_headers/Exploration.hpp"
+
+using namespace Exploration;
 
 EtatEvent::EtatEvent(const Etat& s, EtatEventId id)
 {

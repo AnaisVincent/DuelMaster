@@ -68,7 +68,7 @@
         <dia:point val="-98.1374,-17.0853"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-98.1874,-18.1353;7.13016,44.9072"/>
+        <dia:rectangle val="-98.1874,-18.1353;7.13013,44.9073"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -3376,13 +3376,13 @@
         <dia:point val="-58.542,-12.3667"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-58.592,-12.4167;-36.817,-4.1167"/>
+        <dia:rectangle val="-58.592,-12.4167;-39.897,-4.1167"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="-58.542,-12.3667"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="21.675000000000001"/>
+        <dia:real val="18.594999999999999"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="8.1999999999999993"/>
@@ -3538,7 +3538,7 @@
             <dia:string>##</dia:string>
           </dia:attribute>
           <dia:attribute name="type">
-            <dia:string>#virtual void #</dia:string>
+            <dia:string>#void #</dia:string>
           </dia:attribute>
           <dia:attribute name="visibility">
             <dia:enum val="0"/>
@@ -3568,7 +3568,7 @@
             <dia:string>##</dia:string>
           </dia:attribute>
           <dia:attribute name="type">
-            <dia:string>#virtual sf::Texture #</dia:string>
+            <dia:string>#sf::Texture #</dia:string>
           </dia:attribute>
           <dia:attribute name="visibility">
             <dia:enum val="0"/>
@@ -3598,7 +3598,7 @@
             <dia:string>##</dia:string>
           </dia:attribute>
           <dia:attribute name="type">
-            <dia:string>#virtual void #</dia:string>
+            <dia:string>#void #</dia:string>
           </dia:attribute>
           <dia:attribute name="visibility">
             <dia:enum val="0"/>
@@ -3646,7 +3646,7 @@
             <dia:string>##</dia:string>
           </dia:attribute>
           <dia:attribute name="type">
-            <dia:string>#virtual void #</dia:string>
+            <dia:string>#void #</dia:string>
           </dia:attribute>
           <dia:attribute name="visibility">
             <dia:enum val="0"/>
@@ -3694,7 +3694,7 @@
             <dia:string>##</dia:string>
           </dia:attribute>
           <dia:attribute name="type">
-            <dia:string>#virtual void #</dia:string>
+            <dia:string>#void #</dia:string>
           </dia:attribute>
           <dia:attribute name="visibility">
             <dia:enum val="0"/>
@@ -3776,7 +3776,7 @@
             <dia:string>##</dia:string>
           </dia:attribute>
           <dia:attribute name="type">
-            <dia:string>#virtual void #</dia:string>
+            <dia:string>#void #</dia:string>
           </dia:attribute>
           <dia:attribute name="visibility">
             <dia:enum val="0"/>
@@ -4616,13 +4616,13 @@
         <dia:point val="-30.7333,-15.1667"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-30.7833,-15.2167;-4.7733,-1.3167"/>
+        <dia:rectangle val="-30.7833,-15.2167;-5.9283,-1.3167"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="-30.7333,-15.1667"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="25.91"/>
+        <dia:real val="24.755000000000003"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="13.799999999999999"/>
@@ -4682,19 +4682,19 @@
         <dia:font family="monospace" style="0" name="Courier"/>
       </dia:attribute>
       <dia:attribute name="abstract_font">
-        <dia:font family="monospace" style="88" name="Courier-BoldOblique"/>
+        <dia:font family="monospace" style="0" name="Courier"/>
       </dia:attribute>
       <dia:attribute name="polymorphic_font">
-        <dia:font family="monospace" style="8" name="Courier-Oblique"/>
+        <dia:font family="monospace" style="0" name="Courier"/>
       </dia:attribute>
       <dia:attribute name="classname_font">
         <dia:font family="sans" style="80" name="Helvetica-Bold"/>
       </dia:attribute>
       <dia:attribute name="abstract_classname_font">
-        <dia:font family="sans" style="88" name="Helvetica-BoldOblique"/>
+        <dia:font family="sans" style="0" name="Helvetica"/>
       </dia:attribute>
       <dia:attribute name="comment_font">
-        <dia:font family="sans" style="8" name="Helvetica-Oblique"/>
+        <dia:font family="sans" style="0" name="Helvetica"/>
       </dia:attribute>
       <dia:attribute name="normal_font_height">
         <dia:real val="0.80000000000000004"/>
@@ -5069,7 +5069,7 @@
                 <dia:string>#tuiles#</dia:string>
               </dia:attribute>
               <dia:attribute name="type">
-                <dia:string>#std::vector&amp;lt;int&amp;gt;#</dia:string>
+                <dia:string>#std::vector&lt;int&gt;#</dia:string>
               </dia:attribute>
               <dia:attribute name="value">
                 <dia:string>##</dia:string>
@@ -5312,7 +5312,7 @@
                 <dia:string>#target#</dia:string>
               </dia:attribute>
               <dia:attribute name="type">
-                <dia:string>#sf::RenderTarget&amp;amp;#</dia:string>
+                <dia:string>#sf::RenderTarget&amp;;#</dia:string>
               </dia:attribute>
               <dia:attribute name="value">
                 <dia:string>##</dia:string>
@@ -6532,17 +6532,17 @@
     </dia:object>
     <dia:object type="UML - Generalization" version="1" id="O25">
       <dia:attribute name="obj_pos">
-        <dia:point val="-36.8167,-8.2667"/>
+        <dia:point val="-39.8967,-8.2667"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-36.8667,-9.1167;-30.7337,-7.4167"/>
+        <dia:rectangle val="-39.9467,-9.1167;-30.7337,-7.4167"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
-        <dia:point val="-36.8167,-8.2667"/>
-        <dia:point val="-35.9667,-8.2667"/>
+        <dia:point val="-39.8967,-8.2667"/>
+        <dia:point val="-39.0467,-8.2667"/>
         <dia:point val="-30.8337,-8.2667"/>
         <dia:point val="-30.7837,-8.2667"/>
       </dia:attribute>
@@ -7229,7 +7229,7 @@
         <dia:point val="-47.686,3.77067"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="-48.436,-4.16645;-46.936,4.57067"/>
+        <dia:rectangle val="-49.2945,-4.16645;-46.936,4.57067"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -7237,8 +7237,8 @@
       <dia:attribute name="orth_points">
         <dia:point val="-47.686,3.77067"/>
         <dia:point val="-47.686,-0.522889"/>
-        <dia:point val="-47.7045,-0.522889"/>
-        <dia:point val="-47.7045,-4.11645"/>
+        <dia:point val="-49.2445,-0.522889"/>
+        <dia:point val="-49.2445,-4.11645"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="1"/>

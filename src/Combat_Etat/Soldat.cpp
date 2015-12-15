@@ -1,4 +1,4 @@
-#include "../Combat_Etat_headers/Soldat.h"
+#include "../Combat_Etat_headers/Duel.hpp"
 
 Soldat::Soldat()
 {

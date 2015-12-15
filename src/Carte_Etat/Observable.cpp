@@ -1,4 +1,4 @@
-#include "../Carte_Etat_headers/Observable.h"
+#include "../Carte_Etat_headers/Exploration.hpp"
 
 Observable::~Observable()
 {

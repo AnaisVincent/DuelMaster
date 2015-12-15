@@ -1,4 +1,6 @@
-#include "../IA_headers/IA.h"
+#include "../IA_headers/IA.hpp"
+
+using namespace IA;
 
 IA::IA()
 {

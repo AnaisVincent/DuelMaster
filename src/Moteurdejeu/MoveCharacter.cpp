@@ -1,4 +1,6 @@
-#include "../Moteurdejeu_headers/MoveCharacter.h"
+#include "../Moteurdejeu_headers/Moteur_de_Jeu.hpp"
+
+using namespace Moteur_de_Jeu;
 
 MoveCharacter::MoveCharacter()
 {

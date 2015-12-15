@@ -1,4 +1,6 @@
-#include "../Combat_Etat_headers/Carte.h"
+#include "../Combat_Etat_headers/Duel.hpp"
+
+using namespace Duel;
 
 Carte::Carte()
 {

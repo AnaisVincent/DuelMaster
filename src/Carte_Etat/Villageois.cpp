@@ -1,4 +1,6 @@
-#include "../Carte_Etat_headers/Villageois.h"
+#include "../Carte_Etat_headers/Exploration.hpp"
+
+using namespace Exploration;
 
 Villageois::Villageois()
 {

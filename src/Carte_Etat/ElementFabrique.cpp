@@ -1,4 +1,6 @@
-#include "../Carte_Etat_headers/ElementFabrique.h"
+#include "../Carte_Etat_headers/Exploration.hpp"
+
+using namespace Exploration;
 
 ElementFabrique::~ElementFabrique()
 {

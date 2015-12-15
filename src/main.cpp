@@ -4,16 +4,21 @@
 #include <cstdlib>
 #include <fstream>
 #include <cmath>
-#include "Rendu_headers/Plan.h"
-#include "Carte_Etat_headers/Personnage.h"
-#include "Moteurdejeu_headers/Moteur.h"
-#include "Moteurdejeu_headers/ActionListe.h"
-#include "Moteurdejeu_headers/MoveCharacter.h"
-#include "Moteurdejeu_headers/Ruler.h"
-#include "Rendu_headers/Map.h"
-#include "IHM_headers/PlayerController.h"
+#include "Rendu_headers/Moteur_de_Rendu.hpp"
+#include "Carte_Etat_headers/Exploration.hpp"
+#include "Moteurdejeu_headers/Moteur_de_Jeu.hpp"
+//#include "Moteurdejeu_headers/ActionListe.h"
+//#include "Moteurdejeu_headers/MoveCharacter.h"
+//#include "Moteurdejeu_headers/Ruler.h"
+//#include "Rendu_headers/Map.h"
+#include "IHM_headers/IHM.hpp"
 #include <thread>
 #include <mutex>
+
+using namespace Moteur_de_Jeu;
+using namespace Exploration;
+using namespace Moteur_de_Rendu;
+using namespace IHM;
 
 
 int w = 48;

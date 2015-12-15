@@ -1,4 +1,6 @@
-#include "../Rendu_headers/Animation.h"
+#include "../Rendu_headers/Moteur_de_Rendu.hpp"
+
+using namespace Moteur_de_Rendu;
 
 Animation::Animation(int x, int y, const Tuile * a)
 {

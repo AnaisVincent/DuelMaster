@@ -1,6 +1,8 @@
-#include "../Carte_Etat_headers/Etat.h"
-#include "../Carte_Etat_headers/ElementGrille.h"
-#include "../Carte_Etat_headers/ElementListe.h"
+#include "../Carte_Etat_headers/Exploration.hpp"
+//#include "../Carte_Etat_headers/ElementGrille.h"
+//#include "../Carte_Etat_headers/ElementListe.h"
+
+using namespace Exploration;
 
 Etat::Etat()
 {

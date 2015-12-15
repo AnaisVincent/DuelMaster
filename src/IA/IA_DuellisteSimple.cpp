@@ -1,4 +1,6 @@
-#include "../IA_headers/IA_DuellisteSimple.h"
+#include "../IA_headers/IA.hpp"
+
+using namespace IA;
 
 IA_DuellisteSimple::IA_DuellisteSimple()
 {

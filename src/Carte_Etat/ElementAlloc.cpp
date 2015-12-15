@@ -1,4 +1,6 @@
-#include "../Carte_Etat_headers/ElementAlloc.h"
+#include "../Carte_Etat_headers/Exploration.hpp"
+
+using namespace Exploration;
 
 ElementAlloc::ElementAlloc(char id)
 {

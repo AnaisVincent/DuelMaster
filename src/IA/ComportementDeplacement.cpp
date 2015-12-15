@@ -1,4 +1,6 @@
-#include "../IA_headers/ComportementDeplacement.h"
+#include "../IA_headers/IA.hpp"
+
+using namespace IA;
 
 ComportementDeplacement::ComportementDeplacement()
 {

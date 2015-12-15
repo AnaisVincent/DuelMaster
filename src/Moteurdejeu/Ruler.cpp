@@ -1,4 +1,6 @@
-#include "../Moteurdejeu_headers/Ruler.h"
+#include "../Moteurdejeu_headers/Moteur_de_Jeu.hpp"
+
+using namespace Moteur_de_Jeu;
 
 void Ruler::moveChar(int idx)
 {

@@ -1,4 +1,6 @@
-#include "../Carte_Etat_headers/InstructionMvt.h"
+#include "../Carte_Etat_headers/Exploration.hpp"
+
+using namespace Exploration;
 
 InstructionMvt::InstructionMvt()
 {

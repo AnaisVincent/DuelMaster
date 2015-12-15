@@ -1,4 +1,6 @@
-#include "../Combat_Etat_headers/ElementDuel.h"
+#include "../Combat_Etat_headers/Duel.hpp"
+
+using namespace Duel;
 
 ElementDuel::ElementDuel()
 {

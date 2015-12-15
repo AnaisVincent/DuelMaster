@@ -1,4 +1,6 @@
-#include "../Carte_Etat_headers/StaticElement.h"
+#include "../Carte_Etat_headers/Exploration.hpp"
+
+using namespace Exploration;
 
 StaticElement::StaticElement(){}
 

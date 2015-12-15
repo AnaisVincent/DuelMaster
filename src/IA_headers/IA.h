@@ -1,29 +1,64 @@
-#pragma once
-#include <vector>
-#include "../IA_headers/ComportementDeplacement.h"
-#include "../Moteurdejeu_headers/DirectionCommande.h"
-#include "../Carte_Etat_headers/Etat.h"
-#include "../Moteurdejeu_headers/Moteur.h"
-#ifndef __IA_h__
-#define __IA_h__
+#ifndef IA__H
+#define IA__H
 
 
-class IA
-{
-protected:
-	enum OrderType {IDLE, MOVE_UP, MOVE_DOWN, MOVE_LEFT, MOVE_RIGHT, ATTACK};
-	ComportementDeplacement move_behavior;
-	const Etat* s;
-	Moteur moteur;
-	OrderType order;
+namespace IA {
 
-	
-public:
-	IA();
-	IA(Moteur moteur);
-	~IA();
-	//virtual void addComportement(Comportement* behavior) = 0;
-	virtual DirectionCommande* createDirectionCommande() = 0;
+  /// class Comportement - 
+  class Comportement {
+    // Operations
+  public:
+    Comportement ();
+    ~Comportement ();
+    virtual virtual void  random () = 0;
+    virtual virtual void  smarter () = 0;
+  };
+
+  /// class ComportementDeplacement - 
+  class ComportementDeplacement : public IA::Comportement {
+    // Operations
+  public:
+    ComportementDeplacement ();
+    ~ComportementDeplacement ();
+    void  random ();
+    void  smarter ();
+    void  promenade ();
+    void  stalker ();
+  };
+
+  /// class IA - 
+  class IA {
+    // Associations
+    // Attributes
+  protected:
+    Etat* s;
+    Moteur  moteur;
+    // Operations
+  public:
+    IA ();
+    IA (Moteur moteur);
+    ~IA ();
+    virtual virtual void  addComportement (Comportement* behavior) = 0;
+    virtual virtual DirectionCommande* createDirectionCommande () = 0;
+  };
+
+  /// class IA_DuellisteSimple - 
+  class IA_DuellisteSimple : public IA::IA {
+    // Operations
+  public:
+    IA_DuellisteSimple ();
+    ~IA_DuellisteSimple ();
+  };
+
+  /// class IA_RivalSimple - 
+  class IA_RivalSimple : public IA::IA {
+    // Operations
+  public:
+    IA_RivalSimple ();
+    ~IA_RivalSimple ();
+    void  addComportement (Comportement* behavior);
+    DirectionCommande* createDirectionCommande ();
+  };
 
 };
 

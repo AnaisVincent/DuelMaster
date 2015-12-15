@@ -1,4 +1,6 @@
-#include "../Moteurdejeu_headers/LoadCommande.h"
+#include "../Moteurdejeu_headers/Moteur_de_Jeu.hpp"
+
+using namespace Moteur_de_Jeu;
 
 LoadCommande::LoadCommande(const char * f)
 {

@@ -1,5 +1,8 @@
-#include "../IHM_headers/PlayerController.h"
-#include "../Carte_Etat_headers/Personnage.h"
+#include "../IHM_headers/IHM.hpp"
+#include "../Carte_Etat_headers/Exploration.hpp"
+
+using namespace Exploration;
+using namespace IHM;
 
 PlayerController::PlayerController()
 {

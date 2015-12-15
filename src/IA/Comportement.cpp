@@ -1,4 +1,6 @@
-#include "../IA_headers/Comportement.h"
+#include "../IA_headers/IA.hpp"
+
+using namespace IA;
 
 Comportement::Comportement()
 {
