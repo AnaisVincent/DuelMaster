@@ -2,6 +2,7 @@
 #define MOTEUR_DE_JEU__H
 
 #include <string>
+#include <mutex>
 #include "../Carte_Etat_headers/Exploration.h"
 
 namespace Moteur_de_Jeu {
@@ -22,6 +23,7 @@ namespace Moteur_de_Jeu {
     int  nombre_actions;
 	std::vector<Action*> actions;
 	bool permission[1024];
+	std::mutex muti;
     // Operations
   public:
     ActionListe ();
@@ -192,7 +194,7 @@ namespace Moteur_de_Jeu {
     Exploration::ElementFabrique* factory;
 	Exploration::Etat  currentState;
     CommandeSet* commands;
-    ActionListe  actions;
+    ActionListe*  actions;
     Ruler  ruler;
     Exploration::Personnage* perso;
 	Exploration::Personnage* rival;
@@ -204,6 +206,7 @@ namespace Moteur_de_Jeu {
     Moteur (Exploration::Personnage* perso, Exploration::Personnage* rival);
     ~Moteur ();
     MoteurMode const  getMode ();
+	ActionListe* getActions();
     void  addCommands (Commande* cmd);
     bool  update (int64_t time, int64_t* next_time);
     void  swapCommands ();

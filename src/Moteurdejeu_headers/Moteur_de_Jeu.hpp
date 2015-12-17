@@ -2,6 +2,7 @@
 #include "Moteur_de_Jeu.h"
 
 #include<iostream>
+#include <thread>
 
 
 namespace Moteur_de_Jeu {
