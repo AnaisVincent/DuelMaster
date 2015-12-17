@@ -1,6 +1,8 @@
 #ifndef MOTEUR_DE_JEU__H
 #define MOTEUR_DE_JEU__H
 
+#include <string>
+#include "../Carte_Etat_headers/Exploration.h"
 
 namespace Moteur_de_Jeu {
 
@@ -9,7 +11,7 @@ namespace Moteur_de_Jeu {
     // Operations
   public:
     ~Action ();
-    virtual virtual void  apply () = 0;
+    virtual void  apply () = 0;
   };
 
   /// class ActionListe - 
@@ -18,6 +20,8 @@ namespace Moteur_de_Jeu {
     // Attributes
   protected:
     int  nombre_actions;
+	std::vector<Action*> actions;
+	bool permission[1024];
     // Operations
   public:
     ActionListe ();
@@ -30,6 +34,7 @@ namespace Moteur_de_Jeu {
     void  add (Action* action);
     void  remove (int i);
     void  addApply (Action* action);
+	Action * const ActionListe::get(int i);
   };
 
   enum CommandeCategorie {
@@ -65,7 +70,7 @@ namespace Moteur_de_Jeu {
     std::string  file_name;
     // Operations
   public:
-    LoadCommande (char* f);
+    //LoadCommande (char* f);
     std::string  getFileName ();
   };
 
@@ -119,6 +124,9 @@ namespace Moteur_de_Jeu {
   public:
     DirectionCommande (int c, Exploration::Direction d);
     int const  getCharacter ();
+	int const getCategorie() override;
+	CommandeTypeId const getTypeId() override;
+	Exploration::Direction const getDirection();
   };
 
   /// class Record - 
@@ -142,19 +150,23 @@ namespace Moteur_de_Jeu {
   /// class CommandeSet - 
   class CommandeSet {
     // Associations
+  protected:
+	  std::vector<Commande*> commands;
     // Operations
   public:
     ~CommandeSet ();
     int const  size ();
+	Commande * const get(int category);
     void  set (Commande* cmd);
     void  pop ();
+	std::vector<Commande*> take();
   };
 
   /// class Ruler - 
   class Ruler {
     // Attributes
   protected:
-    Etat* currentState;
+    Exploration::Etat* currentState;
     CommandeSet* commands;
     ActionListe* actions;
     int  w;
@@ -163,7 +175,7 @@ namespace Moteur_de_Jeu {
   public:
     Ruler ();
     Ruler (int width, int height);
-    Ruler (ActionListe* actions, Etat* s, CommandeSet* commands);
+    Ruler (ActionListe* actions, Exploration::Etat* s, CommandeSet* commands);
     ~Ruler ();
     bool  collisions (int x, int y);
     void  apply ();
@@ -177,18 +189,19 @@ namespace Moteur_de_Jeu {
     // Associations
     // Attributes
   protected:
-    ElementFabrique* factory;
-    Etat  currentState;
+    Exploration::ElementFabrique* factory;
+	Exploration::Etat  currentState;
     CommandeSet* commands;
     ActionListe  actions;
     Ruler  ruler;
     Exploration::Personnage* perso;
+	Exploration::Personnage* rival;
     int64_t  lastUpdateTime;
     MoteurMode  enginemode;
     // Operations
   public:
     Moteur ();
-    Moteur (Exploration::Personnage* perso);
+    Moteur (Exploration::Personnage* perso, Exploration::Personnage* rival);
     ~Moteur ();
     MoteurMode const  getMode ();
     void  addCommands (Commande* cmd);
@@ -197,7 +210,10 @@ namespace Moteur_de_Jeu {
     void  setMode (MoteurMode mode);
     void  loadLevel (char* file_name);
     void  exec ();
-    Exploration::Personnage* getPerso ();
+	std::vector<Commande*> Moteur::takeCommands(CommandeSet * commands);
+    Exploration::Personnage* getRival ();
+	Exploration::Personnage* getPerso();
+	Exploration::Etat * getState();
   };
 
 };

@@ -11,7 +11,7 @@ const TuileSet * const Plan::getTuileSet()
 	return this->tuileset;
 }
 
-void Plan::setTuileSet(const TuileSet * tuileset)
+void Plan::setTuileSet(TuileSet * tuileset)
 {
 	this->tuileset = tuileset;
 }
@@ -25,7 +25,7 @@ void Plan::setAnimation(int i, Animation * a)
 {
 }
 
-void Plan::printText(int x, int y, const char * msg, int spriteIdx, int w, int h)
+void Plan::printText(int x, int y, char * msg, int spriteIdx, int w, int h)
 {
 	
 }

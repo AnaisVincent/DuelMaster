@@ -11,7 +11,7 @@ MoveCharacter::MoveCharacter(int idx)
 	this->idx=idx;
 }
 
-MoveCharacter::MoveCharacter(int dx, int dy, Personnage* perso)
+MoveCharacter::MoveCharacter(int dx, int dy, Exploration::Personnage* perso)
 {
 
 	this->dx=dx;

@@ -2,7 +2,7 @@
 
 using namespace Moteur_de_Jeu;
 
-DirectionCommande::DirectionCommande(int c, Element::Direction d)
+DirectionCommande::DirectionCommande(int c, Exploration::Direction d)
 {
 	this->character = c;
 	this->direction = d;
@@ -10,12 +10,12 @@ DirectionCommande::DirectionCommande(int c, Element::Direction d)
 	categorie = MOVE_CATEGORY;
 }
 
-int const DirectionCommande::getCategory()
+int const DirectionCommande::getCategorie()
 {
 	return categorie;
 }
 
-Commande::CommandeTypeId const DirectionCommande::getTypeId()
+CommandeTypeId const DirectionCommande::getTypeId()
 {
 	return type_id;
 }
@@ -25,7 +25,7 @@ int const DirectionCommande::getCharacter()
 	return character;
 }
 
-Element::Direction const DirectionCommande::getDirection()
+Exploration::Direction const DirectionCommande::getDirection()
 {
 	return direction;
 }

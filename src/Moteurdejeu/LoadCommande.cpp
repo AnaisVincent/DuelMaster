@@ -2,7 +2,7 @@
 
 using namespace Moteur_de_Jeu;
 
-LoadCommande::LoadCommande(const char * f)
+/*LoadCommande::LoadCommande(const char * f)
 {
 }
 
@@ -14,7 +14,7 @@ int const LoadCommande::getCategory()
 Commande::CommandeTypeId const LoadCommande::getTypeId()
 {
 	return type_id;
-}
+}*/
 
 std::string LoadCommande::getFileName()
 {

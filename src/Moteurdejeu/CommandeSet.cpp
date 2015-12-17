@@ -14,9 +14,9 @@ int const CommandeSet::size()
 Commande * const CommandeSet::get(int category)
 {
 	Commande* search;
-	int i = 0;
+	unsigned int i = 0;
 	for (i = 0; i < commands.size(); i++) {
-		if (commands.at(i)->getCategory() == category) {
+		if (commands.at(i)->getCategorie() == category) {
 			search = commands[i];
 		}
 	}

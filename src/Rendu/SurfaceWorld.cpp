@@ -18,7 +18,7 @@ void SurfaceWorld::clear()
 }
 
 
-void SurfaceWorld::loadTexture(const char * image_file)
+void SurfaceWorld::loadTexture(char * image_file)
 {
 	if (!texture.loadFromFile(image_file)) {
 		std::cout << "erreur lors du chargement de la texture" << std::endl;

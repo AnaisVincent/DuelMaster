@@ -2,7 +2,7 @@
 
 using namespace Exploration;
 
-EtatEvent::EtatEvent(const Etat& s, EtatEventId id)
+EtatEvent::EtatEvent(Etat& s, EtatEventId id)
 {
 }
 
@@ -10,7 +10,7 @@ EtatEvent::~EtatEvent()
 {
 }
 
-bool const EtatEvent::operator==(EtatEventId id)
+/*bool const EtatEvent::operator==(EtatEventId id)
 {
 	return nullptr;
 }
@@ -18,4 +18,4 @@ bool const EtatEvent::operator==(EtatEventId id)
 bool const EtatEvent::operator!=(EtatEventId id)
 {
 	return nullptr;
-}
+}*/

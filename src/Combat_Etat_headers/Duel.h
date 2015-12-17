@@ -15,7 +15,7 @@ namespace Duel {
   public:
     ElementDuel ();
     ~ElementDuel ();
-    virtual virtual void  clone () = 0;
+    virtual void  clone () = 0;
     int const  getAttaque ();
     int const  getCout ();
     void  setAttaque (int a);
@@ -29,7 +29,7 @@ namespace Duel {
     Carte ();
     ~Carte ();
     virtual void  clone () = 0;
-    virtual virtual void  utiliser () = 0;
+    virtual void  utiliser () = 0;
   };
 
   /// class Soldat - 

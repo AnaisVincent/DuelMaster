@@ -4,10 +4,6 @@ using namespace Exploration;
 
 Obstacle::Obstacle(){}
 
-Obstacle::Obstacle(enumObstacle typeObstacle)
-{
-	this->typeObstacle = typeObstacle;
-}
 
 Obstacle::~Obstacle(){}
 
@@ -15,11 +11,6 @@ int const Obstacle::getTypeId()
 {
 	//id du type Obstacle : 4
 	return OBSTACLE;
-}
-
-Obstacle::enumObstacle const Obstacle::getTypeObstacle()
-{
-	return typeObstacle;
 }
 
 

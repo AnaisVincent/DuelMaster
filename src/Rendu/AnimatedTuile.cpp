@@ -28,10 +28,10 @@ int const AnimatedTuile::getTuileCount()
 	return 0;
 }
 
-const Tuile* const AnimatedTuile::getTuile(int i)
+/*const Tuile* const AnimatedTuile::getTuile(int i)
 {
 	return (this->tuiles + i);
-}
+}*/
 
 void AnimatedTuile::setRate(float rate)
 {

@@ -25,7 +25,7 @@ int const MobileElement::getPosition()
 	return position;
 }
 
-Element::Direction const MobileElement::getDirection()
+Exploration::Direction const MobileElement::getDirection()
 {
 	return direction;
 }

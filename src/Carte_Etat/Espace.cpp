@@ -4,7 +4,7 @@ using namespace Exploration;
 
 Espace::Espace(){}
 
-Espace::Espace(enumEspace typeEspace)
+Espace::Espace(TypeEspace typeEspace)
 {
 	this->typeespace = typeEspace;
 }
@@ -17,7 +17,7 @@ int const Espace::getTypeId()
 	return ESPACE;
 }
 
-Espace::enumEspace const Espace::getTypeEspace()
+TypeEspace const Espace::getTypeEspace()
 {
 	return typeespace;
 }

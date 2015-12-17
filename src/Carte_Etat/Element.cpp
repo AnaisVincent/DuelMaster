@@ -34,7 +34,7 @@ int const Element::getY()
 	return y;
 }
 
-Element::Direction const Element::getOrientation()
+Exploration::Direction const Element::getOrientation()
 {
 	return orientation;
 }

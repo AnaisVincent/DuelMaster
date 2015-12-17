@@ -46,7 +46,7 @@ void ActionListe::undo()
 
 void ActionListe::add(Action * action)
 {
-	this->actions[nombre_actions]=action;
+	actions.push_back(action);
 	nombre_actions++;
 }
 

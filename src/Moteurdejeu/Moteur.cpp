@@ -11,23 +11,23 @@ void Moteur::setMode(MoteurMode mode)
 	this->enginemode = mode;
 }
 
-void Moteur::loadLevel(const char * file_name)
+void Moteur::loadLevel(char * file_name)
 {
 }
 
 void Moteur::exec()
 {
 	std::cout << "execution du moteur";
-	int i = 0; int dimTuile = 32;
+	unsigned int i = 0; int dimTuile = 32;
 	//while (enginemode != CLOSE) {
 		if (enginemode == PLAY){
 			std::cout << " || mode : PLAY";
 			std::vector<Commande*> temp = takeCommands(commands);
 			for (i = 0; i < temp.size(); i++) {
-				if (temp[i]->getTypeId() == Commande::DIRECTION){
+				if (temp[i]->getTypeId() == CommandeTypeId::DIRECTION){
 					std::cout << " || commande de type direction recue" << std::endl;
 					MoveCharacter action = MoveCharacter();
-					if (dynamic_cast<DirectionCommande*>(temp[i])->getDirection() == Element::EST) {
+					if (dynamic_cast<DirectionCommande*>(temp[i])->getDirection() == Exploration::EST) {
 						if(dynamic_cast<DirectionCommande*>(temp[i])->getCharacter() == 0)
 							action = MoveCharacter(dimTuile, 0, perso);
 						if (dynamic_cast<DirectionCommande*>(temp[i])->getCharacter() == 1)
@@ -39,7 +39,7 @@ void Moteur::exec()
 						else
 						actions.setPermission(actions.size(), false);
 					}
-					else if (dynamic_cast<DirectionCommande*>(temp[i])->getDirection() == Element::OUEST) {
+					else if (dynamic_cast<DirectionCommande*>(temp[i])->getDirection() == Exploration::OUEST) {
 						if (dynamic_cast<DirectionCommande*>(temp[i])->getCharacter() == 0)
 							action = MoveCharacter(-dimTuile, 0, perso);
 						if (dynamic_cast<DirectionCommande*>(temp[i])->getCharacter() == 1)
@@ -51,7 +51,7 @@ void Moteur::exec()
 						else
 						actions.setPermission(actions.size(), false);
 					}
-					else if (dynamic_cast<DirectionCommande*>(temp[i])->getDirection() == Element::NORD) {
+					else if (dynamic_cast<DirectionCommande*>(temp[i])->getDirection() == Exploration::NORD) {
 						if (dynamic_cast<DirectionCommande*>(temp[i])->getCharacter() == 0)
 							action = MoveCharacter(0, -dimTuile, perso);
 						if (dynamic_cast<DirectionCommande*>(temp[i])->getCharacter() == 1)
@@ -63,7 +63,7 @@ void Moteur::exec()
 						else
 						actions.setPermission(actions.size(), false);
 					}
-					else if (dynamic_cast<DirectionCommande*>(temp[i])->getDirection() == Element::SUD) {
+					else if (dynamic_cast<DirectionCommande*>(temp[i])->getDirection() == Exploration::SUD) {
 						if (dynamic_cast<DirectionCommande*>(temp[i])->getCharacter() == 0)
 							action = MoveCharacter(0, dimTuile, perso);
 						if (dynamic_cast<DirectionCommande*>(temp[i])->getCharacter() == 1)
@@ -84,12 +84,12 @@ void Moteur::exec()
 	//}
 }
 
-Personnage* Moteur::getPerso()
+Exploration::Personnage* Moteur::getPerso()
 {
 	return perso;
 }
 
-Personnage* Moteur::getRival()
+Exploration::Personnage* Moteur::getRival()
 {
 	return rival;
 }
@@ -98,17 +98,17 @@ Moteur::Moteur()
 {
 	commands = new CommandeSet();
 	actions = ActionListe();
-	currentState = Etat();
+	currentState = Exploration::Etat();
 	ruler = Ruler(&actions, &currentState, commands);
 }
 
-Moteur::Moteur(Personnage* perso, Personnage* rival)
+Moteur::Moteur(Exploration::Personnage* perso, Exploration::Personnage* rival)
 {
 	commands = new CommandeSet();
 	actions = ActionListe();
 	this->perso = perso;
 	this->rival = rival;
-	currentState = Etat();
+	currentState = Exploration::Etat();
 	ruler = Ruler(&actions, &currentState, commands);
 }
 
@@ -116,12 +116,12 @@ Moteur::~Moteur()
 {
 }
 
-Moteur::MoteurMode const Moteur::getMode()
+MoteurMode const Moteur::getMode()
 {
 	return enginemode;
 }
 
-const Etat * const Moteur::getState()
+Exploration::Etat * Moteur::getState()
 {
 	return &currentState;
 }

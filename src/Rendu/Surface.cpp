@@ -16,7 +16,7 @@ sf::Texture Surface::getTexture()
 	return tuileset;
 }
 
-void Surface::loadTexture(const char * image_file)
+void Surface::loadTexture(char * image_file)
 {
 	if (!tuileset.loadFromFile(image_file)) {
 		std::cout << "erreur lors du chargement de la texture" << std::endl;

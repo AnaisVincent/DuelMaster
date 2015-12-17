@@ -2,7 +2,7 @@
 
 using namespace Moteur_de_Rendu;
 
-Animation::Animation(int x, int y, const Tuile * a)
+Animation::Animation(int x, int y, Tuile * a)
 {
 	this->x = x;
 	this->y = y;

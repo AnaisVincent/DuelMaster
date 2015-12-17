@@ -27,13 +27,13 @@ const char * const TuileSetChar::getImageFile()
 	return image_file;
 }
 
-const Tuile * const TuileSetChar::getElementTuile(const Element * e)
+/*const Tuile * const TuileSetChar::getElementTuile(const Element * e)
 {
 	return nullptr;
-}
+}*/
 
 
-const Tuile * const TuileSetChar::getCharTuile(char c)
+/*const Tuile * const TuileSetChar::getCharTuile(char c)
 {
 	const Tuile* temp;
 	/*switch (c)
@@ -52,6 +52,6 @@ const Tuile * const TuileSetChar::getCharTuile(char c)
 		break;
 	default:
 		break;
-	}*/
+	}
 	return temp;
-}
+}*/

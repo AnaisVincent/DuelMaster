@@ -15,18 +15,19 @@ IA_RivalSimple::~IA_RivalSimple()
 	behaviors.push_back(behavior);
 }*/
 
-DirectionCommande* IA_RivalSimple::createDirectionCommande()
+Moteur_de_Jeu::DirectionCommande* IA_RivalSimple::createDirectionCommande()
 {
 	if (order == MOVE_RIGHT) {
-		return new DirectionCommande(1, Element::EST);
+		return new Moteur_de_Jeu::DirectionCommande(1, Exploration::EST);
 	}
 	if (order == MOVE_LEFT) {
-		return new DirectionCommande(1, Element::OUEST);
+		return new Moteur_de_Jeu::DirectionCommande(1, Exploration::OUEST);
 	}
 	if (order == MOVE_UP) {
-		return new DirectionCommande(1, Element::NORD);
+		return new Moteur_de_Jeu::DirectionCommande(1, Exploration::NORD);
 	}
 	if (order == MOVE_DOWN) {
-		return new DirectionCommande(1, Element::SUD);
+		return new Moteur_de_Jeu::DirectionCommande(1, Exploration::SUD);
 	}
+	else return nullptr;
 }

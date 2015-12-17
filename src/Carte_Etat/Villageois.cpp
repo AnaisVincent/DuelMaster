@@ -6,7 +6,7 @@ Villageois::Villageois()
 {
 }
 
-Villageois::Villageois(enumVillageois typeVillageois)
+Villageois::Villageois(StatusVillageois typeVillageois)
 {
 	this->typeVillageois = typeVillageois;
 }
@@ -20,7 +20,7 @@ int const Villageois::getTypeId()
 	return VILLAGEOIS; // id Villageois = 1;
 }
 
-Villageois::enumVillageois const Villageois::getTypeVillageois()
+StatusVillageois const Villageois::getTypeVillageois()
 {
 	return typeVillageois;
 }

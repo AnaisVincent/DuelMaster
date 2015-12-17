@@ -20,7 +20,7 @@ Ruler::Ruler(int width, int height)
 	w = width;
 }
 
-Ruler::Ruler(ActionListe* actions, Etat * s, CommandeSet* commands)
+Ruler::Ruler(ActionListe* actions, Exploration::Etat * s, CommandeSet* commands)
 {
 	this->actions = actions;
 	this->currentState = s;

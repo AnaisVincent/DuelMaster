@@ -1,7 +1,9 @@
 #pragma once
 #include "IHM.h"
 
-namespace IHM {
+#include<iostream>
 
+namespace IHM {
+	class PlayerController;
 
 }

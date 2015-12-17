@@ -2,6 +2,14 @@
 
 using namespace Moteur_de_Rendu;
 
+Moteur_de_Rendu::StaticTuile::StaticTuile()
+{
+	x = 0;
+	y = 0;
+	width = 32;
+	height = 32;
+}
+
 StaticTuile::StaticTuile(int x, int y, int width, int height)
 {
 	this->x = x;

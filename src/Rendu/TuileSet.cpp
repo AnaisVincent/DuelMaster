@@ -14,10 +14,10 @@ int const TuileSet::getCellHeight()
 	return 0;
 }
 
-const char * const TuileSet::getImageFile()
+/*const char * const TuileSet::getImageFile()
 {
 	return 0;
-}
+}*/
 
 /*const Tuile * const TuileSet::getElementTuile(const Element * e)
 {

@@ -13,24 +13,24 @@ PlayerController::~PlayerController()
 {
 }
 
-DirectionCommande* PlayerController::moveCommande(sf::Event event)
+Moteur_de_Jeu::DirectionCommande* PlayerController::moveCommande(sf::Event event)
 {
 	std::cout << "envoi d'une commande de direction" << std::endl;
 	//if (perso.isPersonnage()) {
 
 		if (event.type == sf::Event::KeyPressed && (event.key.code == sf::Keyboard::Right)) {
-			return new DirectionCommande(0, Element::EST);
+			return new Moteur_de_Jeu::DirectionCommande(0, Exploration::EST);
 		}
 		if (event.type == sf::Event::KeyPressed && (event.key.code == sf::Keyboard::Left)) {
-			return new DirectionCommande(0, Element::OUEST);
+			return new Moteur_de_Jeu::DirectionCommande(0, Exploration::OUEST);
 		}
 		if (event.type == sf::Event::KeyPressed && (event.key.code == sf::Keyboard::Up)) {
-			return new DirectionCommande(0, Element::NORD);
+			return new Moteur_de_Jeu::DirectionCommande(0, Exploration::NORD);
 		}
 		if (event.type == sf::Event::KeyPressed && (event.key.code == sf::Keyboard::Down)) {
-			return new DirectionCommande(0, Element::SUD);
+			return new Moteur_de_Jeu::DirectionCommande(0, Exploration::SUD);
 		}
-
+		else return nullptr;
 	//}
 	//throw std::logic_error("Perdu");
 }

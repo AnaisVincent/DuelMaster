@@ -22,34 +22,34 @@ const ElementListe ElementListe::clone()
 	return ElementListe();
 }
 
-void ElementListe::copy(const ElementListe * liste)
+void ElementListe::copy(ElementListe * liste)
 {
 	this->elements = liste->elements;
 	this->fabrique = liste->fabrique;
 	this->s = liste->s;
 }
 
-bool const ElementListe::equals(const ElementListe * other)
+bool const ElementListe::equals(ElementListe * other)
 {
 	if (other->elements == elements && other->fabrique == fabrique && other->s == s)
 		return true;
 	return false;
 }
 
-const Etat * const ElementListe::getEtat()
+/*const Etat * const ElementListe::getEtat()
 {
 	return s;
-}
+}*/
 
 int const ElementListe::size()
 {
 	return elements.size();
 }
 
-Element * const ElementListe::get(int i)
+/*Element * const ElementListe::get(int i)
 {
 	return elements[i];
-}
+}*/
 
 void ElementListe::clear()
 {

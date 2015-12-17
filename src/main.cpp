@@ -113,7 +113,7 @@ int main()
 
 	//Déclaration du moteur de jeu et du controlleur
 	Moteur moteur = Moteur(&perso, &rival);
-	moteur.setMode(Moteur::PLAY);
+	moteur.setMode(Moteur_de_Jeu::PLAY);
 	PlayerController p_control = PlayerController();
 
 	//Threads
@@ -140,7 +140,6 @@ int main()
 				moteur.exec();
 			}
 
-			//moteurJeu(event, x/32, y/32, rx, ry, level);
 		}
 		sprite_personnage.setPosition(x, y);
 		sprite_rival.setPosition(rx, ry);
@@ -176,93 +175,3 @@ void shared_print(char msg, int id) {
 
 
 
-/*void moteurJeu(sf::Event event, int dx, int dy, int rx,int ry, std::vector<int> level) {
-
-
-	int distx = 0;
-	int disty = 0;
-
-	int signe = 0;
-
-	if (event.type == sf::Event::KeyPressed && (event.key.code == sf::Keyboard::Right)) {
-		action = MoveCharacter(dimTuile, 0, &perso);
-		actions.add(&action);
-		// check if action is true
-		if (perso.getX() < (w - 1)*dimTuile && ruler.collisions(dx, dy, 0, level)) // le personnage ne peut pas aller hors de l'ecran; par défaut, permission=false
-			actions.setPermission(actions.size(), true);
-		else
-			actions.setPermission(actions.size(), false);
-
-
-	}
-	else if (event.type == sf::Event::KeyPressed && (event.key.code == sf::Keyboard::Left)) {
-		action = MoveCharacter(-dimTuile, 0, &perso);
-
-		actions.add(&action);
-		// check if action is true
-		if (perso.getX() > 0 && ruler.collisions(dx, dy, 1, level))
-			actions.setPermission(actions.size(), true);
-		else
-			actions.setPermission(actions.size(), false);
-
-
-	}
-	else if (event.type == sf::Event::KeyPressed && (event.key.code == sf::Keyboard::Up)) {
-		action = MoveCharacter(0, -dimTuile, &perso);
-
-		actions.add(&action);
-		// check if action is true
-		if (perso.getY() > 0 && ruler.collisions(dx, dy, 2, level))
-			actions.setPermission(actions.size(), true);
-		else
-			actions.setPermission(actions.size(), false);
-
-
-	}
-	else if (event.type == sf::Event::KeyPressed && (event.key.code == sf::Keyboard::Down)) {
-		action = MoveCharacter(0, dimTuile, &perso);
-
-		actions.add(&action);
-		// check if action is true
-		if (perso.getY() < (h - 1)*dimTuile && ruler.collisions(dx, dy, 3, level))
-			actions.setPermission(actions.size(), true);
-		else
-			actions.setPermission(actions.size(), false);
-
-	}
-	else {
-		int x = perso.getX();
-		int y = perso.getY();
-
-		if ((x - rx)*(x - rx) < (y - ry)*(y - ry)) {
-			if (y < ry ) {
-				action = MoveCharacter(0, -dimTuile, &rival);//aller à gauche
-				actions.add(&action);
-				actions.setPermission(actions.size(), true);
-			}
-			if (ry < y){
-				action = MoveCharacter(0, dimTuile, &rival);//aller à droite
-				actions.add(&action);
-				actions.setPermission(actions.size(), true);
-			}
-					
-
-		}
-		if ((x - rx)*(x - rx) > (y - ry)*(y - ry)) {
-			if (x < rx) {
-				action = MoveCharacter(-dimTuile, 0, &rival);//aller en bas
-				actions.add(&action);
-				actions.setPermission(actions.size(), true);
-			}
-			if (rx < x) {
-				action = MoveCharacter(dimTuile, 0, &rival);//aller en haut
-				actions.add(&action);
-				actions.setPermission(actions.size(), true);
-			}
-			
-		}
-	}
-
-			actions.apply();
-
-}*/

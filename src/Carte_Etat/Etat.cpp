@@ -8,7 +8,7 @@ Etat::Etat()
 {
 	chars = new ElementListe();
 	grid = new ElementGrille();
-	map = new Map();
+	map = new Moteur_de_Rendu::Map();
 	map->levelMap();
 	epoch = 0;
 	epochRate = 0;
@@ -18,11 +18,11 @@ Etat::~Etat()
 {
 }
 
-void Etat::copy(const Etat * other)
+void Etat::copy(Etat * other)
 {
 }
 
-bool const Etat::equals(const Etat * other)
+bool const Etat::equals(Etat * other)
 {
 	return nullptr;
 }
@@ -37,17 +37,17 @@ float const Etat::getEpochRate()
 	return epochRate;
 }
 
-const ElementGrille * const Etat::getGrid()
+ElementGrille * const Etat::getGrid()
 {
 	return grid;
 }
 
-const ElementListe * const Etat::getChars()
+ElementListe * const Etat::getChars()
 {
 	return chars;
 }
 
-Map * Etat::getMap()
+Moteur_de_Rendu::Map * Etat::getMap()
 {
 	return map;
 }
@@ -66,17 +66,17 @@ void Etat::setEpochRate(float rate)
 	this->epochRate = rate;
 }
 
-void Etat::setGrid(const ElementGrille * grid)
+void Etat::setGrid(ElementGrille * grid)
 {
 	this->grid = grid;
 }
 
-void Etat::setChars(const ElementListe * list)
+void Etat::setChars(ElementListe * list)
 {
 	this->chars = list;
 }
 
-void Etat::loadLevel(const char * file_name)
+void Etat::loadLevel(char * file_name)
 {
 }
 

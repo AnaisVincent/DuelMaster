@@ -1,6 +1,8 @@
 #ifndef MOTEUR_DE_RENDU__H
 #define MOTEUR_DE_RENDU__H
 
+#include <vector>
+#include "SFML/Graphics.hpp"
 
 namespace Moteur_de_Rendu {
 
@@ -22,6 +24,7 @@ namespace Moteur_de_Rendu {
     int  height;
     // Operations
   public:
+	StaticTuile();
     StaticTuile (int x, int y, int width, int height);
     ~StaticTuile ();
     bool const  isAnimated ();
@@ -40,6 +43,8 @@ namespace Moteur_de_Rendu {
     // Attributes
   protected:
     std::vector<int>  level;
+	int w;
+	int h;
     // Operations
   public:
     Map ();
@@ -50,6 +55,22 @@ namespace Moteur_de_Rendu {
     const int  getnumber (int x, int y);
     const int  getheight ();
     const int  getwidth ();
+  };
+
+  /// class Surface - 
+  class Surface {
+	  // Attributes
+  private:
+	  sf::Texture  tuileset;
+	  // Operations
+  public:
+	  ~Surface();
+	  virtual void  clear() = 0;
+	  sf::Texture  getTexture();
+	  virtual void  loadTexture(char* image_file) = 0;
+	  virtual void  setSpriteCount(int n) = 0;
+	  virtual void  setSpriteLocation(int i, int x, int y) = 0;
+	  virtual void  setSpriteTexture(int i, StaticTuile tex) = 0;
   };
 
   /// class Animation - 
@@ -105,32 +126,18 @@ namespace Moteur_de_Rendu {
     // Attributes
   private:
     Tuile* tuiles;
+	char* image_file = "../res/ExplorationPart/Textures/tileset.png";
     // Operations
   public:
     TuileSetWorld ();
     ~TuileSetWorld ();
     int const  getCellWidth ();
     int const  getCellHeight ();
+	char * getImageFile();
   };
 
   /// class StateObserver - 
   class StateObserver {
-  };
-
-  /// class Surface - 
-  class Surface {
-    // Attributes
-  private:
-    sf::Texture  tuileset;
-    // Operations
-  public:
-    ~Surface ();
-    virtual void  clear () = 0;
-    virtual sf::Texture  getTexture () = 0;
-    virtual void  loadTexture (char* image_file) = 0;
-    virtual void  setSpriteCount (int n) = 0;
-    virtual void  setSpriteLocation (int i, int x, int y) = 0;
-    virtual void  setSpriteTexture (int i, StaticTuile tex) = 0;
   };
 
   /// class Plan - 
@@ -144,6 +151,7 @@ namespace Moteur_de_Rendu {
   public:
     Plan ();
     ~Plan ();
+	const TuileSet * const getTuileSet();
     void  setTuileSet (TuileSet* tuileset);
     void  setSurface (Surface* surface);
     void  setAnimation (int i, Animation* a);
@@ -173,12 +181,14 @@ namespace Moteur_de_Rendu {
     // Attributes
   private:
     Tuile* tuiles;
+	char* image_file = "../res/ExplorationPart/Sprites/PrPrincipal.png";
     // Operations
   public:
     TuileSetChar ();
     ~TuileSetChar ();
     int const  getCellWidth ();
     int const  getCellHeight ();
+	const char * const getImageFile();
   };
 
   /// class DebugPlan - 
@@ -191,7 +201,7 @@ namespace Moteur_de_Rendu {
   };
 
   /// class SurfaceWorld - 
-  class SurfaceWorld : public Moteur_de_Rendu::Surface {
+  class SurfaceWorld : public Moteur_de_Rendu::Surface, public sf::Drawable, public sf::Transformable{
     // Attributes
   private:
     sf::Texture  texture;
@@ -210,7 +220,7 @@ namespace Moteur_de_Rendu {
     void  setSpriteCount (int n);
     void  setSpriteLocation (int i, int x, int y);
     void  setSpriteTexture (int i, StaticTuile tex);
-    void  draw (sf::RenderTarget& target, sf::RenderStates states);
+    void  draw (sf::RenderTarget& target, sf::RenderStates states) const;
   };
 
   /// class Scene - 

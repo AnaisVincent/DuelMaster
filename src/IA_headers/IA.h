@@ -1,8 +1,19 @@
 #ifndef IA__H
 #define IA__H
 
+#include "../Moteurdejeu_headers/Moteur_de_Jeu.h"
+#include "../Carte_Etat_headers/Exploration.h"
 
 namespace IA {
+
+	enum OrderType {
+		IDLE,
+		MOVE_UP,
+		MOVE_DOWN,
+		MOVE_LEFT,
+		MOVE_RIGHT,
+		ATTACK
+	};
 
   /// class Comportement - 
   class Comportement {
@@ -10,8 +21,8 @@ namespace IA {
   public:
     Comportement ();
     ~Comportement ();
-    virtual void  random () = 0;
-    virtual void  smarter () = 0;
+    virtual int  random () = 0;
+    virtual int  smarter () = 0;
   };
 
   /// class ComportementDeplacement - 
@@ -20,10 +31,10 @@ namespace IA {
   public:
     ComportementDeplacement ();
     ~ComportementDeplacement ();
-    void  random ();
-    void  smarter ();
-    void  promenade ();
-    void  stalker ();
+    int  random ();
+	int  smarter ();
+	int  promenade ();
+	int  stalker ();
   };
 
   /// class IA_classe - 
@@ -33,6 +44,7 @@ namespace IA {
   protected:
     Exploration::Etat* s;
     Moteur_de_Jeu::Moteur  moteur;
+	OrderType order;
     // Operations
   public:
     IA_classe ();
@@ -56,9 +68,10 @@ namespace IA {
   public:
     IA_RivalSimple ();
     ~IA_RivalSimple ();
-    void  addComportement (Comportement* behavior);
+    //void  addComportement (Comportement* behavior);
     Moteur_de_Jeu::DirectionCommande* createDirectionCommande ();
   };
+
 
 };
 

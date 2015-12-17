@@ -6,7 +6,7 @@ Personnage::Personnage()
 {
 }
 
-Personnage::Personnage(enumPersonnage typePersonnage)
+Personnage::Personnage(TypePersonnage typePersonnage)
 {
 	this->typePersonnage = typePersonnage;
 }
@@ -20,7 +20,7 @@ int const Personnage::getTypeId()
 	return PERSONNAGE; // id personnage = 2;
 }
 
-Personnage::enumPersonnage const Personnage::getTypePersonnage()
+TypePersonnage const Personnage::getTypePersonnage()
 {
 	return typePersonnage;
 }
@@ -29,6 +29,7 @@ bool const Personnage::isPersonnage()
 {
 	if (getTypePersonnage() == 0)
 	return true;
+	else return false;
 }
 
 void Personnage::clone()

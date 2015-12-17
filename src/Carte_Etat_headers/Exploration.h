@@ -1,6 +1,7 @@
 #ifndef EXPLORATION__H
 #define EXPLORATION__H
 
+#include "../Rendu_headers/Moteur_de_Rendu.h"
 
 namespace Exploration {
 
@@ -23,6 +24,13 @@ namespace Exploration {
     OBSTACLE     = 4
   };
 
+  enum Direction {
+	  NORD = 1,
+	  SUD = 2,
+	  EST = 3,
+	  OUEST = 4
+  };
+
   /// class Element - 
   class Element {
     // Associations
@@ -35,7 +43,7 @@ namespace Exploration {
   public:
     Element ();
     ~Element ();
-    virtual void  clone ();
+    //virtual void  clone ();
     int const  getX ();
     int const  getY ();
     Direction const  getOrientation ();
@@ -52,7 +60,7 @@ namespace Exploration {
   protected:
     int  speed;
     int  position;
-    Direction  direction;
+    Direction direction;
     // Operations
   public:
     MobileElement ();
@@ -67,12 +75,6 @@ namespace Exploration {
     virtual bool const isPersonnage () = 0;
   };
 
-  enum Direction {
-    NORD     = 1,
-    SUD     = 2,
-    EST     = 3,
-    OUEST     = 4
-  };
 
   /// class AElementAlloc - 
   class AElementAlloc {
@@ -88,7 +90,39 @@ namespace Exploration {
     // Operations
   public:
     ~ElementFabrique ();
-    void  registerType (char id, AElementAlloc& a);
+    //void  registerType (char id, AElementAlloc& a);
+  };
+
+  class ElementListe;
+  class ElementGrille;
+
+  /// class Etat - 
+  class Etat {
+	  // Associations
+	  // Attributes
+  protected:
+	  ElementListe* chars;
+	  ElementGrille* grid;
+	  Moteur_de_Rendu::Map* map;
+	  int  epoch;
+	  float  epochRate;
+	  // Operations
+  public:
+	  Etat();
+	  ~Etat();
+	  void  copy(Etat* other);
+	  bool const  equals(Etat* other);
+	  int const  getEpoch();
+	  float const  getEpochRate();
+	  ElementListe * const getChars();
+	  ElementGrille * const getGrid();
+	  Moteur_de_Rendu::Map* getMap();
+	  void  setElementFactory(ElementFabrique* f);
+	  void  setEpoch(int time);
+	  void  setEpochRate(float rate);
+	  void  setGrid(ElementGrille* grid);
+	  void  setChars(ElementListe* list);
+	  void  loadLevel(char* file_name);
   };
 
   /// class ElementListe - 
@@ -98,6 +132,7 @@ namespace Exploration {
   protected:
     Etat * s;
     ElementFabrique* fabrique;
+	std::vector<Element*> elements;
     // Operations
   public:
     ElementListe ();
@@ -129,7 +164,7 @@ namespace Exploration {
     bool const  hasCell (int i, int j);
     int const  getWidth ();
     int const  getHeight ();
-    void  isSpace (int i, int j, Direction d);
+    //void  isSpace (int i, int j, Direction d);
     void  setCell (int i, int j, Element* e);
     void  load (char* file_name);
     void const  notifyObservers (int i, int j);
@@ -158,7 +193,7 @@ namespace Exploration {
   public:
     Instruction ();
     ~Instruction ();
-    virtual void  execute ();
+    //virtual void  execute ();
   };
 
   /// class InstructionMvt - 
@@ -227,32 +262,7 @@ namespace Exploration {
     void  execute ();
   };
 
-  /// class Etat - 
-  class Etat {
-    // Associations
-    // Attributes
-  protected:
-    ElementListe* chars;
-    ElementGrille* grid;
-    Rendu::Map* map;
-    int  epoch;
-    float  epochRate;
-    // Operations
-  public:
-    Etat ();
-    ~Etat ();
-    void  copy (Etat* other);
-    bool const  equals (Etat* other);
-    int const  getEpoch ();
-    float const  getEpochRate ();
-    Rendu::Map* getMap ();
-    void  setElementFactory (ElementFabrique* f);
-    void  setEpoch (int time);
-    void  setEpochRate (float rate);
-    void  setGrid (ElementGrille* grid);
-    void  setChars (ElementListe* list);
-    void  loadLevel (char* file_name);
-  };
+ 
 
   enum TypePersonnage {
     JOUEUR     = 1,

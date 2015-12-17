@@ -2,11 +2,11 @@
 
 using namespace Moteur_de_Jeu;
 
-ModeCommande::ModeCommande(Moteur::MoteurMode mode)
+ModeCommande::ModeCommande(Moteur_de_Jeu::MoteurMode mode)
 {
 }
 
-int const ModeCommande::getCategory()
+/*int const ModeCommande::getCategory()
 {
 	return categorie;
 }
@@ -16,7 +16,7 @@ Commande::CommandeTypeId const ModeCommande::getTypeId()
 	return type_id;
 }
 
-Moteur::MoteurMode const ModeCommande::getMode()
+Moteur_de_Jeu::MoteurMode const ModeCommande::getMode()
 {
 	return mode;
-}
+	*/

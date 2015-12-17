@@ -22,18 +22,18 @@ int const TuileSetWorld::getCellHeight()
 	return 32;
 }
 
-const char * const TuileSetWorld::getImageFile()
+char * TuileSetWorld::getImageFile()
 {
 	return image_file;
 }
 
-const Tuile * const TuileSetWorld::getElementTuile(const Element * e)
+/*const Tuile * const TuileSetWorld::getElementTuile(const Element * e)
 {
 	return nullptr;
-}
+}*/
 
 
-const Tuile * const TuileSetWorld::getCharTuile(char c)
+/*const Tuile * const TuileSetWorld::getCharTuile(char c)
 {
 	const Tuile* temp;
 	switch (c)
@@ -54,4 +54,4 @@ const Tuile * const TuileSetWorld::getCharTuile(char c)
 		break;
 	}
 	return temp;
-}
+}*/
