@@ -68,7 +68,7 @@
         <dia:point val="1.03339,-25.9835"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="0.983394,-27.0335;47.3004,6.52844"/>
+        <dia:rectangle val="0.98339,-27.0335;47.3004,6.52845"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -127,7 +127,7 @@
         <dia:string>##</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
-        <dia:boolean val="true"/>
+        <dia:boolean val="false"/>
       </dia:attribute>
       <dia:attribute name="suppress_attributes">
         <dia:boolean val="false"/>
@@ -554,7 +554,7 @@
         <dia:string>##</dia:string>
       </dia:attribute>
       <dia:attribute name="abstract">
-        <dia:boolean val="true"/>
+        <dia:boolean val="false"/>
       </dia:attribute>
       <dia:attribute name="suppress_attributes">
         <dia:boolean val="false"/>
@@ -1968,7 +1968,7 @@
         <dia:point val="31.7034,-18.8586"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="25.8303,-19.6086;32.4534,-17.9887"/>
+        <dia:rectangle val="25.8302,-19.6086;32.4534,-17.9887"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
@@ -1977,7 +1977,7 @@
         <dia:point val="31.7034,-18.8586"/>
         <dia:point val="28.4423,-18.8586"/>
         <dia:point val="28.4423,-18.8387"/>
-        <dia:point val="25.8803,-18.8387"/>
+        <dia:point val="25.8802,-18.8387"/>
       </dia:attribute>
       <dia:attribute name="orth_orient">
         <dia:enum val="0"/>
