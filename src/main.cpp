@@ -25,7 +25,7 @@ int w = 48;
 int h = 24;
 int dimTuile = 32;
 MoveCharacter action;
-ActionListe actions=ActionListe();
+//ActionListe actions=ActionListe();
 Ruler ruler(w,h);
 //création personnage
 Personnage perso;
@@ -42,8 +42,8 @@ bool carre = false;
 
 
 //Mutex
-std::mutex mu;
-void shared_print(char msg, int id);
+/*std::mutex mu;
+void shared_print(char msg, int id);*/
 
 
 int main()
@@ -117,7 +117,7 @@ int main()
 	PlayerController p_control = PlayerController();
 
 	//Threads
-	std::thread tMoteur(&ActionListe::apply, &actions);
+	std::thread tMoteur(&ActionListe::apply, moteur.getActions());
 	//std::thread tPlayerController(&PlayerController::moveCommande);
 
 
@@ -166,12 +166,12 @@ int main()
 }
 
 //à utiliser pour 
-void shared_print(char msg, int id) {
+/*void shared_print(char msg, int id) {
 	std::lock_guard<std::mutex> guard(mu); //Evite d'être verrouiller à jamais si la ligne entre lock() et unlock() lève une exception
 	//mu.lock();
 	std::cout << msg << id << std::endl;
 	//mu.unlock();
-}
+}*/
 
 
 

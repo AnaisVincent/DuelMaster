@@ -32,50 +32,51 @@ void Moteur::exec()
 							action = MoveCharacter(dimTuile, 0, perso);
 						if (dynamic_cast<DirectionCommande*>(temp[i])->getCharacter() == 1)
 							action = MoveCharacter(dimTuile, 0, rival);
-						actions.add(&action);
+						actions->add(&action);
 						// check if action is true
 						if (perso->getX() < (currentState.getMap()->getwidth() - 1)*dimTuile && ruler.collisions(perso->getX()/dimTuile + 1, perso->getY()/dimTuile)) // le personnage ne peut pas aller hors de l'ecran; par défaut, permission=false
-						actions.setPermission(actions.size(), true);
+						actions->setPermission(actions->size(), true);
 						else
-						actions.setPermission(actions.size(), false);
+						actions->setPermission(actions->size(), false);
 					}
 					else if (dynamic_cast<DirectionCommande*>(temp[i])->getDirection() == Exploration::OUEST) {
 						if (dynamic_cast<DirectionCommande*>(temp[i])->getCharacter() == 0)
 							action = MoveCharacter(-dimTuile, 0, perso);
 						if (dynamic_cast<DirectionCommande*>(temp[i])->getCharacter() == 1)
 							action = MoveCharacter(-dimTuile, 0, rival);
-						actions.add(&action);
+						actions->add(&action);
 						// check if action is true
 						if (perso->getX() > 0 && ruler.collisions(perso->getX() / dimTuile - 1, perso->getY() / dimTuile))
-						actions.setPermission(actions.size(), true);
+						actions->setPermission(actions->size(), true);
 						else
-						actions.setPermission(actions.size(), false);
+						actions->setPermission(actions->size(), false);
 					}
 					else if (dynamic_cast<DirectionCommande*>(temp[i])->getDirection() == Exploration::NORD) {
 						if (dynamic_cast<DirectionCommande*>(temp[i])->getCharacter() == 0)
 							action = MoveCharacter(0, -dimTuile, perso);
 						if (dynamic_cast<DirectionCommande*>(temp[i])->getCharacter() == 1)
 							action = MoveCharacter(0, -dimTuile, rival);
-						actions.add(&action);
+						actions->add(&action);
 						// check if action is true
 						if (perso->getY() > 0 && ruler.collisions(perso->getX() / dimTuile, perso->getY() / dimTuile - 1))
-						actions.setPermission(actions.size(), true);
+						actions->setPermission(actions->size(), true);
 						else
-						actions.setPermission(actions.size(), false);
+						actions->setPermission(actions->size(), false);
 					}
 					else if (dynamic_cast<DirectionCommande*>(temp[i])->getDirection() == Exploration::SUD) {
 						if (dynamic_cast<DirectionCommande*>(temp[i])->getCharacter() == 0)
 							action = MoveCharacter(0, dimTuile, perso);
 						if (dynamic_cast<DirectionCommande*>(temp[i])->getCharacter() == 1)
 							action = MoveCharacter(0, dimTuile, rival);
-						actions.add(&action);
+						actions->add(&action);
 						// check if action is true
 						if (perso->getY() < (currentState.getMap()->getheight() - 1)*dimTuile && ruler.collisions(perso->getX() / dimTuile, perso->getY() / dimTuile + 1))
-						actions.setPermission(actions.size(), true);
+						actions->setPermission(actions->size(), true);
 						else
-						actions.setPermission(actions.size(), false);
+						actions->setPermission(actions->size(), false);
 					}
-					actions.apply();
+					std::cout << actions->size() << std::endl;
+					//actions.apply();
 					commands->pop();
 				}
 					
@@ -94,22 +95,28 @@ Exploration::Personnage* Moteur::getRival()
 	return rival;
 }
 
+ActionListe* Moteur::getActions()
+{
+	return actions;
+}
+
 Moteur::Moteur()
 {
 	commands = new CommandeSet();
-	actions = ActionListe();
+	actions = new ActionListe();
 	currentState = Exploration::Etat();
-	ruler = Ruler(&actions, &currentState, commands);
+	ruler = Ruler(actions, &currentState, commands);
 }
 
 Moteur::Moteur(Exploration::Personnage* perso, Exploration::Personnage* rival)
 {
 	commands = new CommandeSet();
-	actions = ActionListe();
+	actions = new ActionListe();
 	this->perso = perso;
 	this->rival = rival;
 	currentState = Exploration::Etat();
-	ruler = Ruler(&actions, &currentState, commands);
+	ruler = Ruler(actions, &currentState, commands);
+
 }
 
 Moteur::~Moteur()
