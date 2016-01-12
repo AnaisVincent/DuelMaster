@@ -191,7 +191,7 @@ SFML_NETWORK_LIBRARY_STATIC_DEBUG:FILEPATH=C:/SFML-2.3.2/lib/sfml-network-s-d.li
 SFML_NETWORK_LIBRARY_STATIC_RELEASE:FILEPATH=C:/SFML-2.3.2/lib/sfml-network-s.lib
 
 //No help, variable specified on the command line.
-SFML_ROOT:UNINITIALIZED=C:\SFML-2.3.2
+SFML_ROOT:UNINITIALIZED=C:/SFML-2.3.2
 
 //Path to a library.
 SFML_SYSTEM_LIBRARY_DYNAMIC_DEBUG:FILEPATH=C:/SFML-2.3.2/lib/sfml-system-d.lib
