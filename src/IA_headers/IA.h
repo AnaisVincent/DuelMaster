@@ -68,7 +68,7 @@ namespace IA {
   public:
     IA_RivalSimple ();
     ~IA_RivalSimple ();
-    //void  addComportement (Comportement* behavior);
+    void  addComportement (Comportement* behavior);
     Moteur_de_Jeu::DirectionCommande* createDirectionCommande ();
   };
 

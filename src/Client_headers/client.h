@@ -1,7 +1,11 @@
 #ifndef CLIENT__H
 #define CLIENT__H
 
-#include "server.h"
+#include "../Server_headers/Server.h"
+#include "../Carte_Etat_headers/Exploration.h"
+#include "../Rendu_headers/Moteur_de_Rendu.h"
+#include <iostream>
+#include <vector>
 
 namespace client {
 
@@ -9,13 +13,13 @@ namespace client {
   class CacheEtatObserver {
     // Attributes
   protected:
-    EtatObserver& observer;
-    std::vector<exploration::EtatEvent*> events;
+    Exploration::EtatObserver& observer;
+    std::vector<Exploration::EtatEvent*> events;
     // Operations
   public:
-    virtual CacheEtatObserver (EtatObserver& o) = 0;
+    CacheEtatObserver (Exploration::EtatObserver& o);
     virtual ~CacheEtatObserver ();
-    void stateChanged (const exploration::EtatEvent& e);
+    void stateChanged (const Exploration::EtatEvent& e);
     void flush ();
   };
 
@@ -49,10 +53,10 @@ namespace client {
     // Attributes
   protected:
     sf::RenderWindow window;
-    std::vector<sf::Surface*> surfaces;
+    std::vector<Moteur_de_Rendu::Surface*> surfaces;
     // Operations
   public:
-    virtual SFMLClient (server::Server& server) = 0;
+    SFMLClient (server::Server& server);
     virtual void init () = 0;
     bool acquireControls ();
     void stateChanged ();

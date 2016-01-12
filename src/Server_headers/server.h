@@ -1,20 +1,26 @@
 #ifndef SERVER__H
 #define SERVER__H
 
+#include <iostream>
+#include <vector>
+#include <thread>
+#include "../Moteurdejeu_headers/Moteur_de_Jeu.h"
+#include "../IA_headers/IA.h"
+#include "../Service_headers/Service.h"
 
 namespace server {
 
-  /// class ServerObserver - 
+	enum ServerEvent {
+		INVALID = 0,
+		STATE_CHANGED = 1
+	};
+	
+	/// class ServerObserver - 
   class ServerObserver {
     // Operations
   public:
     ServerObserver ();
     void serverChanged (const ServerEvent& servent);
-  };
-
-  enum ServerEvent {
-    INVALID     = 0,
-    STATE_CHANGED     = 1
   };
 
   /// class Observable - 
@@ -25,7 +31,7 @@ namespace server {
     mutable std::vector<ServerObserver*> observers;
     // Operations
   public:
-    virtual Observable (HttpStatus status, std::String msg) = 0;
+    Observable (Service::HttpStatus status, std::string msg);
     void const registerObserver (ServerObserver* o);
     void const unregisterObserver (ServerObserver o);
     void const notifyObserver (ServerEvent& e);
@@ -35,15 +41,15 @@ namespace server {
   class Server : public server::Observable {
     // Attributes
   public:
-    std:thread* mainThread;
+    std::thread* mainThread;
   protected:
-    moteur_de_jeu::Moteur eng;
+    Moteur_de_Jeu::Moteur eng;
     // Operations
   public:
     Server ();
     virtual ~Server ();
-    moteur_de_jeu::Moteur& getMoteur ();
-    void addCommand (Moteur_de_Jeu::Command* com);
+    Moteur_de_Jeu::Moteur& getMoteur ();
+    void addCommand (Moteur_de_Jeu::Commande* com);
     virtual void run () = 0;
     void runBackground ();
     void join ();
@@ -53,12 +59,12 @@ namespace server {
   class LocalServer : public server::Server {
     // Attributes
   protected:
-    IA::IA_classe behaviorFactory;
-    IA_classe* ias;
+    IA::IA_RivalSimple behaviorFactory;
+	IA::IA_RivalSimple* ias;
     // Operations
   public:
     LocalServer ();
-    ~LocalServer (int id);
+    ~LocalServer ();
     void run ();
   };
 

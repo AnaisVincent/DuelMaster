@@ -10,10 +10,10 @@ IA_RivalSimple::~IA_RivalSimple()
 {
 }
 
-/*void IA_RivalSimple::addComportement(Comportement* behavior)
+void IA_RivalSimple::addComportement(Comportement* behavior)
 {
-	behaviors.push_back(behavior);
-}*/
+	//behavior.push_back(behavior);
+}
 
 Moteur_de_Jeu::DirectionCommande* IA_RivalSimple::createDirectionCommande()
 {
